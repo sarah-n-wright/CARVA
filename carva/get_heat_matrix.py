@@ -1,8 +1,7 @@
 from netcoloc import netprop
 import numpy as np
 import sys
-sys.path.append('/cellar/users/snwright/Git/rat_genetics/')
-from analysis_functions import load_network
+from network_utils import load_network
 import os
 
 outdir=str(sys.argv[1])

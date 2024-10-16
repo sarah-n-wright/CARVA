@@ -2,19 +2,8 @@ import argparse
 import pandas as pd
 import os
 from scipy.stats import hypergeom
+from geneset_utils import load_gene_profile
 
-def load_gene_profile(file, p_th, min_genes):
-    gene_df = pd.read_csv(file, sep='\t')
-    if 'P-value' in gene_df.columns:
-        gene_df = gene_df[gene_df['P-value'] < p_th]
-        gene_list = gene_df['Entrez'].unique().tolist()
-    else:
-        gene_df = pd.read_csv(file, sep='\t', header=None)
-        gene_list = gene_df[0].tolist()
-    if len(gene_list) < min_genes:
-        return None
-    else:
-        return gene_list
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

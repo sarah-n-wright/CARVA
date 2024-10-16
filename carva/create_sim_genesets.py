@@ -8,6 +8,7 @@ from os.path import exists
 import argparse
 import random as rn
 from collections import defaultdict
+from geneset_utils import *
 
 def partition_gene_set(all_genes, total_genes, overlap):
     gene_set = rn.sample(all_genes, total_genes)
@@ -74,38 +75,12 @@ def get_degree_bins(degrees):
     degrees['bin'] = degrees[1].apply(lambda x: bin_assignments[x])
     return degrees
 
-
-
     
 def write_simulated_geneset(geneset, outdir, setname, set_number, overlap, relevance, total_genes, repeat, background):
     outfile = os.path.join(outdir, f'{setname}_overlap{overlap}_relevance{relevance}_totalgenes{total_genes}_repeat{repeat}_background{background}_{set_number}.txt')
     with open(outfile, 'w') as out:
         out.write('\n'.join([str(x) for x in geneset]))
         
-
-def load_node_sets(node_set_file, delimiter='\t', verbose=False, id_type="Entrez"):
-    """ Load node sets from a text file into a dictionary
-    
-    Args:
-        node_set_file (str): path to node set file
-        delimiter (str): delimiter for node set file
-        verbose (bool): print out number of node sets loaded
-        id_type (str): type of node ID to use for graph
-    
-    Returns:
-        dict: dictionary of node sets
-    """
-    f = open(node_set_file)
-    node_set_lines = f.read().splitlines()
-    node_set_lines_split = [line.split(delimiter) for line in node_set_lines]
-    f.close()
-    node_sets = {node_set[0]:set(node_set[1:]) for node_set in node_set_lines_split}
-    if id_type == "Entrez":
-        for set_id in node_sets:
-            node_sets[set_id] = {int(node) for node in list(node_sets[set_id]) if node.isnumeric()}
-    if verbose:
-        print('Node cohorts loaded:', node_set_file)
-    return node_sets
 
 def check_genesets_against_network(genesets, network_node_file):
     network_nodes = set(pd.read_csv(network_node_file, header=None, sep='\t')[0])
@@ -119,7 +94,7 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--setfile', type=str, help='File containing all gene sets')
     parser.add_argument('--outdir', type=str, help='')
-    parser.add_argument('--netnodefile', type=str, help='Path with the reference gene sets')
+    parser.add_argument('--netnodefile', type=str, help='Path to the file containing network nodes')
     parser.add_argument('--overlap', type=int, help='Number of overlapping genes')
     parser.add_argument('--relevance', type=float, help='Relevance of the gene set to control dilution')
     parser.add_argument('--totalgenes', type=int, help='total_genes')

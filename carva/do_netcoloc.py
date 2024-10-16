@@ -9,8 +9,10 @@ from os.path import exists
 import argparse
 sys.path.append('/cellar/users/snwright/Git/rat_genetics/')
 
-from analysis_functions import load_network
+from geneset_utils import *
+from network_utils import *
 from updated_netcoloc_functions import *
+# test if there are unidentified dependencies on updated coloc functions
 
 #TODO get format of z outputs
 #TODO check loading of seeds and matrices
@@ -23,44 +25,6 @@ from updated_netcoloc_functions import *
     #rare_seeds_file=outdir+"/rare_seeds_30630.txt"
     #trait="30630"
     
-def load_seeds(trait, rare_or_common, inputdir):
-    assert rare_or_common in ['rare', 'common']
-    rvc = {'rare':'RV', 'common':'CV'}[rare_or_common]
-    try:
-        seeds = pd.read_csv(os.path.join(inputdir, f"{trait}_{rvc}.txt"), sep='\t')
-        if 'P-value' in seeds.columns:
-            seeds = seeds.sort_values(by='P-value')['Entrez'].unique().tolist()
-        else:
-            seeds = seeds['Entrez'].tolist()
-    except KeyError:
-        seeds = pd.read_csv(os.path.join(inputdir, f"{trait}_{rvc}.txt"), sep='\t', header=None)[0].tolist()
-    return seeds
-
-def load_saved_network_nodes(indir, net_name):
-    if exists(os.path.join(indir, net_name+ "_nodes.txt")):
-        pc_nodes = pd.read_csv(os.path.join(indir, net_name+ "_nodes.txt"), sep='\t', header=None, index_col=0).index.tolist()
-        pc_nodes = [int(x) for x in pc_nodes]
-        return pc_nodes
-    else:
-        return
-        
-def load_saved_network_degrees(indir, net_name):
-    if exists(os.path.join(indir, net_name+ "_degrees.txt")):
-        degree_map = pd.read_csv(os.path.join(indir, net_name+ "_degrees.txt"), sep='\t', header=None, index_col=0).to_dict()[1]
-        return degree_map
-    else:
-        return
-        
-def create_saved_nodes_and_degrees(uuid, outdir, net_name, nodes=True, degrees=True):
-    G_PC = load_network(uuid)
-    if nodes:
-        pc_nodes_df = pd.DataFrame({'node': G_PC.nodes})
-        pc_nodes_df['Entrez'] = pc_nodes_df.node.apply(lambda x: G_PC.nodes[x]['GeneID'])
-        pd.DataFrame(pc_nodes_df.Entrez).to_csv(os.path.join(outdir, net_name+ "_nodes.txt"), sep='\t', header=False, index=False)
-    if degrees:
-        degree_map = pd.DataFrame(G_PC.degree())
-        degree_map['Entrez'] = degree_map[0].apply(lambda x: G_PC.nodes[x]['GeneID'])
-        degree_map.loc[:, ('Entrez', 1)].to_csv(os.path.join(outdir, net_name+ "_degrees.txt"), sep='\t', header=False, index=False)
     
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
@@ -73,8 +37,8 @@ if __name__=='__main__':
     parser.add_argument('--overlap_control', type=str, choices=['remove', 'bin'], default='remove')
     args = parser.parse_args()
 
-    common_seeds = load_seeds(args.trait_common, 'common', args.indir)
-    rare_seeds = load_seeds(args.trait_rare, 'rare', args.indir)
+    common_seeds = load_seed_genes(args.trait_common, 'common', args.indir)
+    rare_seeds = load_seed_genes(args.trait_rare, 'rare', args.indir)
     
     # check if there are enough seed to start with, if not exit
     if (len(common_seeds) < 3) or (len(rare_seeds) < 3):
