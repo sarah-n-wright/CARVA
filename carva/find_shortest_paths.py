@@ -19,10 +19,10 @@ if __name__ == "__main__":
     assert (args.uuid is not None) or (args.netfile is not None), 'Either UUID or network file must be specified'
     
     if args.netfile is not None:
-        G = nx.from_pandas_edgelist(args.netfile)
+        G = nx.from_pandas_edgelist(pd.read_csv(args.netfile), source='Entrez_A', target='Entrez_B')
     
     else:
         G = load_network(args.uuid)
     
     path_lengths = nx.all_pairs_shortest_path_length(G)
-    pd.DataFrame.from_dict(dict(path_lengths)).to_csv(os.path.join(outdir, args.outpref+'path_lengths.csv'))
+    pd.DataFrame.from_dict(dict(path_lengths)).to_csv(os.path.join(args.outdir, args.outpref+'path_lengths.csv'))
