@@ -33,6 +33,7 @@
  * Overall venn diagrams
  * Distributions of trait genes
  * Trait Classification bar charts
+ * Trait Classification venn3 for minimum 3 genes
 ---
 #### `go_genesets.ipynb`
 
