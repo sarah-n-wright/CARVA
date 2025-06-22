@@ -1,0 +1,374 @@
+	EFO	GBD	Cosine	Keep
+312	acne	Acne vulgaris	0.79516685	1
+85	hepatitis	Acute hepatitis	0.8160328	1
+254	hepatitis B virus infection	Acute hepatitis B	0.8430701	1
+270	apolipoprotein B measurement	Acute hepatitis B	0.29724538	0
+96	severe aplastic anemia	Acute myeloid leukemia	0.49986807	0
+296	monocyte percentage of leukocytes	Acute myeloid leukemia	0.30932614	0
+98	hearing loss	Age-related and other hearing loss	0.7400385	1
+94	alopecia areata	Alopecia areata	1	1
+73	androgenetic alopecia	Alopecia areata	0.7608104	0
+148	Alzheimer disease	Alzheimer's disease and other dementias	0.80480146	1
+64	dementia	Alzheimer's disease and other dementias	0.69959354	0
+34	anxiety disorder	Anxiety disorders	0.9681343	1
+111	panic disorder	Anxiety disorders	0.7681592	0
+25	obsessive-compulsive disorder	Anxiety disorders	0.60633296	0
+44	insomnia	Anxiety disorders	0.3993159	0
+322	astigmatism	Ascariasis	0.46394026	0
+50	strabismus	Ascariasis	0.4430228	0
+134	asthma	Asthma	0.99999976	1
+354	Chronic Obstructive Asthma	Asthma	0.7362299	0
+68	allergic rhinitis	Asthma	0.5837346	0
+117	emphysema	Asthma	0.5615897	0
+303	atopic eczema	Atopic dermatitis	0.8301214	0
+118	atrial fibrillation	Atrial fibrillation and flutter	0.81473076	1
+229	cardiac arrhythmia	Atrial fibrillation and flutter	0.52018046	0
+2	autism spectrum disorder	Autism spectrum disorders	0.9528539	1
+362	susceptibility to rubella infection measurement	Bacterial skin diseases	0.4025646	0
+331	dysplasia of cervix	Benign and in situ cervical and uterine neoplasms	0.61722636	0
+48	benign prostatic hyperplasia	Benign prostatic hyperplasia	1.0000001	1
+15	bipolar disorder	Bipolar disorder	1.0000002	1
+284	urinary bladder carcinoma	Bladder cancer	0.8624908	1
+32	breast cancer	Breast cancer	1	1
+54	cardiovascular disease	Cardiovascular diseases	0.96701145	1
+122	coronary artery disease	Cardiovascular diseases	0.7555229	0
+55	heart failure	Cardiovascular diseases	0.61855596	0
+128	angina pectoris	Cardiovascular diseases	0.44210133	0
+262	cholesterol in very large VLDL measurement	Cardiovascular diseases	0.33478963	0
+260	cholesterol in large VLDL measurement	Cardiovascular diseases	0.33016282	0
+365	remnant cholesterol measurement	Cardiovascular diseases	0.3291884	0
+249	free cholesterol in VLDL measurement	Cardiovascular diseases	0.3279668	0
+227	free cholesterol in large VLDL measurement	Cardiovascular diseases	0.32733768	0
+235	free cholesterol in very large VLDL measurement	Cardiovascular diseases	0.32547253	0
+279	low density lipoprotein cholesterol measurement	Cardiovascular diseases	0.32299134	0
+268	cholesterol in very large HDL measurement	Cardiovascular diseases	0.32064414	0
+323	lipoprotein A measurement	Cardiovascular diseases	0.31726965	0
+252	cholesterol in medium VLDL measurement	Cardiovascular diseases	0.31698096	0
+225	cholesterol in very small VLDL measurement	Cardiovascular diseases	0.31603813	0
+275	cholesterol in large HDL measurement	Cardiovascular diseases	0.31352913	0
+197	free cholesterol in medium VLDL measurement	Cardiovascular diseases	0.31343177	0
+223	free cholesterol in very small VLDL measurement	Cardiovascular diseases	0.30887234	0
+214	free cholesterol in small VLDL measurement	Cardiovascular diseases	0.3064035	0
+263	cholesterol in small VLDL measurement	Cardiovascular diseases	0.30537158	0
+226	free cholesterol in large HDL measurement	Cardiovascular diseases	0.30495322	0
+234	free cholesterol in very large HDL measurement	Cardiovascular diseases	0.30351385	0
+357	lipoprotein measurement	Cardiovascular diseases	0.30278987	0
+258	cholesterol in medium HDL measurement	Cardiovascular diseases	0.29699612	0
+253	free cholesterol in HDL measurement	Cardiovascular diseases	0.29688796	0
+255	cholesterol in IDL measurement	Cardiovascular diseases	0.29161334	0
+274	cholesterol in small HDL measurement	Cardiovascular diseases	0.29098272	0
+198	free cholesterol in medium HDL measurement	Cardiovascular diseases	0.2903428	0
+287	total cholesterol measurement	Cardiovascular diseases	0.28857094	0
+217	free cholesterol in small HDL measurement	Cardiovascular diseases	0.28651884	0
+298	HDL cholesterol change measurement	Cardiovascular diseases	0.25748008	0
+265	phospholipids in HDL measurement	Cardiovascular diseases	0.22848421	0
+135	dental caries	Caries of permanent teeth	0.837049	1
+97	platelet aggregation	Caries of permanent teeth	0.23547435	0
+169	cataract	Cataract	1	1
+290	corneal resistance factor	Cataract	0.4057415	0
+301	vasculitis	Cellulitis	0.51574135	0
+297	platelet crit	Cellulitis	0.34591433	0
+67	cervical cancer	Cervical cancer	0.9999999	1
+307	c-reactive protein measurement	Chronic hepatitis C including cirrhosis	0.37670568	0
+327	cystatin c measurement	Chronic hepatitis C including cirrhosis	0.28233916	0
+28	chronic kidney disease	Chronic kidney disease	1.0000001	1
+141	urinary albumin to creatinine ratio	Chronic kidney disease	0.35126686	0
+345	nephrotic syndrome	Chronic kidney disease due to glomerulonephritis	0.5980189	0
+0	proteinuria	Chronic kidney disease due to glomerulonephritis	0.51434165	0
+321	lymphoid leukemia	Chronic lymphoid leukemia	0.8946569	0
+80	chronic lymphocytic leukemia	Chronic lymphoid leukemia	0.81619865	1
+92	lymphocyte count	Chronic lymphoid leukemia	0.4478743	0
+291	lymphocyte percentage of leukocytes	Chronic lymphoid leukemia	0.39884454	0
+281	neutrophil percentage of leukocytes	Chronic lymphoid leukemia	0.29701996	0
+332	myeloproliferative disorder	Chronic myeloid leukemia	0.73998666	0
+23	chronic obstructive pulmonary disease	Chronic obstructive pulmonary disease	1.0000002	1
+250	sleep apnea	Chronic respiratory diseases	0.42186803	0
+259	cirrhosis of liver	Cirrhosis and other chronic liver diseases	0.8438421	1
+278	alcoholic liver cirrhosis	Cirrhosis due to alcohol	0.8605156	1
+295	rectum cancer	Colon and rectum cancer	0.8758034	1
+60	colorectal cancer	Colon and rectum cancer	0.75260305	1
+369	congenital left-sided heart lesions	Congenital heart anomalies	0.77132154	1
+52	vitiligo	COVID-19	0.36315528	0
+361	citrate measurement	Decubitus ulcer	0.1645827	0
+347	Eczematoid dermatitis	Dermatitis	0.68964005	1
+339	diabetes mellitus	Diabetes mellitus	1.0000002	1
+150	gestational diabetes	Diabetes mellitus	0.60749024	0
+326	diabetic retinopathy	Diabetes mellitus	0.58023834	0
+348	glucose measurement	Diabetes mellitus	0.44861794	0
+166	type 1 diabetes mellitus	Diabetes mellitus type 1	0.98652303	1
+367	IgF-1 measurement	Diabetes mellitus type 1	0.29443908	0
+359	HbA1c measurement	Diabetes mellitus type 1	0.24440351	0
+170	type 2 diabetes mellitus	Diabetes mellitus type 2	0.9847902	1
+139	celiac disease	Digestive diseases	0.4870591	0
+349	vital capacity	Drowning	0.2957126	0
+320	obesity	Eating disorders	0.56098866	0
+107	dysphagia	Encephalitis	0.55531013	0
+9	endometriosis	Endometriosis	1	1
+165	clostridium difficile infection	Enteric infections	0.4766606	0
+7	Barrett's esophagus	Esophageal cancer	0.5939085	0
+144	pathological myopia	Eye cancer	0.5021015	0
+277	body weight	Foreign body	0.45782945	0
+311	body mass index	Foreign body	0.37924874	0
+280	comparative body size at age 10, self-reported	Foreign body in other body part	0.32780367	0
+271	lichen planus	Fungal skin diseases	0.4400463	0
+283	serum gamma-glutamyl transferase measurement	G6PD deficiency	0.25275296	0
+302	gallstones	Gallbladder and biliary diseases	0.7029728	1
+70	cholecystitis	Gallbladder and biliary diseases	0.61199915	0
+71	cholelithiasis	Gallbladder and biliary diseases	0.5823188	0
+352	choline measurement	Gallbladder and biliary diseases	0.29916382	0
+90	gastritis	Gastritis and duodenitis	0.760177	1
+20	duodenal ulcer	Gastritis and duodenitis	0.6973617	0
+5	gastroesophageal reflux disease	Gastroesophageal reflux disease	1.0000002	1
+136	uterine prolapse	Genital prolapse	0.80607855	1
+27	glaucoma	Glaucoma	1.0000001	1
+130	Myopia	Glaucoma	0.5419084	0
+21	mean reticulocyte volume	Glaucoma	0.27909654	0
+329	glycine measurement	Glaucoma	0.26915336	0
+269	eosinophil percentage of leukocytes	Gonococcal infection	0.32332712	0
+137	gout	Gout	0.99999964	1
+116	goiter	Gout	0.49692306	0
+245	sex hormone-binding globulin measurement	Gynecological diseases	0.41539145	0
+86	Headache	Headache disorders	0.81103927	1
+292	hemoglobin measurement	Hemoglobinopathies and hemolytic anemias	0.5197792	0
+108	mean corpuscular hemoglobin	Hemoglobinopathies and hemolytic anemias	0.47166622	0
+11	mean corpuscular hemoglobin concentration	Hemoglobinopathies and hemolytic anemias	0.45916557	0
+338	red blood cell density	Hemoglobinopathies and hemolytic anemias	0.33100158	0
+266	basophil percentage of leukocytes	Hemoglobinopathies and hemolytic anemias	0.31173828	0
+343	bilirubin measurement	Hemoglobinopathies and hemolytic anemias	0.23464341	0
+66	hypertension	Hypertensive heart disease	0.74099976	1
+41	diastolic blood pressure	Hypertensive heart disease	0.45789048	0
+65	systolic blood pressure	Hypertensive heart disease	0.4435315	0
+276	pulse pressure measurement	Hypertensive heart disease	0.33227462	0
+35	epilepsy	Idiopathic epilepsy	0.85132754	1
+340	partial epilepsy	Idiopathic epilepsy	0.7591887	0
+238	generalised epilepsy	Idiopathic epilepsy	0.737628	0
+72	crohn's disease	Inflammatory bowel disease	0.7404101	1
+53	ulcerative colitis	Inflammatory bowel disease	0.7309034	1
+38	irritable bowel syndrome	Inflammatory bowel disease	0.5844654	0
+75	inguinal hernia	Inguinal, femoral, and abdominal hernia	0.82774687	0
+316	Hernia	Inguinal, femoral, and abdominal hernia	0.6834616	1
+112	Umbilical hernia	Inguinal, femoral, and abdominal hernia	0.6005057	0
+325	diaphragmatic hernia	Inguinal, femoral, and abdominal hernia	0.5735198	0
+272	bone fracture	Injuries	0.5088928	0
+79	frozen shoulder	Injuries	0.3775978	0
+77	interstitial lung disease	Interstitial lung disease and pulmonary sarcoidosis	0.7731147	1
+105	sarcoidosis	Interstitial lung disease and pulmonary sarcoidosis	0.7092643	0
+1	neutrophil count	Intestinal nematode infections	0.3508597	0
+187	triglycerides in very small VLDL measurement	Ischemic stroke	0.27078214	0
+300	phosphatidylcholine measurement	Ischemic stroke	0.26761562	0
+204	triglycerides in very large VLDL measurement	Ischemic stroke	0.25724623	0
+113	kidney cancer	Kidney cancer	0.9999999	1
+46	renal cell carcinoma	Kidney cancer	0.85235125	0
+81	total lipids in large HDL	Lip and oral cavity cancer	0.30135792	0
+196	total lipids in small HDL measurement	Lip and oral cavity cancer	0.28633314	0
+176	total lipids in medium HDL measurement	Lip and oral cavity cancer	0.27904588	0
+82	total lipids in small VLDL	Lip and oral cavity cancer	0.27812192	0
+199	total lipids in very large HDL measurement	Lip and oral cavity cancer	0.27287236	0
+133	total lipids in large VLDL	Lip and oral cavity cancer	0.26487362	0
+26	total lipids in medium VLDL	Lip and oral cavity cancer	0.25866875	0
+173	total lipids in very small VLDL measurement	Lip and oral cavity cancer	0.23446462	0
+195	total lipids in very large VLDL measurement	Lip and oral cavity cancer	0.22567129	0
+355	liver neoplasm	Liver cancer	0.7568435	1
+31	back pain	Low back pain	0.85291827	0
+95	chronic pain	Low back pain	0.5071186	0
+248	spinal stenosis	Low back pain	0.46917495	0
+147	lumbar disc degeneration	Low back pain	0.41346	0
+127	peripheral vascular disease	Lower extremity peripheral arterial disease	0.7884406	0
+264	phospholipids in very small VLDL measurement	Lower extremity peripheral arterial disease	0.23993364	0
+239	major depressive disorder	Major depressive disorder	1	1
+84	malaria	Malaria	1	1
+294	heel bone mineral density	Malignant neoplasm of bone and articular cartilage	0.34845042	0
+33	melanoma	Malignant skin melanoma	0.82114017	1
+61	actinic keratosis	Malignant skin melanoma	0.43608403	0
+363	susceptibility to mumps measurement	Maternal hypertensive disorders	0.2856712	0
+360	susceptibility to measles measurement	Measles	0.67606187	0
+36	meningitis	Meningitis	1.0000001	1
+8	bacterial meningitis	Meningitis	0.93024445	0
+372	stenosing tenosynovitis	Meningitis	0.44694227	0
+247	migraine disorder	Migraine	0.90863645	1
+131	tinnitus	Migraine	0.4352038	0
+39	Vertigo	Migraine	0.42361367	0
+104	multiple myeloma	Multiple myeloma	1	1
+16	multiple sclerosis	Multiple sclerosis	1.0000002	1
+14	spondylosis	Musculoskeletal disorders	0.48452324	0
+56	shoulder impingement syndrome	Musculoskeletal disorders	0.4835757	0
+109	ankylosing spondylitis	Musculoskeletal disorders	0.41538507	0
+333	myelodysplastic syndrome	Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms	0.7301796	1
+364	myositis	Myocarditis	0.65060735	0
+17	pain	Neck pain	0.5667814	0
+124	Bell's palsy	Neurological disorders	0.40705106	0
+190	non-Hodgkins lymphoma	Non-Hodgkin lymphoma	0.9571173	1
+140	diffuse large b-cell lymphoma	Non-Hodgkin lymphoma	0.6392312	0
+40	basal cell carcinoma	Non-melanoma skin cancer (basal-cell carcinoma)	0.8565705	1
+100	squamous cell carcinoma	Non-melanoma skin cancer (squamous-cell carcinoma)	0.69521177	1
+125	aortic stenosis	Non-rheumatic calcific aortic valve disease	0.54221237	0
+29	Mitral valve prolapse	Non-rheumatic degenerative mitral valve disease	0.6084404	1
+114	osteoarthritis	Osteoarthritis	0.9999999	1
+371	osteitis deformans	Osteoarthritis	0.553167	0
+24	osteoporosis	Osteoarthritis	0.5384152	0
+69	carpal tunnel syndrome	Osteoarthritis hand	0.51469797	0
+293	grip strength measurement	Osteoarthritis hand	0.32002938	0
+318	osteoarthritis, hip	Osteoarthritis hip	0.9341254	1
+149	BMI-adjusted waist-hip ratio	Osteoarthritis hip	0.44652545	0
+103	dilated cardiomyopathy	Other cardiomyopathy	0.7245114	1
+93	hypertrophic cardiomyopathy	Other cardiomyopathy	0.7144382	1
+224	phospholipids in IDL measurement	Other chromosomal abnormalities	0.19143763	0
+261	infectious mononucleosis	Other infectious diseases	0.49200276	0
+121	monocyte count	Other leukemia	0.27899286	0
+370	neoplasm of mature b-cells	Other neoplasms	0.5216873	0
+88	whole-brain volume	Other neurological disorders	0.3248101	0
+308	alkaline phosphatase measurement	Other pharynx cancer	0.22348268	0
+142	eosinophil count	Other sexually transmitted infections	0.3964165	0
+78	retinal detachment	Other vision loss	0.54769653	0
+22	otitis media	Otitis media	1.0000002	1
+119	otosclerosis	Otitis media	0.5443441	0
+207	ovarian carcinoma	Ovarian cancer	0.9350095	1
+289	malignant epithelial tumor of ovary	Ovarian cancer	0.78966427	1
+83	acute pancreatitis	Pancreatitis	0.9091553	1
+146	Parkinson disease	Parkinson's disease	0.97049856	1
+58	gastric ulcer	Peptic ulcer disease	0.76556146	1
+101	periodontitis	Periodontal diseases	0.8318641	1
+299	peritonsillar abscess	Pertussis	0.5471735	0
+273	preeclampsia	Premenstrual syndrome	0.6291488	0
+87	prostate cancer	Prostate cancer	1	1
+310	prostate carcinoma	Prostate cancer	0.9376619	1
+342	total blood protein measurement	Protein-energy malnutrition	0.41869974	0
+353	base metabolic rate measurement	Protein-energy malnutrition	0.33114436	0
+306	pyruvate measurement	Protein-energy malnutrition	0.2779809	0
+282	aspartate aminotransferase measurement	Protein-energy malnutrition	0.27732795	0
+337	adiponectin measurement	Protein-energy malnutrition	0.27636874	0
+335	alanine measurement	Protein-energy malnutrition	0.261598	0
+315	phenylalanine measurement	Protein-energy malnutrition	0.25096467	0
+324	phosphate measurement	Protein-energy malnutrition	0.25004044	0
+37	psoriasis	Psoriasis	1.0000001	1
+74	psoriasis vulgaris	Psoriasis	0.85246515	1
+123	psoriatic arthritis	Psoriasis	0.8438895	0
+4	pulmonary embolism	Pulmonary Arterial Hypertension	0.5168994	0
+257	phospholipids in very large VLDL measurement	Pulmonary Arterial Hypertension	0.22900912	0
+317	forced expiratory volume	Pulmonary aspiration and foreign body in airway	0.41933307	0
+341	retinopathy	Retinoblastoma	0.6886102	0
+319	proliferative diabetic retinopathy	Retinoblastoma	0.52700496	0
+129	rhegmatogenous retinal detachment	Retinoblastoma	0.48471618	0
+102	reticulocyte count	Retinoblastoma	0.30124933	0
+120	rheumatic fever	Rheumatic heart disease	0.72684264	0
+76	rheumatoid arthritis	Rheumatoid arthritis	1.0000002	1
+145	juvenile idiopathic arthritis	Rheumatoid arthritis	0.51333225	0
+138	systemic lupus erythematosus	Rheumatoid arthritis	0.48589462	0
+143	Sjogren syndrome	Rheumatoid arthritis	0.4452248	0
+45	schizophrenia	Schizophrenia	1.0000002	1
+91	seborrheic dermatitis	Seborrhoeic dermatitis	0.9581017	1
+132	sick sinus syndrome	Sickle cell disorders	0.5062082	0
+49	red cell distribution width	Sickle cell trait	0.23491845	0
+62	stroke	Stroke	1	1
+351	cerebral atherosclerosis	Stroke	0.49597126	0
+47	basophil count	Syphilis	0.31871697	0
+328	susceptibility to plantar warts measurement	Testicular cancer	0.23926462	0
+43	thyroid cancer	Thyroid cancer	1.0000001	1
+57	hyperthyroidism	Thyroid cancer	0.5639043	0
+6	hypothyroidism	Thyroid cancer	0.5552966	0
+19	autoimmune thyroid disease	Thyroid cancer	0.5544547	0
+89	platelet count	Total burden related to hepatitis B	0.29858807	0
+151	platelet component distribution width	Total burden related to hepatitis B	0.21862048	0
+251	FEV/FVC ratio	Total burden related to hepatitis C	0.26127392	0
+350	fatty acid measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.38385737	0
+212	triglycerides to total lipids in large LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.37916148	0
+200	triglycerides to total lipids in small LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3742563	0
+177	triglycerides to total lipids in medium LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.37097722	0
+194	free cholesterol to total lipids in medium LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.35451764	0
+185	triglycerides to total lipids in very large HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3531953	0
+314	polyunsaturated fatty acid measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.35109806	0
+206	free cholesterol to total lipids in large LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.35002154	0
+192	triglycerides to total lipids in large HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3459354	0
+189	triglycerides to total lipids in IDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.34316587	0
+188	triglycerides to total lipids in medium HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.34266892	0
+231	cholesterol to total lipids in medium LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3416845	0
+201	free cholesterol to total lipids in small LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.34111905	0
+203	triglycerides to total lipids in small HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.34086394	0
+18	body fat percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.33766818	0
+236	cholesterol to total lipids in large LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.33557752	0
+285	saturated fatty acids measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.33348137	0
+309	omega-6 polyunsaturated fatty acid measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.33037037	0
+305	triglyceride measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32798404	0
+213	triglycerides in large LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32444143	0
+334	omega-3 polyunsaturated fatty acid measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32338697	0
+180	triglycerides to total lipids in very large VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32271087	0
+168	triglycerides to total lipids in medium VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32247674	0
+228	total lipids in medium LDL	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32228994	0
+233	cholesterol to total lipids in small LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32224303	0
+179	triglycerides to total lipids in very small VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32043087	0
+171	triglycerides to total lipids in large VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.32029954	0
+193	triglycerides in small LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.31987998	0
+174	triglycerides in medium LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.31716114	0
+218	free cholesterol to total lipids in very large HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.31587744	0
+184	triglycerides to total lipids in small VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.31495303	0
+202	free cholesterol to total lipids in IDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3149171	0
+181	free cholesterol to total lipids in medium HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3136223	0
+182	free cholesterol to total lipids in large HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30849403	0
+126	total lipids in large LDL	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30843088	0
+167	free cholesterol to total lipids in medium VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3076745	0
+222	cholesterol to total lipids in very large HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3074898	0
+178	free cholesterol to total lipids in very large VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3070888	0
+243	saturated fatty acids to total fatty acids percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3063552	0
+216	free cholesterol in medium LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30383292	0
+172	free cholesterol to total lipids in large VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30379385	0
+186	triglycerides in IDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30369958	0
+220	cholesterol to total lipids in medium HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30276644	0
+241	free cholesterol in large LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30195346	0
+12	total lipids in small LDL	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30191767	0
+175	free cholesterol to total lipids in very small VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.3017784	0
+330	omega-6:omega-3 polyunsaturated fatty acid ratio	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30156797	0
+205	free cholesterol to total lipids in small HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30106026	0
+208	cholesterol to total lipids in IDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.30085266	0
+244	polyunsaturated fatty acids to total fatty acids percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.29904318	0
+209	free cholesterol in IDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.29793727	0
+221	cholesterol to total lipids in large HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.29703867	0
+191	free cholesterol to total lipids in small VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.29669178	0
+183	cholesterol to total lipids in medium VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.29136842	0
+246	triglycerides in HDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.2912469	0
+153	cholesteryl esters to total lipids in small LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.2910055	0
+219	cholesterol to total lipids in small HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.28720257	0
+232	free cholesterol in small LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.28692144	0
+154	cholesteryl esters to total lipids in large LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.28628623	0
+152	cholesteryl esters to total lipids in medium LDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.28497133	0
+210	cholesterol to total lipids in large VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.28472823	0
+237	docosahexaenoic acid to total fatty acids percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.2815454	0
+211	cholesterol to total lipids in small VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.27582455	0
+288	esterified cholesterol measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.26613632	0
+240	polyunsaturated fatty acids to monounsaturated fatty acids ratio	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.26581416	0
+358	intermediate density lipoprotein measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.2631033	0
+161	cholesteryl esters to total lipids in very large HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.25114456	0
+163	cholesteryl esters to total lipids in IDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.24934155	0
+159	cholesteryl esters to total lipids in medium HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.24251337	0
+155	cholesteryl esters to total lipids in small HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.24100222	0
+157	cholesteryl esters to total lipids in large HDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.24045852	0
+242	phospholipids in large LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.2268157	0
+215	phospholipids in medium LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.22373825	0
+230	phospholipids in small LDL measurement	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.21802287	0
+160	cholesteryl esters to total lipids in very small VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.2119966	0
+156	cholesteryl esters to total lipids in medium VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.20700228	0
+158	cholesteryl esters to total lipids in very large VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.20649177	0
+164	cholesteryl esters to total lipids in small VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.20188312	0
+162	cholesteryl esters to total lipids in large VLDL percentage	Total burden related to Non-alcoholic fatty liver disease (NAFLD)	0.19913344	0
+13	total lipids in IDL	Total cancers	0.29491886	0
+30	lung cancer	Tracheal, bronchus, and lung cancer	0.7367796	1
+42	lung adenocarcinoma	Tracheal, bronchus, and lung cancer	0.6475866	1
+106	tuberculosis	Tuberculosis	1	1
+3	pulmonary tuberculosis	Tuberculosis	0.8834524	1
+344	tyrosine measurement	Typhoid fever	0.37774044	0
+346	upper respiratory tract disorder	Upper respiratory infections	0.7583907	1
+99	pneumonia	Upper respiratory infections	0.6181015	0
+51	erectile dysfunction	Urinary diseases and male infertility	0.42619333	0
+368	nephrolithiasis	Urinary tract infections and interstitial nephritis	0.6041853	1
+286	urinary microalbumin measurement	Urinary tract infections and interstitial nephritis	0.38802475	0
+356	urate measurement	Urogenital congenital anomalies	0.41526926	0
+59	urolithiasis	Urolithiasis	1	1
+63	urticaria	Urticaria	1	1
+256	Nasal cavity polyp	Urticaria	0.348001	0
+10	Varicose veins	Varicella and herpes zoster	0.42445928	0
+115	chickenpox	Varicella and herpes zoster	0.36910772	1
+366	susceptibility to shingles measurement	Varicella and herpes zoster	0.31739354	0
+110	diverticular disease	Vascular intestinal disorders	0.48085696	0
+267	vitamin D deficiency	Vitamin A deficiency	0.67074025	0
+313	vitamin D measurement	Vitamin A deficiency	0.4343399	0
+304	apolipoprotein a 1 measurement	Vitamin A deficiency	0.30611962	0
+336	calcium measurement	Vitamin A deficiency	0.23568065	0

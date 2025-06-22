@@ -1,0 +1,374 @@
+	EFO	UKB	Cosine	Keep
+61	actinic keratosis	Actinic keratosis	1	1
+79	frozen shoulder	Adhesive capsulitis of shoulder	0.591907	1
+335	alanine measurement	Alanine aminotransferase (U/L)	0.56831306	0
+308	alkaline phosphatase measurement	Alkaline phosphatase (U/L)	0.67167157	1
+148	Alzheimer disease	Alzheimers disease	0.9615743	1
+34	anxiety disorder	Anxiety disorders	0.9681343	1
+125	aortic stenosis	Aortic aneurysm	0.70959264	0
+270	apolipoprotein B measurement	Apoliprotein B (g/L)	0.58380413	1
+4	pulmonary embolism	Arterial embolism and thrombosis	0.74311864	1
+282	aspartate aminotransferase measurement	Aspartate aminotransferase (U/L)	0.70797956	1
+354	Chronic Obstructive Asthma	Asthma (mode)	0.67201847	0
+134	asthma	Asthma (mode)	0.80269754	1
+322	astigmatism	Astigmatism angle (right)	0.78867877	0
+319	proliferative diabetic retinopathy	Background diabetic retinopathy	0.8973601	0
+341	retinopathy	Background diabetic retinopathy	0.7218906	0
+326	diabetic retinopathy	Background diabetic retinopathy	0.95281845	1
+99	pneumonia	Bacterial pneumonia (organism specified)	0.83208925	1
+306	pyruvate measurement	Basal metabolic rate	0.47643876	0
+353	base metabolic rate measurement	Basal metabolic rate	0.7031008	1
+47	basophil count	Basophill count	0.6499239	1
+266	basophil percentage of leukocytes	Basophill percentage	0.6607972	1
+124	Bell's palsy	Bells palsy	0.875361	1
+15	bipolar disorder	Bipolar disorder status	0.82931304	1
+237	docosahexaenoic acid to total fatty acids percentage	Body fat percentage	0.48549592	0
+18	body fat percentage	Body fat percentage	1.0000002	1
+311	body mass index	Body mass index (BMI)	0.864352	1
+307	c-reactive protein measurement	C-reactive protein (mg/L)	0.7100663	1
+336	calcium measurement	Calcium	0.76406074	0
+40	basal cell carcinoma	Cancer code, self-reported: basal cell carcinoma	0.84457684	1
+67	cervical cancer	Cancer code, self-reported: cervical cancer	0.7778896	1
+80	chronic lymphocytic leukemia	Cancer code, self-reported: chronic lymphocytic	0.70204544	1
+113	kidney cancer	Cancer code, self-reported: kidney/renal cell cancer	0.7827407	1
+60	colorectal cancer	Cancer code, self-reported: large bowel cancer/colorectal cancer	0.70833254	1
+190	non-Hodgkins lymphoma	Cancer code, self-reported: non-hodgkins lymphoma	0.90858537	1
+100	squamous cell carcinoma	Cancer code, self-reported: squamous cell carcinoma	0.79827696	1
+103	dilated cardiomyopathy	Cardiomyopathy	0.7842971	1
+93	hypertrophic cardiomyopathy	Cardiomyopathy	0.78272164	1
+69	carpal tunnel syndrome	Carpal tunnel syndrome	0.99999976	1
+288	esterified cholesterol measurement	Cholesterol (mmol/L)	0.66232157	0
+365	remnant cholesterol measurement	Cholesterol (mmol/L)	0.6214416	0
+352	choline measurement	Cholesterol (mmol/L)	0.40206856	0
+287	total cholesterol measurement	Cholesterol (mmol/L)	0.65649617	1
+90	gastritis	Chronic gastritis	0.9028702	1
+83	acute pancreatitis	Chronic pancreatitis	0.8681617	1
+139	celiac disease	Coeliac disease	0.77866626	1
+280	comparative body size at age 10, self-reported	Comparative body size at age 10	0.9423506	1
+369	congenital left-sided heart lesions	Congenital malformations of heart and great arteries	0.66840523	1
+290	corneal resistance factor	Corneal resistance factor (right)	0.9691502	1
+122	coronary artery disease	Coronary atherosclerosis	0.8160432	1
+318	osteoarthritis, hip	Coxarthrosis [arthrosis of hip](FG)	0.6910479	1
+141	urinary albumin to creatinine ratio	Creatinine (enzymatic) in urine	0.6428688	0
+72	crohn's disease	Crohns disease of large intestine	0.8291151	1
+327	cystatin c measurement	Cystatin C (mg/L)	0.6975761	1
+64	dementia	Dementia	1	1
+239	major depressive disorder	Depression	0.70034754	1
+339	diabetes mellitus	Diabetes diagnosed by doctor	0.73641706	1
+328	susceptibility to plantar warts measurement	Diagnoses - main ICD10: B07 Viral warts	0.45787922	0
+333	myelodysplastic syndrome	Diagnoses - main ICD10: D46 Myelodysplastic syndromes	0.7199153	1
+96	severe aplastic anemia	Diagnoses - main ICD10: D61 Other aplastic anaemias	0.64456016	1
+340	partial epilepsy	Diagnoses - main ICD10: G40 Epilepsy	0.6426507	0
+238	generalised epilepsy	Diagnoses - main ICD10: G40 Epilepsy	0.60439324	0
+35	epilepsy	Diagnoses - main ICD10: G40 Epilepsy	0.6468364	1
+247	migraine disorder	Diagnoses - main ICD10: G43 Migraine	0.69770986	1
+299	peritonsillar abscess	Diagnoses - main ICD10: J36 Peritonsillar abscess	0.8129946	1
+346	upper respiratory tract disorder	Diagnoses - main ICD10: J39 Other diseases of upper respiratory tract	0.71604896	1
+135	dental caries	Diagnoses - main ICD10: K02 Dental caries	0.72889495	1
+101	periodontitis	Diagnoses - main ICD10: K05 Gingivitis and periodontal diseases	0.65393794	1
+5	gastroesophageal reflux disease	Diagnoses - main ICD10: K21 Gastro-oesophageal reflux disease	0.7349647	1
+325	diaphragmatic hernia	Diagnoses - main ICD10: K44 Diaphragmatic hernia	0.7573094	1
+259	cirrhosis of liver	Diagnoses - main ICD10: K74 Fibrosis and cirrhosis of liver	0.7893623	1
+71	cholelithiasis	Diagnoses - main ICD10: K80 Cholelithiasis	0.7577373	1
+271	lichen planus	Diagnoses - main ICD10: L43 Lichen planus	0.8122661	1
+91	seborrheic dermatitis	Diagnoses - main ICD10: L82 Seborrhoeic keratosis	0.6197839	0
+28	chronic kidney disease	Diagnoses - main ICD10: N18 Chronic renal failure	0.6251986	1
+331	dysplasia of cervix	Diagnoses - main ICD10: N87 Dysplasia of cervix uteri	0.7711178	1
+107	dysphagia	Diagnoses - main ICD10: R13 Dysphagia	0.6440785	1
+41	diastolic blood pressure	Diastolic blood pressure, manual reading	0.78307045	1
+278	alcoholic liver cirrhosis	Diseases of liver	0.6801506	0
+39	Vertigo	Disorders of vestibular function (Vertigo)	0.7737798	1
+23	chronic obstructive pulmonary disease	Doctor diagnosed COPD (chronic obstructive pulmonary disease)	0.8340391	1
+117	emphysema	Doctor diagnosed emphysema	0.85811144	1
+68	allergic rhinitis	Doctor diagnosed hayfever or allergic rhinitis	0.765087	1
+105	sarcoidosis	Doctor diagnosed sarcoidosis	0.91137755	1
+106	tuberculosis	Doctor diagnosed tuberculosis	0.77155566	1
+3	pulmonary tuberculosis	Doctor diagnosed tuberculosis	0.7239316	1
+9	endometriosis	Endometriosis of uterus	0.9087784	1
+165	clostridium difficile infection	Enterocolitis due to Clostridium difficile	0.7966383	1
+142	eosinophil count	Eosinophill count	0.97464466	1
+269	eosinophil percentage of leukocytes	Eosinophill percentage	0.7731279	1
+169	cataract	Eye problems/disorders: Cataract	0.73753107	1
+317	forced expiratory volume	Forced expiratory volume in 1-second (FEV1)	0.7819897	1
+251	FEV/FVC ratio	Forced vital capacity (FVC)	0.49425966	0
+349	vital capacity	Forced vital capacity (FVC), Best measure	0.74722624	1
+272	bone fracture	Fractured bone site(s): Other bones	0.78727937	1
+283	serum gamma-glutamyl transferase measurement	Gamma glutamyltransferase (U/L)	0.5860497	1
+58	gastric ulcer	Gastroduodenal ulcer	0.89052486	1
+150	gestational diabetes	Gestational diabetes only	0.9417837	1
+345	nephrotic syndrome	Glomerulonephritis	0.6091671	0
+348	glucose measurement	Glucose (mmol/L)	0.66974497	1
+343	bilirubin measurement	Glycated haemoglobin (mmol/mol)	0.46576917	0
+329	glycine measurement	Glycated haemoglobin (mmol/mol)	0.46481007	0
+359	HbA1c measurement	Glycated haemoglobin (mmol/mol)	0.43664157	1
+137	gout	Gout, unspecified	0.8685578	1
+292	hemoglobin measurement	Haemoglobin concentration	0.758352	1
+73	androgenetic alopecia	Hair/balding pattern: Pattern 3	0.5178321	0
+94	alopecia areata	Hair/balding pattern: Pattern 3	0.508794	0
+293	grip strength measurement	Hand grip strength (right)	0.8245356	1
+258	cholesterol in medium HDL measurement	HDL cholesterol (mmol/L)	0.77196676	0
+198	free cholesterol in medium HDL measurement	HDL cholesterol (mmol/L)	0.7591208	0
+275	cholesterol in large HDL measurement	HDL cholesterol (mmol/L)	0.7500824	0
+274	cholesterol in small HDL measurement	HDL cholesterol (mmol/L)	0.74441695	0
+226	free cholesterol in large HDL measurement	HDL cholesterol (mmol/L)	0.74344194	0
+217	free cholesterol in small HDL measurement	HDL cholesterol (mmol/L)	0.73965573	0
+268	cholesterol in very large HDL measurement	HDL cholesterol (mmol/L)	0.7384033	0
+234	free cholesterol in very large HDL measurement	HDL cholesterol (mmol/L)	0.7325719	0
+220	cholesterol to total lipids in medium HDL percentage	HDL cholesterol (mmol/L)	0.7295794	0
+181	free cholesterol to total lipids in medium HDL percentage	HDL cholesterol (mmol/L)	0.7291193	0
+221	cholesterol to total lipids in large HDL percentage	HDL cholesterol (mmol/L)	0.7142705	0
+182	free cholesterol to total lipids in large HDL percentage	HDL cholesterol (mmol/L)	0.71136177	0
+298	HDL cholesterol change measurement	HDL cholesterol (mmol/L)	0.7113377	0
+219	cholesterol to total lipids in small HDL percentage	HDL cholesterol (mmol/L)	0.7112472	0
+222	cholesterol to total lipids in very large HDL percentage	HDL cholesterol (mmol/L)	0.70852923	0
+205	free cholesterol to total lipids in small HDL percentage	HDL cholesterol (mmol/L)	0.7062348	0
+218	free cholesterol to total lipids in very large HDL percentage	HDL cholesterol (mmol/L)	0.7011174	0
+255	cholesterol in IDL measurement	HDL cholesterol (mmol/L)	0.6543634	0
+252	cholesterol in medium VLDL measurement	HDL cholesterol (mmol/L)	0.65357924	0
+159	cholesteryl esters to total lipids in medium HDL percentage	HDL cholesterol (mmol/L)	0.6530859	0
+155	cholesteryl esters to total lipids in small HDL percentage	HDL cholesterol (mmol/L)	0.6456265	0
+157	cholesteryl esters to total lipids in large HDL percentage	HDL cholesterol (mmol/L)	0.6444348	0
+161	cholesteryl esters to total lipids in very large HDL percentage	HDL cholesterol (mmol/L)	0.6441828	0
+176	total lipids in medium HDL measurement	HDL cholesterol (mmol/L)	0.6439157	0
+197	free cholesterol in medium VLDL measurement	HDL cholesterol (mmol/L)	0.64342487	0
+249	free cholesterol in VLDL measurement	HDL cholesterol (mmol/L)	0.64183176	0
+183	cholesterol to total lipids in medium VLDL percentage	HDL cholesterol (mmol/L)	0.63543105	0
+167	free cholesterol to total lipids in medium VLDL percentage	HDL cholesterol (mmol/L)	0.633537	0
+227	free cholesterol in large VLDL measurement	HDL cholesterol (mmol/L)	0.63098204	0
+214	free cholesterol in small VLDL measurement	HDL cholesterol (mmol/L)	0.63005996	0
+260	cholesterol in large VLDL measurement	HDL cholesterol (mmol/L)	0.62959903	0
+209	free cholesterol in IDL measurement	HDL cholesterol (mmol/L)	0.62704134	0
+196	total lipids in small HDL measurement	HDL cholesterol (mmol/L)	0.62659204	0
+262	cholesterol in very large VLDL measurement	HDL cholesterol (mmol/L)	0.6248808	0
+263	cholesterol in small VLDL measurement	HDL cholesterol (mmol/L)	0.6244013	0
+235	free cholesterol in very large VLDL measurement	HDL cholesterol (mmol/L)	0.6237385	0
+223	free cholesterol in very small VLDL measurement	HDL cholesterol (mmol/L)	0.6168462	0
+81	total lipids in large HDL	HDL cholesterol (mmol/L)	0.61643094	0
+199	total lipids in very large HDL measurement	HDL cholesterol (mmol/L)	0.61430913	0
+211	cholesterol to total lipids in small VLDL percentage	HDL cholesterol (mmol/L)	0.6130202	0
+172	free cholesterol to total lipids in large VLDL percentage	HDL cholesterol (mmol/L)	0.6128861	0
+210	cholesterol to total lipids in large VLDL percentage	HDL cholesterol (mmol/L)	0.6124269	0
+191	free cholesterol to total lipids in small VLDL percentage	HDL cholesterol (mmol/L)	0.61224484	0
+216	free cholesterol in medium LDL measurement	HDL cholesterol (mmol/L)	0.61214423	0
+225	cholesterol in very small VLDL measurement	HDL cholesterol (mmol/L)	0.6117743	0
+265	phospholipids in HDL measurement	HDL cholesterol (mmol/L)	0.6104071	0
+194	free cholesterol to total lipids in medium LDL percentage	HDL cholesterol (mmol/L)	0.6095457	0
+231	cholesterol to total lipids in medium LDL percentage	HDL cholesterol (mmol/L)	0.607947	0
+178	free cholesterol to total lipids in very large VLDL percentage	HDL cholesterol (mmol/L)	0.6039969	0
+175	free cholesterol to total lipids in very small VLDL percentage	HDL cholesterol (mmol/L)	0.5974579	0
+208	cholesterol to total lipids in IDL percentage	HDL cholesterol (mmol/L)	0.5954343	0
+232	free cholesterol in small LDL measurement	HDL cholesterol (mmol/L)	0.5882088	0
+241	free cholesterol in large LDL measurement	HDL cholesterol (mmol/L)	0.5831417	0
+201	free cholesterol to total lipids in small LDL percentage	HDL cholesterol (mmol/L)	0.5823228	0
+206	free cholesterol to total lipids in large LDL percentage	HDL cholesterol (mmol/L)	0.5803182	0
+202	free cholesterol to total lipids in IDL percentage	HDL cholesterol (mmol/L)	0.5784458	0
+233	cholesterol to total lipids in small LDL percentage	HDL cholesterol (mmol/L)	0.57786536	0
+236	cholesterol to total lipids in large LDL percentage	HDL cholesterol (mmol/L)	0.57593316	0
+152	cholesteryl esters to total lipids in medium LDL percentage	HDL cholesterol (mmol/L)	0.5636893	0
+156	cholesteryl esters to total lipids in medium VLDL percentage	HDL cholesterol (mmol/L)	0.55555975	0
+153	cholesteryl esters to total lipids in small LDL percentage	HDL cholesterol (mmol/L)	0.55501187	0
+154	cholesteryl esters to total lipids in large LDL percentage	HDL cholesterol (mmol/L)	0.5497257	0
+164	cholesteryl esters to total lipids in small VLDL percentage	HDL cholesterol (mmol/L)	0.54692894	0
+162	cholesteryl esters to total lipids in large VLDL percentage	HDL cholesterol (mmol/L)	0.54273665	0
+160	cholesteryl esters to total lipids in very small VLDL percentage	HDL cholesterol (mmol/L)	0.54104245	0
+158	cholesteryl esters to total lipids in very large VLDL percentage	HDL cholesterol (mmol/L)	0.5407512	0
+163	cholesteryl esters to total lipids in IDL percentage	HDL cholesterol (mmol/L)	0.5346168	0
+224	phospholipids in IDL measurement	HDL cholesterol (mmol/L)	0.46150923	0
+257	phospholipids in very large VLDL measurement	HDL cholesterol (mmol/L)	0.42936385	0
+253	free cholesterol in HDL measurement	HDL cholesterol (mmol/L)	0.7495975	1
+86	Headache	Headaches for 3+ months	0.6797232	1
+55	heart failure	Heart failure	1	1
+294	heel bone mineral density	Heel bone mineral density (BMD) (right)	0.89100826	1
+75	inguinal hernia	Hernia	0.81337637	0
+316	Hernia	Hernia	1.0000004	1
+149	BMI-adjusted waist-hip ratio	Hip circumference	0.61357975	0
+66	hypertension	Hypertension	1	1
+6	hypothyroidism	Hypothyroidism,other/unspecified	0.9519588	1
+367	IgF-1 measurement	IGF-1 (nmol/L)	0.75105226	1
+56	shoulder impingement syndrome	Impingement syndrome of shoulder	0.9818244	1
+357	lipoprotein measurement	Lipoprotein A (nmol/L)	0.6730715	0
+358	intermediate density lipoprotein measurement	Lipoprotein A (nmol/L)	0.6325293	0
+304	apolipoprotein a 1 measurement	Lipoprotein A (nmol/L)	0.55444634	0
+279	low density lipoprotein cholesterol measurement	Lipoprotein A (nmol/L)	0.5525225	0
+12	total lipids in small LDL	Lipoprotein A (nmol/L)	0.5493873	0
+228	total lipids in medium LDL	Lipoprotein A (nmol/L)	0.547921	0
+126	total lipids in large LDL	Lipoprotein A (nmol/L)	0.52039534	0
+230	phospholipids in small LDL measurement	Lipoprotein A (nmol/L)	0.51371	0
+215	phospholipids in medium LDL measurement	Lipoprotein A (nmol/L)	0.5065025	0
+242	phospholipids in large LDL measurement	Lipoprotein A (nmol/L)	0.5016976	0
+264	phospholipids in very small VLDL measurement	Lipoprotein A (nmol/L)	0.4311719	0
+323	lipoprotein A measurement	Lipoprotein A (nmol/L)	0.7212802	1
+31	back pain	Low back pain	0.85291827	1
+30	lung cancer	Lung cancer and mesothelioma	0.72992253	1
+92	lymphocyte count	Lymphocyte count	1	1
+291	lymphocyte percentage of leukocytes	Lymphocyte percentage	0.87262124	1
+321	lymphoid leukemia	Lymphoid leukaemia	0.9083148	1
+140	diffuse large b-cell lymphoma	Lymphomas	0.68955326	1
+33	melanoma	Malignant melanoma of skin	0.7949746	1
+284	urinary bladder carcinoma	Malignant neoplasm of bladder	0.80211747	1
+32	breast cancer	Malignant neoplasm of breast	0.7150852	1
+42	lung adenocarcinoma	Malignant neoplasm of bronchus and lung	0.70391846	1
+46	renal cell carcinoma	Malignant neoplasm of kidney, except renal pelvis	0.7719948	1
+355	liver neoplasm	Malignant neoplasm of liver and intrahepatic bile ducts	0.8132962	1
+370	neoplasm of mature b-cells	Malignant neoplasm of other connective and soft tissue	0.47693008	0
+289	malignant epithelial tumor of ovary	Malignant neoplasm of ovary	0.8746234	0
+207	ovarian carcinoma	Malignant neoplasm of ovary	0.8119302	1
+310	prostate carcinoma	Malignant neoplasm of prostate	0.81262004	1
+87	prostate cancer	Malignant neoplasm of prostate	0.76944715	1
+295	rectum cancer	Malignant neoplasm of rectum	0.8290677	1
+43	thyroid cancer	Malignant neoplasm of thyroid gland	0.772994	1
+108	mean corpuscular hemoglobin	Mean corpuscular haemoglobin	0.94663805	1
+11	mean corpuscular hemoglobin concentration	Mean corpuscular haemoglobin concentration	0.9555087	1
+88	whole-brain volume	Mean corpuscular volume	0.5052666	0
+21	mean reticulocyte volume	Mean reticulocyte volume	1.0000002	1
+8	bacterial meningitis	Meningitis	0.93024445	0
+36	meningitis	Meningitis	1.0000001	1
+2	autism spectrum disorder	Mental health problems ever diagnosed by a professional: Autism, Asperger's or autistic spectrum disorder	0.6530877	1
+25	obsessive-compulsive disorder	Mental health problems ever diagnosed by a professional: Obsessive compulsive disorder (OCD)	0.75312877	1
+286	urinary microalbumin measurement	Microalbumin in urine	0.7752875	1
+121	monocyte count	Monocyte count	1	1
+296	monocyte percentage of leukocytes	Monocyte percentage	0.7818872	1
+104	multiple myeloma	Multiple myeloma and malignant plasma cell neoplasms	0.8230883	1
+332	myeloproliferative disorder	Myeloid leukaemia	0.6984209	0
+1	neutrophil count	Neutrophill count	0.64570665	1
+281	neutrophil percentage of leukocytes	Neutrophill percentage	0.6680099	1
+312	acne	Non-cancer illness code, self-reported: acne/acne vulgaris	0.6475929	1
+109	ankylosing spondylitis	Non-cancer illness code, self-reported: ankylosing spondylitis	0.79563963	1
+118	atrial fibrillation	Non-cancer illness code, self-reported: atrial fibrillation	0.7042247	1
+48	benign prostatic hyperplasia	Non-cancer illness code, self-reported: bph / benign prostatic hypertrophy	0.7226715	1
+115	chickenpox	Non-cancer illness code, self-reported: chickenpox	0.60650724	1
+70	cholecystitis	Non-cancer illness code, self-reported: cholecystitis	0.73481923	1
+302	gallstones	Non-cancer illness code, self-reported: cholelithiasis/gall stones	0.7326169	1
+147	lumbar disc degeneration	Non-cancer illness code, self-reported: disc degeneration	0.6202456	1
+110	diverticular disease	Non-cancer illness code, self-reported: diverticular disease/diverticulitis	0.73517644	1
+20	duodenal ulcer	Non-cancer illness code, self-reported: duodenal ulcer	0.81013	1
+303	atopic eczema	Non-cancer illness code, self-reported: eczema/dermatitis	0.58071923	0
+347	Eczematoid dermatitis	Non-cancer illness code, self-reported: eczema/dermatitis	0.66021633	1
+51	erectile dysfunction	Non-cancer illness code, self-reported: erectile dysfunction / impotence	0.7159188	1
+229	cardiac arrhythmia	Non-cancer illness code, self-reported: heart arrhythmia	0.66759145	1
+57	hyperthyroidism	Non-cancer illness code, self-reported: hyperthyroidism/thyrotoxicosis	0.7022786	1
+261	infectious mononucleosis	Non-cancer illness code, self-reported: infectious mononucleosis / glandular fever / epstein barr virus (ebv)	0.6380901	1
+77	interstitial lung disease	Non-cancer illness code, self-reported: interstitial lung disease	0.7802619	1
+38	irritable bowel syndrome	Non-cancer illness code, self-reported: irritable bowel syndrome	0.7568795	1
+368	nephrolithiasis	Non-cancer illness code, self-reported: kidney stone/ureter stone/bladder stone	0.56597996	1
+59	urolithiasis	Non-cancer illness code, self-reported: kidney stone/ureter stone/bladder stone	0.65402067	1
+84	malaria	Non-cancer illness code, self-reported: malaria	0.693395	1
+29	Mitral valve prolapse	Non-cancer illness code, self-reported: mitral regurgitation / incompetence	0.5153252	1
+16	multiple sclerosis	Non-cancer illness code, self-reported: multiple sclerosis	0.72931135	1
+363	susceptibility to mumps measurement	Non-cancer illness code, self-reported: mumps / epidemic parotitis	0.56473124	0
+364	myositis	Non-cancer illness code, self-reported: myositis/myopathy	0.71470934	1
+256	Nasal cavity polyp	Non-cancer illness code, self-reported: nasal polyps	0.71688825	1
+132	sick sinus syndrome	Non-cancer illness code, self-reported: nasal/sinus disorder	0.63935673	1
+7	Barrett's esophagus	Non-cancer illness code, self-reported: oesophagitis/barretts oesophagus	0.70676833	1
+114	osteoarthritis	Non-cancer illness code, self-reported: osteoarthritis	0.71918845	1
+119	otosclerosis	Non-cancer illness code, self-reported: otosclerosis	0.7073418	1
+146	Parkinson disease	Non-cancer illness code, self-reported: parkinsons disease	0.66129994	0
+362	susceptibility to rubella infection measurement	Non-cancer illness code, self-reported: rubella / german measles	0.6061839	0
+360	susceptibility to measles measurement	Non-cancer illness code, self-reported: rubella / german measles	0.5741471	0
+366	susceptibility to shingles measurement	Non-cancer illness code, self-reported: shingles	0.5925001	0
+143	Sjogren syndrome	Non-cancer illness code, self-reported: sjogren's syndrome/sicca syndrome	0.695376	1
+138	systemic lupus erythematosus	Non-cancer illness code, self-reported: systemic lupus erythematosis/sle	0.675904	1
+116	goiter	Non-cancer illness code, self-reported: thyroid goitre	0.44648612	1
+112	Umbilical hernia	Non-cancer illness code, self-reported: umbilical hernia	0.7841628	1
+136	uterine prolapse	Non-cancer illness code, self-reported: vaginal prolapse/uterine prolapse	0.7647097	1
+10	Varicose veins	Non-cancer illness code, self-reported: varicose veins	0.766937	1
+301	vasculitis	Non-cancer illness code, self-reported: vasculitis	0.7138783	1
+52	vitiligo	Non-cancer illness code, self-reported: vitiligo	0.5977789	1
+320	obesity	Obesity	1	1
+145	juvenile idiopathic arthritis	Ohter specific/unspecified arthritis	0.6022824	0
+24	osteoporosis	Osteoporosis	1	1
+371	osteitis deformans	Other acquired deformities of ankle and foot	0.56654245	0
+27	glaucoma	Other and unspecified glaucoma	0.85805595	1
+98	hearing loss	Other hearing loss	0.9195982	1
+54	cardiovascular disease	Other or ill-defined heart diseases	0.7083998	0
+50	strabismus	Other strabismus	0.91605043	1
+53	ulcerative colitis	Other ulcerative colitis	0.92617685	1
+372	stenosing tenosynovitis	Other/unspecified synovitis and tenosynovitis	0.6519021	1
+22	otitis media	Otitis media, unspecified	0.943008	1
+17	pain	Pain in limb	0.6454569	0
+95	chronic pain	Pain type(s) experienced in last month: Pain all over the body	0.5864364	0
+111	panic disorder	Panic disorder	0.99999994	1
+127	peripheral vascular disease	Peripheral artery disease	0.90560055	1
+351	cerebral atherosclerosis	Peripheral atherosclerosis	0.71611553	0
+324	phosphate measurement	Phosphate (mmol/L)	0.67990875	1
+97	platelet aggregation	Platelet count	0.7574258	0
+89	platelet count	Platelet count	1	1
+297	platelet crit	Platelet crit	1	1
+151	platelet component distribution width	Platelet distribution width	0.9666358	1
+314	polyunsaturated fatty acid measurement	Polyunsaturated fat	0.77040446	0
+240	polyunsaturated fatty acids to monounsaturated fatty acids ratio	Polyunsaturated fat	0.73761714	0
+244	polyunsaturated fatty acids to total fatty acids percentage	Polyunsaturated fat	0.71114266	0
+309	omega-6 polyunsaturated fatty acid measurement	Polyunsaturated fat	0.67480654	0
+334	omega-3 polyunsaturated fatty acid measurement	Polyunsaturated fat	0.663308	0
+330	omega-6:omega-3 polyunsaturated fatty acid ratio	Polyunsaturated fat	0.6561409	0
+350	fatty acid measurement	Polyunsaturated fat	0.56172913	0
+273	preeclampsia	Pre-eclampsia or eclampsia	0.82179016	1
+0	proteinuria	Protein	0.6445507	0
+74	psoriasis vulgaris	Psoriasis	0.85246515	0
+123	psoriatic arthritis	Psoriasis	0.8438895	0
+37	psoriasis	Psoriasis	1.0000001	1
+276	pulse pressure measurement	Pulse rate	0.6496871	1
+338	red blood cell density	Red blood cell (erythrocyte) distribution width	0.7453	0
+49	red cell distribution width	Red blood cell (erythrocyte) distribution width	0.7892389	1
+102	reticulocyte count	Reticulocyte count	1	1
+129	rhegmatogenous retinal detachment	Retinal detachment with retinal break	0.7567514	0
+78	retinal detachment	Retinal detachment with retinal break	0.90301466	1
+120	rheumatic fever	Rheumatic fever incl heart disease	0.82775176	1
+76	rheumatoid arthritis	Rheumatoid arthritis	1.0000002	1
+285	saturated fatty acids measurement	Saturated fat	0.72349715	0
+243	saturated fatty acids to total fatty acids percentage	Saturated fat	0.67516065	0
+45	schizophrenia	Schizophrenia, schizotypal and delusional disorders	0.6968386	1
+250	sleep apnea	Sleep apnoea	0.6680984	1
+44	insomnia	Sleeplessness / insomnia	0.790753	1
+248	spinal stenosis	Spinal stenosis	0.99999994	1
+14	spondylosis	Spondylopathies	0.8325041	1
+62	stroke	Stroke	1	1
+65	systolic blood pressure	Systolic blood pressure, manual reading	0.7927805	1
+19	autoimmune thyroid disease	Thyrotoxicosis	0.5637676	0
+131	tinnitus	Tinnitus: Yes, now some of the time	0.864434	1
+342	total blood protein measurement	Total protein (g/L)	0.5924511	1
+337	adiponectin measurement	Treatment/medication code: adizem-xl plus m/r capsule	0.39829767	0
+361	citrate measurement	Treatment/medication code: magnesium citrate	0.42902416	0
+315	phenylalanine measurement	Treatment/medication code: phenytoin	0.41437465	0
+245	sex hormone-binding globulin measurement	Treatment/medication code: testosterone product	0.4285822	0
+344	tyrosine measurement	Treatment/medication code: tylex capsule	0.41901493	0
+300	phosphatidylcholine measurement	Treatment/medication code: ventolin 100micrograms inhaler	0.4035235	0
+186	triglycerides in IDL measurement	Triglycerides (mmol/L)	0.67899454	0
+184	triglycerides to total lipids in small VLDL percentage	Triglycerides (mmol/L)	0.67849064	0
+168	triglycerides to total lipids in medium VLDL percentage	Triglycerides (mmol/L)	0.676739	0
+246	triglycerides in HDL measurement	Triglycerides (mmol/L)	0.673406	0
+171	triglycerides to total lipids in large VLDL percentage	Triglycerides (mmol/L)	0.6696718	0
+179	triglycerides to total lipids in very small VLDL percentage	Triglycerides (mmol/L)	0.6648868	0
+180	triglycerides to total lipids in very large VLDL percentage	Triglycerides (mmol/L)	0.66384226	0
+203	triglycerides to total lipids in small HDL percentage	Triglycerides (mmol/L)	0.6611177	0
+188	triglycerides to total lipids in medium HDL percentage	Triglycerides (mmol/L)	0.6553405	0
+192	triglycerides to total lipids in large HDL percentage	Triglycerides (mmol/L)	0.65198445	0
+200	triglycerides to total lipids in small LDL percentage	Triglycerides (mmol/L)	0.65032524	0
+185	triglycerides to total lipids in very large HDL percentage	Triglycerides (mmol/L)	0.6480112	0
+177	triglycerides to total lipids in medium LDL percentage	Triglycerides (mmol/L)	0.64744	0
+187	triglycerides in very small VLDL measurement	Triglycerides (mmol/L)	0.6437007	0
+212	triglycerides to total lipids in large LDL percentage	Triglycerides (mmol/L)	0.64346415	0
+193	triglycerides in small LDL measurement	Triglycerides (mmol/L)	0.64344484	0
+189	triglycerides to total lipids in IDL percentage	Triglycerides (mmol/L)	0.642473	0
+174	triglycerides in medium LDL measurement	Triglycerides (mmol/L)	0.6383097	0
+204	triglycerides in very large VLDL measurement	Triglycerides (mmol/L)	0.6326133	0
+213	triglycerides in large LDL measurement	Triglycerides (mmol/L)	0.6263589	0
+26	total lipids in medium VLDL	Triglycerides (mmol/L)	0.5254456	0
+82	total lipids in small VLDL	Triglycerides (mmol/L)	0.50970405	0
+173	total lipids in very small VLDL measurement	Triglycerides (mmol/L)	0.49166262	0
+133	total lipids in large VLDL	Triglycerides (mmol/L)	0.4780873	0
+195	total lipids in very large VLDL measurement	Triglycerides (mmol/L)	0.47538507	0
+13	total lipids in IDL	Triglycerides (mmol/L)	0.47469902	0
+305	triglyceride measurement	Triglycerides (mmol/L)	0.68370044	1
+166	type 1 diabetes mellitus	Type 1 diabetes	0.9534395	1
+170	type 2 diabetes mellitus	Type 2 diabetes	0.9474359	1
+128	angina pectoris	Unstable angina pectoris	0.8565893	1
+356	urate measurement	Urea (mmol/L)	0.53977716	1
+63	urticaria	Urticaria	1	1
+254	hepatitis B virus infection	Viral hepatitis	0.7058695	0
+85	hepatitis	Viral hepatitis	0.84896725	1
+267	vitamin D deficiency	Vitamin D	0.8320812	0
+313	vitamin D measurement	Vitamin D	0.7763846	0
+277	body weight	Weight	0.8755511	1
+130	Myopia	Which eye(s) affected by myopia (short sight): Both eyes	0.64214385	0
+144	pathological myopia	Which eye(s) affected by myopia (short sight): Both eyes	0.604573	0
