@@ -1,8 +1,13 @@
 # user defined
 archive/
+Notebooks/Archive/
+carva/dev/
 Notebooks/development/
 run/template.sh
+run/run_configs2/
+run/run_configs3/
 Notebooks/gene2go
+.vscode/
 *.jpg
 *.svg
 

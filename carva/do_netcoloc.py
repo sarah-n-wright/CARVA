@@ -35,18 +35,19 @@ if __name__=='__main__':
     parser.add_argument('--uuid', type=str, help='UUID of network')
     parser.add_argument('--net_name', type=str, help='Name of network')
     parser.add_argument('--overlap_control', type=str, choices=['remove', 'bin'], default='remove')
+    parser.add_argument('--min-genes', type=int, default=3)
     args = parser.parse_args()
 
     common_seeds = load_seed_genes(args.trait_common, 'common', args.indir)
     rare_seeds = load_seed_genes(args.trait_rare, 'rare', args.indir)
     
     # check if there are enough seed to start with, if not exit
-    if (len(common_seeds) < 3) or (len(rare_seeds) < 3):
+    if (len(common_seeds) < args.min_genes) or (len(rare_seeds) < args.min_genes):
         print("Not enough common/rare seeds")
         n_rare = len(rare_seeds)
         n_common = len(common_seeds)
         with open(os.path.join(args.outdir, 'not_enough_seeds.txt'), 'a') as f:
-            f.write(f"{args.trait_rare}\t{n_rare}\t{args.trait_common}\t{n_common}\n")
+            f.write(f"{args.trait_rare}\t{n_rare}\t{args.trait_common}\t{n_common}\tinput\n")
     else: # continue with the analysis
         # load the presaved node and degree info, or create from the network as needed
         pc_nodes = load_saved_network_nodes(args.indir, args.net_name)
@@ -61,12 +62,12 @@ if __name__=='__main__':
         common_seeds = [int(x) for x in common_seeds if int(x) in pc_nodes]
         rare_seeds = [int(x) for x in rare_seeds if int(x) in pc_nodes]
         # check if there are enough seeds present in the network, if not exit
-        if (len(common_seeds) < 3) or (len(rare_seeds) < 3):
+        if (len(common_seeds) < args.min_genes) or (len(rare_seeds) < args.min_genes):
             print("Not enough common/rare seeds in network")
             n_rare = len(rare_seeds)
             n_common = len(common_seeds)    
             with open(os.path.join(args.outdir, 'not_enough_seeds.txt'), 'a') as f:
-                f.write(f"{args.trait_rare}\t{n_rare}\t{args.trait_common}\t{n_common}\n")
+                f.write(f"{args.trait_rare}\t{n_rare}\t{args.trait_common}\t{n_common}\tnetwork\n")
         else:
             # load the heat matrix for network propagation
             if exists(os.path.join(args.indir, args.net_name+ "_individual_heats.npy")):
@@ -88,7 +89,7 @@ if __name__=='__main__':
                                                                 pc_degree, 
                                                                 common_seeds,
                                                                 num_reps=1000, alpha=0.5,
-                                                                minimum_bin_size=10)
+                                                                minimum_bin_size=20)
 
                     z_common.to_csv(os.path.join(args.outdir, args.trait_common + "_z_CV.tsv"), sep="\t", header=False)
                     z_common=pd.read_csv(os.path.join(args.outdir, args.trait_common + "_z_CV.tsv"), sep="\t", index_col=0, header=None).squeeze('columns')
@@ -102,7 +103,7 @@ if __name__=='__main__':
                                                                 pc_degree, 
                                                                 rare_seeds,
                                                                 num_reps=1000, alpha=0.5,
-                                                                minimum_bin_size=10)                                    
+                                                                minimum_bin_size=20)                                    
 
                     z_rare.to_csv(os.path.join(args.outdir, args.trait_rare + "_z_RV.tsv"), sep="\t", header=False)
                     z_rare = pd.read_csv(os.path.join(args.outdir, args.trait_rare + "_z_RV.tsv"), sep="\t", index_col=0, header=None).squeeze('columns')

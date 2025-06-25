@@ -1,6 +1,0 @@
-2453,2453#Cancer diagnosed by doctor
-C3_PRIMARY_LYMPHOID_HEMATOPOIETIC,Union#BlockC81-C96#C81-C96 Malignant neoplasms| stated or presumed to be primary| of lymphoid| haematopoietic and related tissue
-C92,Union#C92#C92 Myeloid leukaemia
-D46,Union#D46#D46 Myelodysplastic syndromes
-D47,Union#D47#D47 Other neoplasms of uncertain or unknown behaviour of lymphoid| haematopoietic and related tissue
-XVII_MALFORMAT_ABNORMAL,Union#ChapterXVII#Chapter XVII Congenital malformations| deformations and chromosomal abnormalities

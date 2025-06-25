@@ -1,6 +1,0 @@
-gene_symbol pvalue
-A   0.0000001
-B   0.001
-C   0.01
-D   0.5
-E   0.00001
