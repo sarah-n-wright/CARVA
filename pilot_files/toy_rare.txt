@@ -1,5 +1,0 @@
-Gene    Field   Pheno   p-value
-A   38  b   0
-B   39  a   0.5
-C   38  b   1
-D   38  b   0.0001
