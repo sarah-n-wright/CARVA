@@ -8,14 +8,17 @@ import networkx as nx
 import ndex2
 from getpass import getpass
 
-def upload_network(G, name, template=None, networkset=None, networkset_name=None, username=None, password=None):
+def upload_network(G, name, template=None, networkset=None, networkset_name=None, username=None, password=None, is_cx=False,
+                  include_layout=False):
     if (username is None) or (password is None):
         username=getpass('Username:')
         password = getpass('Password:')
     client = ndex2.client.Ndex2(username=username, password=password)
-
-    G_cx = ndex2.create_nice_cx_from_networkx(G)
-    G_cx.add_network_attribute('name', name)
+    if not is_cx:
+        G_cx = ndex2.create_nice_cx_from_networkx(G)
+        G_cx.add_network_attribute('name', name)
+    else:
+        G_cx=G
     
     SERVER = 'http://ndexbio.org'
     if template is not None:

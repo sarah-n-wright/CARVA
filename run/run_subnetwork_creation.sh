@@ -6,7 +6,7 @@
 #SBATCH --mem-per-cpu=64G
 #SBATCH --time=03:00:00
 
-traitlist_file=/cellar/users/snwright/Data/RareCommon/outputs/netcoloc/March_2025/coloc_repeat_best_results.tsv
+traitlist_file=/cellar/users/snwright/Data/RareCommon/outputs/key_files/best_coloc_overlap.txt
 
 DATADIR=/cellar/users/snwright/Data/RareCommon/inputs/March_2025
 z_dir=/cellar/users/snwright/Data/RareCommon/outputs/netcoloc/March_2025

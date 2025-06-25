@@ -67,7 +67,15 @@ if __name__ == '__main__':
         c_genes = load_genelists(trait[1], args.genelist_dir, 'C')
         all_genes = r_genes.merge(c_genes, on=['Entrez'], how='outer')
         all_genes['Entrez'] = all_genes.Entrez.astype(int)
+        all_genes['input_gene'] = ~all_genes.pval_R.isna() | ~all_genes.pval_C.isna() 
+        all_genes['rare'] = ~all_genes.pval_R.isna()
+        all_genes['common'] = ~all_genes.pval_C.isna()
+        all_genes['shared'] = all_genes['common'] & all_genes['rare']
+        all_genes['gene_class'] = all_genes.apply(lambda x: 'shared' if (x['common'] & x['rare']) else 'common' if x['common'] else 'rare', axis=1)
         z_df = z_df.merge(all_genes, on=['Entrez'], how='left')
+        z_df['input_gene'].fillna(False, inplace=True)
+        z_df['gene_class'].fillna('Network', inplace=True)
+        z_df = z_df.assign(HGNC=z_df.Entrez.map(map_genes_using_network_map(z_df.Entrez.values)))
         if any(z_df['Entrez'].value_counts() > 1 ):
             print('DUPLICATED ENTREZ 2!!!')
             counts = z_df.Entrez.value_counts()
@@ -76,24 +84,26 @@ if __name__ == '__main__':
             print(z_common.loc[dupes])
             print(all_genes.loc[all_genes.Entrez.isin(dupes)])
             print(z_df.loc[z_df.Entrez.isin(dupes)])
-        
-        sig_df = z_df[(z_df['Z_coloc'] > args.zzth) & (z_df.z_R > args.zth) & (z_df.z_C > args.zth)]
+        z_df['coloc_gene'] = z_df.apply(lambda x: 1 if x['Z_coloc'] > args.zzth and x['z_R'] > args.zth and x['z_C'] > args.zth else 0, axis=1)
+        all_df = z_df[(z_df['coloc_gene']==1) | (z_df['input_gene'])]
 
         # Create a subgraph of the network
-        G_sub_all = nx.subgraph(H, sig_df['Entrez'].tolist())
+        G_sub_all = nx.subgraph(H, all_df['Entrez'].tolist())
         if len([x for x in G_sub_all.nodes()]) == 0:
             print([x for x in H.nodes()][0:10])
-            print(sig_df['Entrez'].tolist()[0:10])
-        G_sub_inputs = nx.subgraph(H, z_df[z_df.Entrez.isin(all_genes.Entrez.values)]['Entrez'].tolist())
+            print(all_df['Entrez'].tolist()[0:10])
+        G_sub_inputs = nx.subgraph(H, z_df[z_df['input_gene']]['Entrez'].tolist())
         # add node_attributes to the subgraph
         for Gout in [G_sub_all, G_sub_inputs]:
-            nx.set_node_attributes(Gout, sig_df.set_index('Entrez')['symbol_R'].to_dict(), name='symbol_R')
-            nx.set_node_attributes(Gout, sig_df.set_index('Entrez')['symbol_C'].to_dict(), name='symbol_C')
-            nx.set_node_attributes(Gout, sig_df.set_index('Entrez')['pval_R'].to_dict(), name='pval_R')
-            nx.set_node_attributes(Gout, sig_df.set_index('Entrez')['pval_C'].to_dict(), name='pval_C')
-            nx.set_node_attributes(Gout, sig_df.set_index('Entrez')['z_R'].to_dict(), name='z_R')
-            nx.set_node_attributes(Gout, sig_df.set_index('Entrez')['z_C'].to_dict(), name='z_C')
-            nx.set_node_attributes(Gout, sig_df.set_index('Entrez')['Z_coloc'].to_dict(), name='Z_coloc')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['symbol_R'].to_dict(), name='symbol_R')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['symbol_C'].to_dict(), name='symbol_C')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['pval_R'].to_dict(), name='pval_R')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['pval_C'].to_dict(), name='pval_C')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['z_R'].to_dict(), name='z_R')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['z_C'].to_dict(), name='z_C')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['Z_coloc'].to_dict(), name='Z_coloc')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['gene_class'].to_dict(), name='gene_class')
+            nx.set_node_attributes(Gout, all_df.set_index('Entrez')['coloc_gene'].to_dict(), name='coloc_gene')
         if args.use_cx2:
             # export to cx2
             cx2_all = factory.get_cx2network(G_sub_all)
@@ -106,10 +116,8 @@ if __name__ == '__main__':
             G_sub_all_df.to_csv(os.path.join(args.outputdir, f'{"_".join(trait)}_subnetwork_all.tsv'), sep='\t', index=False)
             G_sub_inputs_df.to_csv(os.path.join(args.outputdir, f'{"_".join(trait)}_subnetwork_inputs.tsv'), sep='\t', index=False)
             # save the node attributes as a tsv file
-            sig_df = sig_df.assign(HGNC=sig_df.Entrez.map(map_genes_using_network_map(sig_df.Entrez.values)))
-            sig_df.to_csv(os.path.join(args.outputdir, f'{"_".join(trait)}_subnetwork_all_node_attributes.tsv'), sep='\t', index=False)
-            z_df = z_df.assign(HGNC=sig_df.Entrez.map(map_genes_using_network_map(z_df.Entrez.values)))
-            z_df[z_df.Entrez.isin(all_genes.Entrez.values)].to_csv(os.path.join(args.outputdir, f'{"_".join(trait)}_subnetwork_inputs_node_attributes.tsv'), sep='\t', index=False)
+            all_df.to_csv(os.path.join(args.outputdir, f'{"_".join(trait)}_subnetwork_all_node_attributes.tsv'), sep='\t', index=False)
+            z_df[z_df['input_gene']].to_csv(os.path.join(args.outputdir, f'{"_".join(trait)}_subnetwork_inputs_node_attributes.tsv'), sep='\t', index=False)
         print(f'{"_".join(trait)} done')
 
 

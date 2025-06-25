@@ -12,7 +12,7 @@ execdir=/cellar/users/snwright/Git/rare_common/carva
 uuid='d73d6357-e87b-11ee-9621-005056ae23aa'
 name=pcnet2_0
 netdir=/cellar/users/snwright/Data/RareCommon/inputs/
-raresuff='_CV'
+raresuff='_RV'
 commonsuff='_CV'
 
 

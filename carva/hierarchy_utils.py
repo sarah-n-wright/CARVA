@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import networkx as nx
 import os
+import ndex2 as ndex
 import sys
 sys.path.append('/cellar/users/snwright/Git/rare_common/carva')
 from network_utils import *
@@ -11,9 +12,71 @@ import cdapsutil
 from gprofiler import GProfiler
 gp = GProfiler("MyToolName/0.1")
 
+
+## Load initial networks
+
+def load_subnetwork(subnet_dir, trait_pair, net_suff, return_cx=False, name=''):
+    net_file = os.path.join(subnet_dir, f'{trait_pair}_subnetwork_{net_suff}.tsv')
+    net_df = pd.read_csv(net_file, sep='\t')
+    node_df = pd.read_csv(os.path.join(subnet_dir, f'{trait_pair}_subnetwork_{net_suff}_node_attributes.tsv'), sep='\t')
+    node_df = clean_nodes(node_df)
+    
+    # --- 3) build the graph edges in one go ---
+    edge_cols = [c for c in net_df.columns if c not in ('source','target')]
+    if len(edge_cols) == 0:
+        G =nx.Graph()
+    else:
+        G = nx.from_pandas_edgelist(
+        net_df,
+        source='source',
+        target='target',
+        edge_attr=edge_cols,
+        create_using=nx.Graph()
+        )
+
+    # --- 4) make sure all nodes (even isolated ones) are present ---
+    G.add_nodes_from(node_df['Entrez'])
+
+    # --- 5) bulk-set every node’s attributes from the node_df ---
+    #     this creates a dict Entrez → {col1:val1, col2:val2, …}
+    node_attr_map = node_df.set_index('Entrez').to_dict('index')
+    nx.set_node_attributes(G, node_attr_map)
+    if return_cx:
+        G_cx = ndex.create_nice_cx_from_networkx(G)
+        G_cx.add_network_attribute('name', f'{name} {net_suff}')
+        return G_cx
+    else:
+        return G
+
+def load_subnetwork_edges(trait_pair, subnet_dir, suffix='all'):
+    all_df = pd.read_csv(os.path.join(subnet_dir, f'{trait_pair}_subnetwork_{suffix}.tsv'), sep='\t')
+    return all_df
+
+
+def load_subnetwork_node_info(trait_pair, subnet_dir, suffix='all'):
+    all_nodes = pd.read_csv(os.path.join(subnet_dir, f'{trait_pair}_subnetwork_{suffix}_node_attributes.tsv'), sep='\t')
+    all_nodes = clean_nodes(all_nodes)
+    return all_nodes
+
+def clean_nodes(node_df):
+    node_df['name'] = node_df.Entrez.astype(str)
+    node_df = node_df.fillna({'symbol_R': '', 'symbol_C' :'', 'pval_R': 1, 'pval_C': 1})
+    node_df['symbol_R'] = node_df.symbol_R.astype(str)
+    node_df['symbol_C'] = node_df.symbol_C.astype(str)
+    node_df['symbol'] = node_df.apply(lambda x: x.symbol_R if x.rare else x.symbol_C if x.common else '', axis=1)
+    node_df['logp'] = node_df.apply(lambda x: -1* np.log10(min(x.pval_R, x.pval_C)+ 1e-250), axis=1)
+    return node_df
+
 ## Create hierarchy ------------------------------------------
 
-def create_hierarchy(G_cx, verbose=True):
+def create_hierarchy(G_cx, verbose=True, filter_nodes=None):
+    if filter_nodes is not None:
+        name = G_cx.get_name()
+        G = G_CX.to_networkx()
+        coloc_nodes = [node for node in G.nodes(data=True) if G.nodes[node]['coloc_gene']==1]
+        Gsub = G.subgraph(coloc_nodes)
+        G_cx = ndex.create_nice_cx_from_networkx(G)
+        G_cx.add_network_attribute('name', name)
     cd = cdapsutil.CommunityDetection()
     CX_hier = cd.run_community_detection(G_cx, algorithm='hidefv1.1beta',arguments={'--maxres':'10'})
     if verbose:

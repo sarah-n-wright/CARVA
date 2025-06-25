@@ -4,17 +4,17 @@
 #SBATCH --error /cellar/users/snwright/Data/RareCommon/slurm/qnetcoloc_%A_%a.err
 #SBATCH --cpus-per-task=1
 #SBATCH --time=01:00:00
-#SBATCH --mem-per-cpu=32G
+#SBATCH --mem-per-cpu=24G
 
 #DATADIR=/cellar/users/snwright/Data/RareCommon/inputs/testing
 execdir=/cellar/users/snwright/Git/rare_common/carva
 #OUTDIR=/cellar/users/snwright/Data/RareCommon/outputs/netcoloc/testing
 #uuid='d73d6357-e87b-11ee-9621-005056ae23aa'
-#uuid='8b4b54fa-e87d-11ee-9621-005056ae23aa'
-uuid='db921c7d-f144-11ee-9621-005056ae23aa'
+uuid='8b4b54fa-e87d-11ee-9621-005056ae23aa'
+#uuid='db921c7d-f144-11ee-9621-005056ae23aa'
 #name=pcnet2_0
-#name=pcnet2_2
-name=humannet
+name=pcnet2_2
+#name=humannet
 netdir=/cellar/users/snwright/Data/RareCommon/inputs/
 
 config=$1

@@ -10,8 +10,8 @@
 DATADIR=/cellar/users/snwright/Data/RareCommon/inputs/March_2025
 execdir=/cellar/users/snwright/Git/rare_common/carva
 OUTDIR=/cellar/users/snwright/Data/RareCommon/outputs/Features
-geneset_file=best_rare.traitlist
-geneset_file2=best_common.traitlist
+geneset_file=not_best_rare.traitlist
+geneset_file2=not_best_common.traitlist
 #uuid_list=('d73d6357-e87b-11ee-9621-005056ae23aa' '8b4b54fa-e87d-11ee-9621-005056ae23aa' '5f5da339-f14a-11ee-9621-005056ae23aa' 'db921c7d-f144-11ee-9621-005056ae23aa')
 net_files=('pcnet2_0.edgelist.tsv' 'pcnet2_2.edgelist.tsv' 'string.edgelist.tsv' 'humannet.edgelist.tsv')
 netdir=/cellar/users/snwright/Data/RareCommon/Reference
