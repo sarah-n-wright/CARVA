@@ -1,6 +1,7 @@
 # user defined
 archive/
-Notebooks/Archive/
+Notebooks/archive/
+run/archive/
 carva/dev/
 Notebooks/development/
 run/template.sh
