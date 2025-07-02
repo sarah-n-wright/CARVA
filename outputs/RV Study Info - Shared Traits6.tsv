@@ -1,0 +1,395 @@
+	Reported Trait	DISEASE/TRAIT	MAPPED_TRAIT_CLEAN_C	MAPPED_TRAIT_CLEAN_R	trait_type	Domain	Cosine_R	Cosine_C	CosineRC	Keep
+0	Isolated proteinuria	Proteinuria	proteinuria	proteinuria	CC	Renal	0.87141615	1.0000005	0.87141615	1
+1	Neutrophil count	Neutrophil count	neutrophil count	neutrophil count	Q	Immunological	1.0000004	1.0000004	1.0000002	1
+2	Autism spectrum disorder	Autism spectrum disorder	autism spectrum disorder	autism spectrum disorder	CC	Psychiatric	1.0000002	1.0000002	1.0000001	1
+3	Tuberculosis (tb	Pulmonary tuberculosis	pulmonary tuberculosis	pulmonary tuberculosis	CC	Infection	0.86746013	1.0000002	0.8674605	1
+4	Pulmonary embolism	Pulmonary embolism	pulmonary embolism	pulmonary embolism	CC	Cardiovascular	1.0000002	1.0000002	1.0000001	1
+5	Gastro-oesophageal reflux disease	Gastroesophageal reflux disease	gastroesophageal reflux disease	gastroesophageal reflux disease	CC	Gastrointestinal	0.9658337	1.0000002	0.96583366	1
+6	Other hypothyroidism	Hypothyroidism	hypothyroidism	hypothyroidism	CC	Endocrine	0.952587	1.0000002	0.952587	1
+7	Barrett's oesophagus	Barrett's esophagus	Barrett's esophagus	Barrett's esophagus	CC	Gastrointestinal	0.9367394	1.0000002	0.9367394	1
+8	Bacterial meningitis| not elsewhere classified	Bacterial meningitis	bacterial meningitis	bacterial meningitis	CC	Infection	0.8900169	1.0000002	0.8900169	1
+9	Endometriosis	Endometriosis	endometriosis	endometriosis	CC	Reproductive	1	1.0000002	1	1
+10	Abnormalitof white blood cells| not elsewhere classified	Granulocyte percentage of myeloid white cells	granulocyte percentage of myeloid white cells	granulocyte percentage of myeloid white cells	Q	Immunological	0.5166899	1.0000002	0.51668984	0
+11	Varicose veins	Varicose veins	Varicose veins	Varicose veins	CC	Cardiovascular	1.0000002	1.0000002	1.0000002	1
+12	Mean corpuscular haemoglobin concentration	Mean corpuscular hemoglobin concentration	mean corpuscular hemoglobin concentration	mean corpuscular hemoglobin concentration	Q	Hematological	0.9555088	1.0000002	0.9555088	1
+13	Total Lipids in Small LDL	Total lipids in small LDL	total lipids in small LDL	total lipids in small LDL	Q	Metabolic	0.9970038	1.0000002	1.0000002	1
+14	Total Lipids in IDL	Total lipids in IDL	total lipids in IDL	total lipids in IDL	Q	Metabolic	0.996796	1.0000002	0.99999976	1
+15	Spondylosis	Spondylosis	spondylosis	spondylosis	CC	Skeletal	1.0000002	1.0000002	1.0000002	1
+16	Bipolar affective disorder	Bipolar disorder	bipolar disorder	bipolar disorder	CC	Psychiatric	0.8998481	1.0000002	0.8998481	1
+17	Multiple sclerosis	Multiple sclerosis	multiple sclerosis	multiple sclerosis	CC	Neurological	1.0000002	1.0000002	1.0000002	1
+18	Pain| unspecified	Pain	pain	pain	CC	Pain	0.7446017	1.0000002	0.7446017	1
+19	Body_fat_percentage	Body fat percentage	body fat percentage	body fat percentage	Q	Anthropometric	0.891474	1.0000002	0.891474	1
+20	Autoimmune thyroiditis	Autoimmune thyroid disease	autoimmune thyroid disease	autoimmune thyroid disease	CC	Immunological	0.9558911	1.0000002	0.9558912	1
+21	Duodenal ulcer	Duodenal ulcer	duodenal ulcer	duodenal ulcer	CC	Gastrointestinal	1.0000002	1.0000002	1.0000002	1
+22	Mean reticulocyte volume	Mean reticulocyte volume	mean reticulocyte volume	mean reticulocyte volume	Q	Hematological	1.0000002	1.0000002	1.0000002	1
+23	Chronic mucoid otitis media	Otitis media	otitis media	otitis media	CC	EarNoseThroat	0.7611385	1.0000002	0.76113844	1
+24	Other chronic obstructive pulmonary disease	Chronic obstructive pulmonary disease	chronic obstructive pulmonary disease	chronic obstructive pulmonary disease	CC	Respiratory	0.9402597	1.0000002	0.9402597	1
+25	Osteoporosis	Osteoporosis	osteoporosis	osteoporosis	CC	Skeletal	1	1.0000001	0.99999994	1
+26	Obsessive-compulsive disorder	Obsessive-compulsive disorder	obsessive-compulsive disorder	obsessive-compulsive disorder	CC	Psychiatric	1.0000001	1.0000001	1	1
+27	Total Lipids in Medium VLDL	Total lipids in medium VLDL	total lipids in medium VLDL	total lipids in medium VLDL	Q	Metabolic	0.99760324	1.0000001	1.0000001	1
+28	Glaucoma	Glaucoma	glaucoma	glaucoma	CC	Opthamological	1	1.0000001	1.0000001	1
+29	Chronic renal failure	Chronic kidney disease	chronic kidney disease	chronic kidney disease	CC	Renal	0.7962861	1.0000001	0.796286	1
+30	Mitral (valve prolapse	Mitral valve prolapse	Mitral valve prolapse	Mitral valve prolapse	CC	Cardiovascular	0.9763973	1.0000001	0.9763972	1
+31	Lung cancer	Lung cancer	lung cancer	lung cancer	CC	Neoplasm	1.0000001	1.0000001	1	1
+32	Back pain	Back pain	back pain	back pain	CC	Pain	1.0000001	1.0000001	1.0000001	1
+33	Breast cancer	Breast cancer	breast cancer	breast cancer	CC	Neoplasm	1.0000001	1.0000001	1	1
+34	Melanoma and other malignant neoplasms of skin	Melanoma	melanoma	melanoma	CC	Neoplasm	0.7311989	1.0000001	0.7311989	1
+35	Other anxiety disorders	Anxiety disorder	anxiety disorder	anxiety disorder	CC	Psychiatric	0.8494811	1.0000001	0.8494812	1
+36	Epilepsy	Epilepsy	epilepsy	epilepsy	CC	Neurological	1.0000001	1.0000001	1.0000001	1
+37	Meningitis	Meningitis	meningitis	meningitis	CC	Infection	1.0000001	1.0000001	1.0000001	1
+38	Psoriasis	Psoriasis	psoriasis	psoriasis	CC	Dermatological	1.0000002	1.0000001	1.0000001	1
+39	Irritable bowel syndrome	Irritable bowel syndrome	irritable bowel syndrome	irritable bowel syndrome	CC	Gastrointestinal	1.0000001	1.0000001	1.0000002	1
+40	Vertigo	Vertigo	Vertigo	Vertigo	CC	Neurological	1.0000001	1.0000001	1.0000001	1
+41	Basal cell carcinoma| nos	Basal cell carcinoma	basal cell carcinoma	basal cell carcinoma	CC	Neoplasm	0.9328932	1.0000001	0.9328932	1
+42	Diastolic_blood_pressure_automated_reading	Diastolic blood pressure	diastolic blood pressure	diastolic blood pressure	Q	Cardiovascular	0.67848814	1.0000001	0.678488	1
+43	Adenocarcinoma| nos	Lung adenocarcinoma	lung adenocarcinoma	lung adenocarcinoma	CC	Neoplasm	0.60915685	1.0000001	0.60915685	1
+44	Thyroid cancer	Thyroid cancer	thyroid cancer	thyroid cancer	CC	Neoplasm	1.0000001	1.0000001	1.0000001	1
+45	Insomnia	Insomnia	insomnia	insomnia	CC	Psychiatric	1.0000001	1.0000001	1.0000001	1
+46	Schizophrenia	Schizophrenia	schizophrenia	schizophrenia	CC	Psychiatric	1.0000001	1.0000001	1.0000002	1
+47	Renal cell carcinoma	Renal cell carcinoma	renal cell carcinoma	renal cell carcinoma	CC	Neoplasm	1.0000001	1.0000001	1.0000001	1
+48	Blood BASOPHIL COUNT	Basophil count	basophil count	basophil count	Q	Immunological	0.9035178	1.0000001	0.9035178	1
+49	Hyperplasia of prostate	Benign prostatic hyperplasia	benign prostatic hyperplasia	benign prostatic hyperplasia	CC	Reproductive	0.8351908	1.0000001	0.8351909	1
+50	Red blood cell (erythrocyte) distribution width	Red cell distribution width	red cell distribution width	red cell distribution width	Q	Hematological	0.7892389	1.0000001	0.7892389	1
+51	Other strabismus	Strabismus	strabismus	strabismus	CC	Opthamological	0.91605043	1.0000001	0.91605043	1
+52	Erectile d| impotence	Erectile dysfunction	erectile dysfunction	erectile dysfunction	CC	Reproductive	0.71497846	1.0000001	0.71497834	1
+53	Vitiligo	Vitiligo	vitiligo	vitiligo	CC	Dermatological	1	1	1	1
+54	Ulcerative colitis	Ulcerative colitis	ulcerative colitis	ulcerative colitis	CC	Gastrointestinal	1	1	1	1
+55	Heart disease| unspecified	Cardiovascular disease	cardiovascular disease	cardiovascular disease	CC	Cardiovascular	0.76428044	1	0.76428056	1
+56	Heart failure	Heart failure	heart failure	heart failure	CC	Cardiovascular	1	1	1	1
+57	Impingement sof shoulder	Shoulder impingement syndrome	shoulder impingement syndrome	shoulder impingement syndrome	CC	Skeletal	0.8009312	1	0.8009312	1
+58	Th[hyperthyroidism]	Hyperthyroidism	hyperthyroidism	hyperthyroidism	CC	Endocrine	0.8902998	1	0.8902998	1
+59	Gastric ulcer	Gastric ulcer	gastric ulcer	gastric ulcer	CC	Gastrointestinal	0.9999999	1	0.9999999	1
+60	Urolithiasis	Urolithiasis	urolithiasis	urolithiasis	CC	Renal	1.0000002	1	1.0000002	1
+61	Large bowel cancer|colorectal cancer	Colorectal cancer	colorectal cancer	colorectal cancer	CC	Neoplasm	0.80817306	1	0.80817306	1
+62	Actinic keratosis	Actinic keratosis	actinic keratosis	actinic keratosis	CC	Dermatological	1	1	1	1
+63	Stroke	Stroke	stroke	stroke	CC	Cardiovascular	1	1	1	1
+64	Urticaria	Urticaria	urticaria	urticaria	CC	Immunological	1	1	1	1
+65	Unspecified dementia	Dementia	dementia	dementia	CC	Neurological	0.8429936	1	0.8429936	1
+66	Systolic_blood_pressure_automated_reading	Systolic blood pressure	systolic blood pressure	systolic blood pressure	Q	Cardiovascular	0.68119156	1	0.68119144	1
+67	Hypertension	Hypertension	hypertension	hypertension	CC	Cardiovascular	0.9999999	1	0.9999999	1
+68	Cervical cancer	Cervical cancer	cervical cancer	cervical cancer	CC	Neoplasm	1	1	1	1
+69	Other allergic rhinitis	Allergic rhinitis	allergic rhinitis	allergic rhinitis	CC	Immunological	0.94428396	1	0.94428384	1
+70	Carpal tunnel syndrome	Carpal tunnel syndrome	carpal tunnel syndrome	carpal tunnel syndrome	CC	Neurological	0.99999976	1	0.99999976	1
+71	Cholecystitis	Cholecystitis	cholecystitis	cholecystitis	CC	Gastrointestinal	1	1	1.0000001	1
+72	Cholelithiasis	Cholelithiasis	cholelithiasis	cholelithiasis	CC	Gastrointestinal	1	1	1	1
+73	Crohns disease	Crohn's disease	crohn's disease	crohn's disease	CC	Gastrointestinal	0.9757204	1	0.9757204	1
+74	Androgenic alopecia	Androgenetic alopecia	androgenetic alopecia	androgenetic alopecia	CC	Other	0.9592285	1	0.9592285	1
+75	Psoriasis vulgaris	Psoriasis vulgaris	psoriasis vulgaris	psoriasis vulgaris	CC	Dermatological	1.0000001	1	1.0000001	1
+76	Inguinal hernia	Inguinal hernia	inguinal hernia	inguinal hernia	CC	Muscular	1	1	1	1
+77	Rheumatoid arthritis	Rheumatoid arthritis	rheumatoid arthritis	rheumatoid arthritis	CC	Immunological	1.0000001	1	1.0000001	1
+78	Other interstitial pulmonary diseases	Interstitial lung disease	interstitial lung disease	interstitial lung disease	CC	Respiratory	0.8495197	1	0.8495197	1
+79	Retinal detachment	Retinal detachment	retinal detachment	retinal detachment	CC	Opthamological	1	1	1	1
+80	Adhesive capsulitis of shoulder	Frozen shoulder	frozen shoulder	frozen shoulder	CC	Skeletal	0.52008635	1	0.52008647	1
+81	Type of cancer: chronic lymphocytic leukemia of b-cell type (40006)	Chronic lymphocytic leukemia	chronic lymphocytic leukemia	chronic lymphocytic leukemia	CC	Neoplasm	0.7923106	1	0.79231066	1
+82	Total Lipids in Large HDL	Total lipids in large HDL	total lipids in large HDL	total lipids in large HDL	Q	Metabolic	0.99758345	1	1	1
+83	Total Lipids in Small VLDL	Total lipids in small VLDL	total lipids in small VLDL	total lipids in small VLDL	Q	Metabolic	0.99773836	1	1	1
+84	Acute pancreatitis	Acute pancreatitis	acute pancreatitis	acute pancreatitis	CC	Endocrine	1.0000001	1	1.0000001	1
+85	Malaria	Malaria	malaria	malaria	CC	Infection	1	1	1	1
+86	Hepatitis	Hepatitis	hepatitis	hepatitis	CC	Infection	1	1	1	1
+87	Headache	Headache	Headache	Headache	CC	Neurological	1	1	1	1
+88	Prostate cancer	Prostate cancer	prostate cancer	prostate cancer	CC	Neoplasm	1	1	1	1
+89	Volume of non wm hypointensities whole brain (26529)	Whole-brain volume	whole-brain volume	whole-brain volume	Q	Neurological	0.72786325	1	0.72786313	1
+90	Platelet count	Platelet count	platelet count	platelet count	Q	Hematological	1	1	1	1
+91	Other gastritis	Gastritis	gastritis	gastritis	CC	Gastrointestinal	0.9224564	1	0.9224564	1
+92	Neutrophill count	Granulocyte count	granulocyte count	granulocyte count	Q	Immunological	0.4413067	1	0.4413067	0
+93	Seborrhoeic dermatitis	Seborrheic dermatitis	seborrheic dermatitis	seborrheic dermatitis	CC	Dermatological	0.95810163	1	0.95810163	1
+94	Lymphocyte count	Lymphocyte count	lymphocyte count	lymphocyte count	Q	Immunological	1	1	1	1
+95	Hcardiom(hcm | hocm	Hypertrophic cardiomyopathy	hypertrophic cardiomyopathy	hypertrophic cardiomyopathy	CC	Cardiovascular	0.19136205	1	0.19136205	1
+96	Alopecia areata	Alopecia areata	alopecia areata	alopecia areata	CC	Immunological	1	1	1	1
+97	Other chronic pain	Chronic pain	chronic pain	chronic pain	CC	Pain	0.90689915	1	0.90689915	1
+98	Other aplastic anaemias	Severe aplastic anemia	severe aplastic anemia	severe aplastic anemia	CC	Hematological	0.8621849	1	0.8621849	1
+99	Platelet aggregation	Platelet aggregation	platelet aggregation	platelet aggregation	Q	Hematological	1	1	1	1
+100	Other hearing loss	Hearing loss	hearing loss	hearing loss	CC	EarNoseThroat	0.9195982	1	0.91959816	1
+101	Pneumonia	Pneumonia	pneumonia	pneumonia	CC	Infection	1	1	1	1
+102	Squamous cell carcinoma	Squamous cell carcinoma	squamous cell carcinoma	squamous cell carcinoma	CC	Neoplasm	1	1	1	1
+103	Chronic periodontitis	Periodontitis	periodontitis	periodontitis	CC	Skeletal	0.8898818	1	0.88988185	1
+104	Reticulocyte count	Reticulocyte count	reticulocyte count	reticulocyte count	Q	Hematological	1	1	1	1
+105	Dilated cardiomyopathy	Dilated cardiomyopathy	dilated cardiomyopathy	dilated cardiomyopathy	CC	Cardiovascular	1	1	1	1
+106	Multiple myeloma	Multiple myeloma	multiple myeloma	multiple myeloma	CC	Neoplasm	1	1	1	1
+107	Sarcoidosis	Sarcoidosis	sarcoidosis	sarcoidosis	CC	Immunological	0.99999994	0.99999994	0.99999994	1
+108	Tuberculosis	Tuberculosis	tuberculosis	tuberculosis	CC	Infection	1.0000001	0.99999994	1.0000001	1
+109	Dysphagia	Dysphagia	dysphagia	dysphagia	CC	Muscular	1	0.99999994	0.99999994	1
+110	Mean corpuscular haemoglobin	Mean corpuscular hemoglobin	mean corpuscular hemoglobin	mean corpuscular hemoglobin	Q	Hematological	0.94663805	0.99999994	0.94663805	1
+111	Ankylosing spondylitis	Ankylosing spondylitis	ankylosing spondylitis	ankylosing spondylitis	CC	Skeletal	0.9999999	0.99999994	0.99999994	1
+112	Diverticular disease|diverticulitis	Diverticular disease	diverticular disease	diverticular disease	CC	Gastrointestinal	0.9147973	0.99999994	0.9147972	1
+113	Panic attacks	Panic disorder	panic disorder	panic disorder	CC	Psychiatric	0.86180407	0.99999994	0.861804	1
+114	Umbilical hernia	Umbilical hernia	Umbilical hernia	Umbilical hernia	CC	Muscular	0.99999994	0.99999994	0.99999994	1
+115	Kidney cancer	Kidney cancer	kidney cancer	kidney cancer	CC	Neoplasm	0.9999998	0.9999999	0.9999999	1
+116	Osteoarthritis	Osteoarthritis	osteoarthritis	osteoarthritis	CC	Skeletal	0.9999999	0.9999999	0.9999999	1
+117	Varicella [chickenpox])	Chickenpox	chickenpox	chickenpox	CC	Infection	0.72057277	0.9999999	0.7205728	1
+118	Thwith tomultinodular goitre	Goiter	goiter	goiter	CC	Endocrine	0.362832	0.9999999	0.36283195	1
+119	Emphysema	Emphysema	emphysema	emphysema	CC	Respiratory	0.99999976	0.9999999	0.9999999	1
+120	Atrial fibrillation	Atrial fibrillation	atrial fibrillation	atrial fibrillation	CC	Cardiovascular	0.9999999	0.9999999	0.9999999	1
+121	Otosclerosis	Otosclerosis	otosclerosis	otosclerosis	CC	Skeletal	1.0000001	0.9999999	1.0000001	1
+122	Rheumatic fever	Rheumatic fever	rheumatic fever	rheumatic fever	CC	Infection	0.9999999	0.9999999	0.9999999	1
+123	Monocyte count	Monocyte count	monocyte count	monocyte count	Q	Immunological	0.9999999	0.9999999	0.9999999	1
+124	Coronary artery disease	Coronary artery disease	coronary artery disease	coronary artery disease	CC	Cardiovascular	0.9999999	0.9999999	1	1
+125	Psoriatic arthropathy	Psoriatic arthritis	psoriatic arthritis	psoriatic arthritis	CC	Dermatological	0.84189296	0.9999999	0.84189296	1
+126	Leg predicted mass left (23118)	Left ventricular mass	left ventricular mass	left ventricular mass	Q	Cardiovascular	0.42466706	0.9999999	0.42466703	0
+127	Bell's palsy	Bell's palsy	Bell's palsy	Bell's palsy	CC	Muscular	1.0000002	0.9999999	1.0000002	1
+128	Icd10 z85: personal history of malignant neoplasm	Cancer	cancer	cancer	CC	Neoplasm	0.4058488	0.9999998	0.4058488	0
+129	Aortic (valve stenosis	Aortic stenosis	aortic stenosis	aortic stenosis	CC	Cardiovascular	0.9089318	0.9999998	0.90893173	1
+130	Total Lipids in Large LDL	Total lipids in large LDL	total lipids in large LDL	total lipids in large LDL	Q	Metabolic	0.99698794	0.9999998	0.9999999	1
+131	Peripheral vascular disease| unspecified	Peripheral vascular disease	peripheral vascular disease	peripheral vascular disease	CC	Cardiovascular	0.95106065	0.99999976	0.95106065	1
+132	Angina pectoris	Angina pectoris	angina pectoris	angina pectoris	CC	Cardiovascular	0.99999976	0.99999976	0.99999976	1
+133	Retinal detachment with retinal break	Rhegmatogenous retinal detachment	rhegmatogenous retinal detachment	rhegmatogenous retinal detachment	CC	Opthamological	0.7567514	0.99999976	0.75675136	1
+134	Myopia	Myopia	Myopia	Myopia	CC	Opthamological	0.99999976	0.99999976	0.99999976	1
+135	Tinnitus	Tinnitus	tinnitus	tinnitus	CC	EarNoseThroat	0.99999976	0.99999976	0.99999976	1
+136	Sick sinus syndrome	Sick sinus syndrome	sick sinus syndrome	sick sinus syndrome	CC	EarNoseThroat	0.99999976	0.99999976	0.99999976	1
+137	Total Lipids in Large VLDL	Total lipids in large VLDL	total lipids in large VLDL	total lipids in large VLDL	Q	Metabolic	0.99774367	0.99999976	0.99999976	1
+138	Asthma	Asthma	asthma	asthma	CC	Respiratory	0.99999976	0.99999976	0.99999976	1
+139	Dental caries	Dental caries	dental caries	dental caries	CC	Skeletal	0.9999997	0.9999997	0.99999976	1
+140	Vaginal prolapse|uterine prolapse	Uterine prolapse	uterine prolapse	uterine prolapse	CC	Reproductive	0.9410976	0.9999997	0.9410976	1
+141	Gout	Gout	gout	gout	CC	Skeletal	0.99999964	0.99999964	0.99999964	1
+142	Systemic lupus erythematosus	Systemic lupus erythematosus	systemic lupus erythematosus	systemic lupus erythematosus	CC	Infection	0.99999964	0.99999964	0.99999964	1
+143	Coeliac disease	Celiac disease	celiac disease	celiac disease	CC	Immunological	0.7786662	0.9999996	0.7786662	1
+144	Large cell (diffuse	Diffuse large B cell lymphoma	diffuse large b-cell lymphoma	diffuse large b-cell lymphoma	CC	Neoplasm	0.52344495	0.9917188	0.5418701	1
+145	Urinary albumincreatinine ratio (rgc)	Urinary albumin-to-creatinine ratio	urinary albumin to creatinine ratio	urinary albumin to creatinine ratio	Q	Renal	0.7420406	0.9902651	0.7617092	1
+146	Blood EOSINOPHIL COUNT	Eosinophil counts	eosinophil count	eosinophil count	Q	Immunological	0.91271806	0.986836	0.91543996	1
+147	Sjogren's ssyndrome	Sjögren's syndrome	Sjogren syndrome	sjogren syndrome	CC	Immunological	0.7753424	0.9849888	0.78496206	1
+148	Degenerative myopia	Myopia (pathological)	pathological myopia	pathological myopia	CC	Opthamological	0.7739401	0.9795408	0.7886246	1
+149	Premature rupture of membranes| unspecified	Spontaneous preterm birth (preterm birth)	spontaneous preterm birth	spontaneous preterm birth	CC	Reproductive	0.26205435	0.9782847	0.26411915	0
+150	Seropositive rheumatoid arthritis| unspecified	Arthritis (juvenile idiopathic)	juvenile idiopathic arthritis	juvenile idiopathic arthritis	CC	Skeletal	0.47700235	0.9767262	0.50794446	1
+151	Parkinson's disease	Parkinson's disease	Parkinson disease	Parkinson disease	CC	Neurological	0.9704986	0.9704986	1.0000001	1
+152	Disc degeneration	Disc degeneration (lumbar)	lumbar disc degeneration	lumbar disc degeneration	CC	Skeletal	0.75626427	0.9703651	0.806852	1
+153	G30_alzheimer_s_disease	Alzheimer's disease	Alzheimer disease	alzheimer disease	CC	Neurological	0.6650152	0.96921515	0.67254174	1
+154	Body waist-hip ratio BMI	Waist-to-hip ratio adjusted for BMI	BMI-adjusted waist-hip ratio	BMI-adjusted waist-hip ratio	Q	Anthropometric	0.95825607	0.9687487	0.92520654	1
+155	Gestational diabetes	Gestational diabetes mellitus	gestational diabetes	gestational diabetes	CC	Endocrine	0.9999997	0.9668673	0.9668673	1
+156	Platelet distribution width	Platelet distribution width	platelet component distribution width	platelet component distribution width	Q	Hematological	0.96663564	0.96663564	0.99999994	1
+157	Cholesteryl Esters to Total Lipids in Medium LDL percentage	Cholesteryl esters to total lipids in medium LDL percentage (UKB data field 23621)	cholesteryl esters to total lipids in medium LDL percentage	cholesteryl esters to total lipids in medium LDL percentage	Q	Lipid Measurement	0.9988997	0.9639476	0.9639478	1
+158	Cholesteryl Esters to Total Lipids in Small LDL percentage	Cholesteryl esters to total lipids in small LDL percentage (UKB data field 23626)	cholesteryl esters to total lipids in small LDL percentage	cholesteryl esters to total lipids in small LDL percentage	Q	Lipid Measurement	0.9987824	0.96382475	0.96382475	1
+159	Cholesteryl Esters to Total Lipids in Large LDL percentage	Cholesteryl esters to total lipids in large LDL percentage (UKB data field 23616)	cholesteryl esters to total lipids in large LDL percentage	cholesteryl esters to total lipids in large LDL percentage	Q	Lipid Measurement	0.9987955	0.9634128	0.96341264	1
+160	Cholesteryl Esters to Total Lipids in Small HDL percentage	Cholesteryl esters to total lipids in small HDL percentage (UKB data field 23646)	cholesteryl esters to total lipids in small HDL percentage	cholesteryl esters to total lipids in small HDL percentage	Q	Lipid Measurement	0.9990169	0.96338195	0.9633821	1
+161	Cholesteryl Esters to Total Lipids in Medium VLDL percentage	Cholesteryl esters to total lipids in medium VLDL percentage (UKB data field 23596)	cholesteryl esters to total lipids in medium VLDL percentage	cholesteryl esters to total lipids in medium VLDL percentage	Q	Lipid Measurement	0.9990726	0.963294	0.9632941	1
+162	Cholesteryl Esters to Total Lipids in Large HDL percentage	Cholesteryl esters to total lipids in large HDL percentage (UKB data field 23636)	cholesteryl esters to total lipids in large HDL percentage	cholesteryl esters to total lipids in large HDL percentage	Q	Lipid Measurement	0.99904096	0.96288025	0.9628804	1
+163	Cholesteryl Esters to Total Lipids in Very Large VLDL percentage	Cholesteryl esters to total lipids in very large VLDL percentage (UKB data field 23586)	cholesteryl esters to total lipids in very large VLDL percentage	cholesteryl esters to total lipids in very large VLDL percentage	Q	Lipid Measurement	0.9989222	0.9627603	0.96276027	1
+164	Cholesteryl Esters to Total Lipids in Medium HDL percentage	Cholesteryl esters to total lipids in medium HDL percentage (UKB data field 23641)	cholesteryl esters to total lipids in medium HDL percentage	cholesteryl esters to total lipids in medium HDL percentage	Q	Lipid Measurement	0.99905527	0.9625727	0.9625728	1
+165	Cholesteryl Esters to Total Lipids in Very Small VLDL percentage	Cholesteryl esters to total lipids in very small VLDL percentage (UKB data field 23606)	cholesteryl esters to total lipids in very small VLDL percentage	cholesteryl esters to total lipids in very small VLDL percentage	Q	Lipid Measurement	0.99890053	0.96193784	0.9619377	1
+166	Cholesteryl Esters to Total Lipids in Very Large HDL percentage	Cholesteryl esters to total lipids in very large HDL percentage (UKB data field 23631)	cholesteryl esters to total lipids in very large HDL percentage	cholesteryl esters to total lipids in very large HDL percentage	Q	Lipid Measurement	0.9991744	0.96081555	0.96081537	1
+167	Cholesteryl Esters to Total Lipids in Large VLDL percentage	Cholesteryl esters to total lipids in large VLDL percentage (UKB data field 23591)	cholesteryl esters to total lipids in large VLDL percentage	cholesteryl esters to total lipids in large VLDL percentage	Q	Lipid Measurement	0.9990635	0.958979	0.958979	1
+168	Cholesteryl Esters to Total Lipids in IDL percentage	Cholesteryl esters to total lipids in IDL percentage (UKB data field 23611)	cholesteryl esters to total lipids in IDL percentage	cholesteryl esters to total lipids in IDL percentage	Q	Lipid Measurement	0.99854887	0.95818067	0.95818067	1
+169	Cholesteryl Esters to Total Lipids in Small VLDL percentage	Cholesteryl esters to total lipids in small VLDL percentage (UKB data field 23601)	cholesteryl esters to total lipids in small VLDL percentage	cholesteryl esters to total lipids in small VLDL percentage	Q	Lipid Measurement	0.9990864	0.95705485	0.957055	1
+170	Enterocolitis due to clostridium difficile	Clostridioides difficle infection	clostridium difficile infection	clostridium difficile infection	CC	Infection	0.7966383	0.955361	0.7328302	1
+171	Insulin-dependent diabetes mellitus	Type 1 diabetes	type 1 diabetes mellitus	type 1 diabetes mellitus	CC	Endocrine	0.6584547	0.9534395	0.59172136	1
+172	Free Cholesterol to Total Lipids in Medium VLDL percentage	Free cholesterol to total lipids in medium VLDL percentage (UKB data field 23597)	free cholesterol to total lipids in medium VLDL percentage	free cholesterol to total lipids in medium VLDL percentage	Q	Lipid Measurement	0.9979692	0.9501047	0.9501048	1
+173	Triglycerides to Total Lipids in Medium VLDL percentage	Triglycerides to total lipids in medium VLDL percentage (UKB data field 23598)	triglycerides to total lipids in medium VLDL percentage	triglycerides to total lipids in medium VLDL percentage	Q	Lipid Measurement	0.9983016	0.94852626	0.9485264	1
+174	Cataract	Cataracts	cataract	cataract	CC	Opthamological	1	0.94764096	0.94764096	1
+175	Non-insulin-dependent diabetes mellitus	Type 2 diabetes	type 2 diabetes mellitus	type 2 diabetes mellitus	CC	Endocrine	0.6500521	0.9474359	0.60555303	1
+176	Triglycerides to Total Lipids in Large VLDL percentage	Triglycerides to total lipids in large VLDL percentage (UKB data field 23593)	triglycerides to total lipids in large VLDL percentage	triglycerides to total lipids in large VLDL percentage	Q	Lipid Measurement	0.998454	0.9467538	0.94675374	1
+177	Free Cholesterol to Total Lipids in Large VLDL percentage	Free cholesterol to total lipids in large VLDL percentage (UKB data field 23592)	free cholesterol to total lipids in large VLDL percentage	free cholesterol to total lipids in large VLDL percentage	Q	Lipid Measurement	0.998146	0.9460358	0.9460356	1
+178	Total Lipids in Very Small VLDL	Total lipids in very small VLDL	total lipids in very small VLDL measurement	total lipids in very small VLDL measurement	Q	Lipid Measurement	0.9436388	0.94537234	0.9999999	1
+179	Triglycerides in Medium LDL	Triglycerides in medium LDL	triglycerides in medium LDL measurement	triglycerides in medium LDL measurement	Q	Lipid Measurement	0.942932	0.94502234	1	1
+180	Free Cholesterol to Total Lipids in Very Small VLDL percentage	Free cholesterol to total lipids in very small VLDL percentage (UKB data field 23607)	free cholesterol to total lipids in very small VLDL percentage	free cholesterol to total lipids in very small VLDL percentage	Q	Lipid Measurement	0.99802065	0.9449723	0.94497204	1
+181	Total Lipids in Medium HDL	Total lipids in medium HDL	total lipids in medium HDL measurement	total lipids in medium HDL measurement	Q	Lipid Measurement	0.9448978	0.9449699	0.9999999	1
+182	Triglycerides to Total Lipids in Medium LDL percentage	Triglycerides to total lipids in medium LDL percentage (UKB data field 23623)	triglycerides to total lipids in medium LDL percentage	triglycerides to total lipids in medium LDL percentage	Q	Lipid Measurement	0.9985645	0.94474745	0.94474745	1
+183	Free Cholesterol to Total Lipids in Very Large VLDL percentage	Free cholesterol to total lipids in very large VLDL percentage (UKB data field 23587)	free cholesterol to total lipids in very large VLDL percentage	free cholesterol to total lipids in very large VLDL percentage	Q	Lipid Measurement	0.9981062	0.94472384	0.94472396	1
+184	Triglycerides to Total Lipids in Very Small VLDL percentage	Triglycerides to total lipids in very small VLDL percentage (UKB data field 23608)	triglycerides to total lipids in very small VLDL percentage	triglycerides to total lipids in very small VLDL percentage	Q	Lipid Measurement	0.9983424	0.9446007	0.9446005	1
+185	Triglycerides to Total Lipids in Very Large VLDL percentage	Triglycerides to total lipids in very large VLDL percentage (UKB data field 23588)	triglycerides to total lipids in very large VLDL percentage	triglycerides to total lipids in very large VLDL percentage	Q	Lipid Measurement	0.99840146	0.9444227	0.94442296	1
+186	Free Cholesterol to Total Lipids in Medium HDL percentage	Free cholesterol to total lipids in medium HDL percentage (UKB data field 23642)	free cholesterol to total lipids in medium HDL percentage	free cholesterol to total lipids in medium HDL percentage	Q	Lipid Measurement	0.9984868	0.9436853	0.9436855	1
+187	Free Cholesterol to Total Lipids in Large HDL percentage	Free cholesterol to total lipids in large HDL percentage (UKB data field 23637)	free cholesterol to total lipids in large HDL percentage	free cholesterol to total lipids in large HDL percentage	Q	Lipid Measurement	0.99847484	0.9435158	0.9435156	1
+188	Cholesterol to Total Lipids in Medium VLDL percentage	Cholesterol to total lipids in medium VLDL percentage (UKB data field 23595)	cholesterol to total lipids in medium VLDL percentage	cholesterol to total lipids in medium VLDL percentage	Q	Lipid Measurement	0.9980135	0.94330055	0.94330037	1
+189	Triglycerides to Total Lipids in Small VLDL percentage	Triglycerides to total lipids in small VLDL percentage (UKB data field 23603)	triglycerides to total lipids in small VLDL percentage	triglycerides to total lipids in small VLDL percentage	Q	Lipid Measurement	0.99839306	0.94317067	0.9431708	1
+190	Triglycerides to Total Lipids in Very Large HDL percentage	Triglycerides to total lipids in very large HDL percentage (UKB data field 23633)	triglycerides to total lipids in very large HDL percentage	triglycerides to total lipids in very large HDL percentage	Q	Lipid Measurement	0.99862707	0.9431566	0.9431566	1
+191	Triglycerides in IDL measurement	Triglycerides in IDL	triglycerides in IDL measurement	triglycerides in IDL measurement	Q	Lipid Measurement	0.9976486	0.94296503	0.9429647	1
+192	Triglycerides in Very Small VLDL measurement	Triglycerides in very small VLDL	triglycerides in very small VLDL measurement	triglycerides in very small VLDL measurement	Q	Lipid Measurement	0.9984353	0.94223106	0.94223106	1
+193	Triglycerides to Total Lipids in Medium HDL percentage	Triglycerides to total lipids in medium HDL percentage (UKB data field 23643)	triglycerides to total lipids in medium HDL percentage	triglycerides to total lipids in medium HDL percentage	Q	Lipid Measurement	0.9986267	0.94196904	0.94196904	1
+194	Triglycerides to Total Lipids in IDL percentage	Triglycerides to total lipids in IDL percentage (UKB data field 23613)	triglycerides to total lipids in IDL percentage	triglycerides to total lipids in IDL percentage	Q	Lipid Measurement	0.9981593	0.941885	0.941885	1
+195	Non-hodgkin's lunspecified type	Non-Hodgkin's lymphoma	non-Hodgkins lymphoma	non-hodgkins lymphoma	CC	Neoplasm	0.39905617	0.9414314	0.393299	1
+196	Free Cholesterol to Total Lipids in Small VLDL percentage	Free cholesterol to total lipids in small VLDL percentage (UKB data field 23602)	free cholesterol to total lipids in small VLDL percentage	free cholesterol to total lipids in small VLDL percentage	Q	Lipid Measurement	0.99808806	0.94142765	0.9414278	1
+197	Triglycerides to Total Lipids in Large HDL percentage	Triglycerides to total lipids in large HDL percentage (UKB data field 23638)	triglycerides to total lipids in large HDL percentage	triglycerides to total lipids in large HDL percentage	Q	Lipid Measurement	0.9986423	0.94114196	0.9411421	1
+198	Triglycerides in Small LDL	Triglycerides in small LDL	triglycerides in small LDL measurement	triglycerides in small LDL measurement	Q	Lipid Measurement	0.9387883	0.9402733	1.0000001	1
+199	Free Cholesterol to Total Lipids in Medium LDL percentage	Free cholesterol to total lipids in medium LDL percentage (UKB data field 23622)	free cholesterol to total lipids in medium LDL percentage	free cholesterol to total lipids in medium LDL percentage	Q	Lipid Measurement	0.99839556	0.9401617	0.94016176	1
+200	Total Lipids in Very Large VLDL	Total lipids in very large VLDL	total lipids in very large VLDL measurement	total lipids in very large VLDL measurement	Q	Lipid Measurement	0.9375845	0.93986654	1	1
+201	Total Lipids in Small HDL	Total lipids in small HDL	total lipids in small HDL measurement	total lipids in small HDL measurement	Q	Lipid Measurement	0.94095194	0.9392459	1	1
+202	Free Cholesterol in Medium VLDL measurement	Free cholesterol in medium VLDL	free cholesterol in medium VLDL measurement	free cholesterol in medium VLDL measurement	Q	Lipid Measurement	0.9983487	0.9390191	0.9390191	1
+203	Free Cholesterol in Medium HDL measurement	Free cholesterol in medium HDL	free cholesterol in medium HDL measurement	free cholesterol in medium HDL measurement	Q	Lipid Measurement	0.998498	0.9389955	0.9389955	1
+204	Total Lipids in Very Large HDL	Total lipids in very large HDL	total lipids in very large HDL measurement	total lipids in very large HDL measurement	Q	Lipid Measurement	0.9370036	0.93895876	1.0000004	1
+205	Triglycerides to Total Lipids in Small LDL percentage	Triglycerides to total lipids in small LDL percentage (UKB data field 23628)	triglycerides to total lipids in small LDL percentage	triglycerides to total lipids in small LDL percentage	Q	Lipid Measurement	0.9984926	0.93887246	0.93887246	1
+206	Free Cholesterol to Total Lipids in Small LDL percentage	Free cholesterol to total lipids in small LDL percentage (UKB data field 23627)	free cholesterol to total lipids in small LDL percentage	free cholesterol to total lipids in small LDL percentage	Q	Lipid Measurement	0.99826837	0.9383524	0.9383524	1
+207	Free Cholesterol to Total Lipids in IDL percentage	Free cholesterol to total lipids in IDL percentage (UKB data field 23612)	free cholesterol to total lipids in IDL percentage	free cholesterol to total lipids in IDL percentage	Q	Lipid Measurement	0.9978191	0.9375499	0.9375499	1
+208	Triglycerides to Total Lipids in Small HDL percentage	Triglycerides to total lipids in small HDL percentage (UKB data field 23648)	triglycerides to total lipids in small HDL percentage	triglycerides to total lipids in small HDL percentage	Q	Lipid Measurement	0.99853384	0.93733954	0.93733954	1
+209	Triglycerides in Very Large VLDL measurement	Triglycerides in very large VLDL	triglycerides in very large VLDL measurement	triglycerides in very large VLDL measurement	Q	Lipid Measurement	0.99846333	0.9372648	0.9372648	1
+210	Free Cholesterol to Total Lipids in Small HDL percentage	Free cholesterol to total lipids in small HDL percentage (UKB data field 23647)	free cholesterol to total lipids in small HDL percentage	free cholesterol to total lipids in small HDL percentage	Q	Lipid Measurement	0.99835944	0.9367107	0.9367107	1
+211	Free Cholesterol to Total Lipids in Large LDL percentage	Free cholesterol to total lipids in large LDL percentage (UKB data field 23617)	free cholesterol to total lipids in large LDL percentage	free cholesterol to total lipids in large LDL percentage	Q	Lipid Measurement	0.9982952	0.9365144	0.9365144	1
+212	Ovarian cancer	Ovarian cancer	ovarian carcinoma	ovarian carcinoma	CC	Neoplasm	0.9350095	0.9350095	1.0000005	1
+213	Cholesterol to Total Lipids in IDL percentage	Cholesterol to total lipids in IDL percentage (UKB data field 23610)	cholesterol to total lipids in IDL percentage	cholesterol to total lipids in IDL percentage	Q	Lipid Measurement	0.99760735	0.9349127	0.9349127	1
+214	Free Cholesterol in IDL measurement	Free cholesterol in IDL	free cholesterol in IDL measurement	free cholesterol in IDL measurement	Q	Lipid Measurement	0.9972435	0.93490696	0.9349068	1
+215	Cholesterol to Total Lipids in Large VLDL percentage	Cholesterol to total lipids in large VLDL percentage (UKB data field 23590)	cholesterol to total lipids in large VLDL percentage	cholesterol to total lipids in large VLDL percentage	Q	Lipid Measurement	0.9981314	0.9344512	0.9344512	1
+216	Cholesterol to Total Lipids in Small VLDL percentage	Cholesterol to total lipids in small VLDL percentage (UKB data field 23600)	cholesterol to total lipids in small VLDL percentage	cholesterol to total lipids in small VLDL percentage	Q	Lipid Measurement	0.9981158	0.9339851	0.9339851	1
+217	Triglycerides to Total Lipids in Large LDL percentage	Triglycerides to total lipids in large LDL percentage (UKB data field 23618)	triglycerides to total lipids in large LDL percentage	triglycerides to total lipids in large LDL percentage	Q	Lipid Measurement	0.9985251	0.9339344	0.9339344	1
+218	Triglycerides in Large LDL	Triglycerides in large LDL	triglycerides in large LDL measurement	triglycerides in large LDL measurement	Q	Lipid Measurement	0.93189615	0.93300784	0.9999999	1
+219	Free Cholesterol in Small VLDL measurement	Free cholesterol in small VLDL	free cholesterol in small VLDL measurement	free cholesterol in small VLDL measurement	Q	Lipid Measurement	0.99840295	0.93242586	0.93242586	1
+220	Phospholipids in Medium LDL	Phospholipids in medium LDL	phospholipids in medium LDL measurement	phospholipids in medium LDL measurement	Q	Lipid Measurement	0.93082064	0.9320277	1.0000004	1
+221	Free Cholesterol in Medium LDL	Free cholesterol in medium LDL	free cholesterol in medium LDL measurement	free cholesterol in medium LDL measurement	Q	Lipid Measurement	0.9297831	0.93181944	0.9999998	1
+222	Free Cholesterol in Small HDL measurement	Free cholesterol in small HDL	free cholesterol in small HDL measurement	free cholesterol in small HDL measurement	Q	Lipid Measurement	0.9983748	0.93138814	0.93138814	1
+223	Free Cholesterol to Total Lipids in Very Large HDL percentage	Free cholesterol to total lipids in very large HDL percentage (UKB data field 23632)	free cholesterol to total lipids in very large HDL percentage	free cholesterol to total lipids in very large HDL percentage	Q	Lipid Measurement	0.99818826	0.9310287	0.9310287	1
+224	Cholesterol to Total Lipids in Small HDL percentage	Cholesterol to total lipids in small HDL percentage (UKB data field 23645)	cholesterol to total lipids in small HDL percentage	cholesterol to total lipids in small HDL percentage	Q	Lipid Measurement	0.99822676	0.9299934	0.9299936	1
+225	Cholesterol to Total Lipids in Medium HDL percentage	Cholesterol to total lipids in medium HDL percentage (UKB data field 23640)	cholesterol to total lipids in medium HDL percentage	cholesterol to total lipids in medium HDL percentage	Q	Lipid Measurement	0.99828696	0.9295461	0.9295461	1
+226	Cholesterol to Total Lipids in Large HDL percentage	Cholesterol to total lipids in large HDL percentage (UKB data field 23635)	cholesterol to total lipids in large HDL percentage	cholesterol to total lipids in large HDL percentage	Q	Lipid Measurement	0.99833786	0.9294033	0.9294033	1
+227	Cholesterol to Total Lipids in Very Large HDL percentage	Cholesterol to total lipids in very large HDL percentage (UKB data field 23630)	cholesterol to total lipids in very large HDL percentage	cholesterol to total lipids in very large HDL percentage	Q	Lipid Measurement	0.99819547	0.92829674	0.92829674	1
+228	Free Cholesterol in Very Small VLDL measurement	Free cholesterol in very small VLDL	free cholesterol in very small VLDL measurement	free cholesterol in very small VLDL measurement	Q	Lipid Measurement	0.99809885	0.92811847	0.92811847	1
+229	Phospholipids in IDL measurement	Phospholipids in IDL	phospholipids in IDL measurement	phospholipids in IDL measurement	Q	Lipid Measurement	0.9970356	0.92712665	0.92712665	1
+230	Cholesterol in Very Small VLDL measurement	Total cholesterol in very small VLDL	cholesterol in very small VLDL measurement	cholesterol in very small VLDL measurement	Q	Lipid Measurement	0.9982511	0.9264411	0.926441	1
+231	Free Cholesterol in Large HDL measurement	Free cholesterol in large HDL	free cholesterol in large HDL measurement	free cholesterol in large HDL measurement	Q	Lipid Measurement	0.9983999	0.9263302	0.9263305	1
+232	Free Cholesterol in Large VLDL measurement	Free cholesterol in large VLDL	free cholesterol in large VLDL measurement	free cholesterol in large VLDL measurement	Q	Lipid Measurement	0.99833626	0.92620945	0.92620945	1
+233	Total Lipids in Medium LDL	Total lipids in medium LDL (UKB data field 23538)	total lipids in medium LDL	total lipids in medium LDL	Q	Lipid Measurement	0.99691844	0.9260655	0.92606556	1
+234	Heart arrhythmia	Arrhythmia	cardiac arrhythmia	cardiac arrhythmia	CC	Cardiovascular	0.97944045	0.9258577	0.92837274	1
+235	Phospholipids in Small LDL	Phospholipids in small LDL	phospholipids in small LDL measurement	phospholipids in small LDL measurement	Q	Lipid Measurement	0.9243777	0.92485404	1	1
+236	Cholesterol to Total Lipids in Medium LDL percentage	Cholesterol to total lipids in medium LDL percentage (UKB data field 23620)	cholesterol to total lipids in medium LDL percentage	cholesterol to total lipids in medium LDL percentage	Q	Lipid Measurement	0.9980974	0.9245235	0.9245235	1
+237	Free Cholesterol in Small LDL	Free cholesterol in small LDL	free cholesterol in small LDL measurement	free cholesterol in small LDL measurement	Q	Lipid Measurement	0.9221419	0.9236641	1	1
+238	Cholesterol to Total Lipids in Small LDL percentage	Cholesterol to total lipids in small LDL percentage (UKB data field 23625)	cholesterol to total lipids in small LDL percentage	cholesterol to total lipids in small LDL percentage	Q	Lipid Measurement	0.99807435	0.92285776	0.92285776	1
+239	Free Cholesterol in Very Large HDL measurement	Free cholesterol in very large HDL	free cholesterol in very large HDL measurement	free cholesterol in very large HDL measurement	Q	Lipid Measurement	0.9985409	0.92235565	0.9223556	1
+240	Free Cholesterol in Very Large VLDL measurement	Free cholesterol in very large VLDL	free cholesterol in very large VLDL measurement	free cholesterol in very large VLDL measurement	Q	Lipid Measurement	0.99810374	0.9223231	0.9223231	1
+241	Cholesterol to Total Lipids in Large LDL percentage	Cholesterol to total lipids in large LDL percentage (UKB data field 23615)	cholesterol to total lipids in large LDL percentage	cholesterol to total lipids in large LDL percentage	Q	Lipid Measurement	0.99802816	0.92175984	0.92175984	1
+242	Docosahexaenoic Acid to Total Fatty Acids percentage	Docosahexaenoic acid to total fatty acids percentage (UKB data field 23457)	docosahexaenoic acid to total fatty acids percentage	docosahexaenoic acid to total fatty acids percentage	Q	Lipid Measurement	1	0.92170024	0.92170024	1
+243	Generalised idiopathic epilepsand epileptic syndromes	Generalized epilepsy	generalised epilepsy	generalised epilepsy	CC	Neurological	0.68621683	0.92100906	0.66379905	1
+244	Recurrent depressive disorder	Major depressive disorder (broad)	major depressive disorder	major depressive disorder	CC	Psychiatric	0.8142196	0.91964954	0.7575373	1
+245	Polyunsaturated Fatty Acids to Monounsaturated Fatty Acids ratio	Polyunsaturated fatty acids to monounsaturated fatty acids ratio (UKB data field 23458)	polyunsaturated fatty acids to monounsaturated fatty acids ratio	polyunsaturated fatty acids to monounsaturated fatty acids ratio	Q	Lipid Measurement	1	0.9191768	0.91917676	1
+246	Free Cholesterol in Large LDL	Free cholesterol in large LDL	free cholesterol in large LDL measurement	free cholesterol in large LDL measurement	Q	Lipid Measurement	0.9150804	0.9162308	1	1
+247	Phospholipids in Large LDL	Phospholipids in large LDL	phospholipids in large LDL measurement	phospholipids in large LDL measurement	Q	Lipid Measurement	0.9144818	0.91536593	0.9999999	1
+248	Saturated Fatty Acids to Total Fatty Acids percentage	Saturated fatty acids to total fatty acids percentage (UKB data field 23455)	saturated fatty acids to total fatty acids percentage	saturated fatty acids to total fatty acids percentage	Q	Lipid Measurement	0.9999999	0.91053843	0.91053843	1
+249	Polyunsaturated Fatty Acids to Total Fatty Acids percentage	Polyunsaturated fatty acids to total fatty acids percentage (UKB data field 23453)	polyunsaturated fatty acids to total fatty acids percentage	polyunsaturated fatty acids to total fatty acids percentage	Q	Lipid Measurement	1.0000004	0.9103377	0.9103377	1
+250	SHBG measurement	Sex hormone-binding globulin levels	sex hormone-binding globulin measurement	sex hormone-binding globulin measurement	Q	Endocrine	0.9384755	0.9094652	0.8421787	1
+251	Triglycerides in HDL measurement	Triglycerides in HDL (UKB data field 23410)	triglycerides in HDL measurement	triglycerides in HDL measurement	Q	Lipid Measurement	0.9986354	0.9092443	0.9092443	1
+252	Migraine	Migraine	migraine disorder	migraine disorder	CC	Neurological	0.90863645	0.9086365	1	1
+253	Spinal stenosis	Spinal canal stenosis	spinal stenosis	spinal stenosis	CC	Skeletal	1	0.9082782	0.9082782	1
+254	Free Cholesterol in VLDL measurement	Free cholesterol in VLDL (UKB data field 23420)	free cholesterol in VLDL measurement	free cholesterol in VLDL measurement	Q	Lipid Measurement	0.99838626	0.902143	0.9021429	1
+255	Sleep apnoea	Sleep apnea syndrome	sleep apnea	sleep apnea	CC	Neurological	0.66809833	0.9014576	0.56922424	1
+256	Fev1/ fvc ratio z-score	Lung function (FEV1/FVC)	FEV/FVC ratio	fev/fec ratio	Q	Respiratory	0.65935874	0.900171	0.46670988	1
+257	Cholesterol in Medium VLDL measurement	Cholesterol in medium VLDL (UKB data field 23505)	cholesterol in medium VLDL measurement	cholesterol in medium VLDL measurement	Q	Lipid Measurement	0.99825513	0.8988621	0.89886177	1
+258	Free Cholesterol in HDL measurement	Free cholesterol in HDL (UKB data field 23422)	free cholesterol in HDL measurement	free cholesterol in HDL measurement	Q	Lipid Measurement	0.99835753	0.89846486	0.898465	1
+259	Hepatitis b	Hepatitis B	hepatitis B virus infection	hepatitis B virus infection	CC	Infection	0.8976259	0.89762586	0.99999994	1
+260	Cholesterol in IDL measurement	Cholesterol in IDL (UKB data field 23526)	cholesterol in IDL measurement	cholesterol in IDL measurement	Q	Lipid Measurement	0.9967917	0.8973421	0.8973422	1
+261	Nasal polyp	Nasal polyps	Nasal cavity polyp	nasal cavity polyp	CC	EarNoseThroat	0.9375088	0.8970323	0.9517805	1
+262	Phospholipids in Very Large VLDL measurement	Phospholipids in very large VLDL (UKB data field 23490)	phospholipids in very large VLDL measurement	phospholipids in very large VLDL measurement	Q	Lipid Measurement	0.99831367	0.89601564	0.89601564	1
+263	Cholesterol in Medium HDL measurement	Cholesterol in medium HDL (UKB data field 23568)	cholesterol in medium HDL measurement	cholesterol in medium HDL measurement	Q	Lipid Measurement	0.99818796	0.89541215	0.8954121	1
+264	Fibrosis and cirrhosis of liver	Cirrhosis	cirrhosis of liver	cirrhosis of liver	CC	Hepatic	0.8111676	0.8925115	0.6958245	1
+265	Cholesterol in Large VLDL measurement	Cholesterol in large VLDL (UKB data field 23498)	cholesterol in large VLDL measurement	cholesterol in large VLDL measurement	Q	Lipid Measurement	0.9981048	0.89098775	0.8909879	1
+266	Infectious mononucleosis	Mononucleosis	infectious mononucleosis	infectious mononucleosis	CC	Infection	1.0000002	0.8906692	0.89066905	1
+267	Cholesterol in Very Large VLDL measurement	Cholesterol in very large VLDL (UKB data field 23491)	cholesterol in very large VLDL measurement	cholesterol in very large VLDL measurement	Q	Lipid Measurement	0.9980614	0.8898852	0.8898852	1
+268	Cholesterol in Small VLDL measurement	Cholesterol in small VLDL (UKB data field 23512)	cholesterol in small VLDL measurement	cholesterol in small VLDL measurement	Q	Lipid Measurement	0.99828684	0.88892096	0.8889209	1
+269	Phospholipids in Very Small VLDL measurement	Phospholipids in very small VLDL (UKB data field 23518)	phospholipids in very small VLDL measurement	phospholipids in very small VLDL measurement	Q	Lipid Measurement	0.9984733	0.8877624	0.8877624	1
+270	Phospholipids in HDL measurement	Phospholipids in HDL (UKB data field 23414)	phospholipids in HDL measurement	phospholipids in HDL measurement	Q	Lipid Measurement	0.99824774	0.88744104	0.88744116	1
+271	Basophil percentage (30220)	Basophil percentage of white cells	basophil percentage of leukocytes	basophil percentage of leukocytes	Q	Immunological	0.799153	0.88406885	0.81330943	1
+272	Vitamin d deficiency	Vitamin D insufficiency	vitamin D deficiency	vitamin D deficiency	CC	Metabolic	1	0.8833738	0.8833738	1
+273	Postprocedural respiratory disorders| not elsewhere classified	Respiratory diseases	respiratory system disease	respiratory system disease	CC	Respiratory	0.71539056	0.88255394	0.7619219	0
+274	Cholesterol in Very Large HDL measurement	Cholesterol in very large HDL (UKB data field 23554)	cholesterol in very large HDL measurement	cholesterol in very large HDL measurement	Q	Lipid Measurement	0.99824303	0.8822384	0.8822384	1
+275	Eosinophill percentage	Eosinophil percentage of white cells	eosinophil percentage of leukocytes	eosinophil percentage of leukocytes	Q	Immunological	0.773128	0.88126326	0.79525566	1
+276	Apolipoprotein b measurement	Apolipoprotein B levels	apolipoprotein B measurement	apolipoprotein B measurement	Q	Lipid Measurement	1.0000001	0.880414	0.88041407	1
+277	Lichen planus	Non-oral lichen planus	lichen planus	lichen planus	CC	Dermatological	1.0000001	0.87902987	0.87903005	1
+278	Fracture	Fractures	bone fracture	bone fracture	CC	Skeletal	0.87532413	0.8785972	0.93252265	1
+279	Preeclampsia| unspecified	Preeclampsia or eclampsia	preeclampsia	preeclampsia	CC	Reproductive	0.91880476	0.87835294	0.8060175	1
+280	Cholesterol in Small HDL measurement	Cholesterol in small HDL (UKB data field 23575)	cholesterol in small HDL measurement	cholesterol in small HDL measurement	Q	Lipid Measurement	0.9980384	0.87834704	0.8783469	1
+281	Cholesterol in Large HDL measurement	Cholesterol in large HDL (UKB data field 23561)	cholesterol in large HDL measurement	cholesterol in large HDL measurement	Q	Lipid Measurement	0.99807775	0.87784636	0.87784624	1
+282	Pulse pressure measurement	Pulse pressure	pulse pressure measurement	pulse pressure measurement	Q	Cardiovascular	1.0000001	0.87652147	0.8765216	1
+283	Weight	Weight	body weight	body weight	Q	Anthropometric	0.8755511	0.8755511	1.0000004	1
+284	Alcoholic cirrhosis of liver	Cirrhosis (alcohol related)	alcoholic liver cirrhosis	alcoholic liver cirrhosis	CC	Hepatic	0.9841516	0.87536865	0.87528706	1
+285	Sequelae of injuries of neck and trunk	Cutaneous melanoma (MTAG)	cutaneous melanoma	cutaneous melanoma	CC	Neoplasm	0.19981948	0.8737914	0.15156141	0
+286	Ldl direct measurement	Low density lipoprotein cholesterol levels	low density lipoprotein cholesterol measurement	low density lipoprotein cholesterol measurement	Q	Lipid Measurement	0.5009425	0.8726377	0.36258703	1
+287	Comparative height size at age 10 - shorter (1697)	Body size at age 10	comparative body size at age 10, self-reported	comparative body size at age 10, self-reported	Q	Anthropometric	0.7214872	0.872139	0.6610613	1
+288	Neutrophill percentage	Neutrophil percentage of white cells	neutrophil percentage of leukocytes	neutrophil percentage of leukocytes	Q	Immunological	0.53186846	0.8704676	0.48150682	1
+289	Aspartate aminotransferase measurement	Aspartate aminotransferase levels	aspartate aminotransferase measurement	aspartate aminotransferase measurement	Q	Metabolic	1	0.8700095	0.8700094	1
+290	Biochemistry Gamma Glutamyl transferase measurement	Gamma glutamyl transferase levels	serum gamma-glutamyl transferase measurement	serum gamma-glutamyl transferase measurement	Q	Hepatic	0.9388088	0.8625721	0.8881352	1
+291	Bladder cancer	Bladder cancer	urinary bladder carcinoma	urinary bladder carcinoma	CC	Neoplasm	0.8624908	0.8624909	1	1
+292	Saturated Fatty Acids	Saturated fatty acids	saturated fatty acids measurement	saturated fatty acids measurement	Q	Lipid Measurement	0.86118996	0.86118996	1	1
+293	Microalbumin_in_urine measurement	Urinary microalbumin levels	urinary microalbumin measurement	urinary microalbumin measurement	Q	Renal	0.8914851	0.8586916	0.7988545	1
+294	Cholesterol	Total cholesterol levels	total cholesterol measurement	total cholesterol measurement	Q	Lipid Measurement	0.72265565	0.8559607	0.74170256	1
+295	Other congenital malformations of heart	Conotruncal heart defects	conotruncal heart malformations	conotruncal heart malformations	CC	Cardiovascular	0.77236843	0.85586274	0.67302364	0
+296	Total Esterified Cholesterol to Total Lipids percentage	Esterified cholesterol levels	esterified cholesterol measurement	esterified cholesterol measurement	Q	Lipid Measurement	0.7468957	0.855085	0.75049955	1
+297	Malignant neoplasm of ovary	Epithelial ovarian cancer	malignant epithelial tumor of ovary	malignant epithelial tumor of ovary	CC	Neoplasm	0.8746234	0.85257107	0.72192633	1
+298	Corneal resistance factor (left)	Corneal resistance factor (MTAG)	corneal resistance factor	corneal resistance factor	Q	Opthamological	0.9087734	0.8505132	0.77916586	1
+299	Lymphocyte percentage	Lymphocyte percentage of white cells	lymphocyte percentage of leukocytes	lymphocyte percentage of leukocytes	Q	Immunological	0.87262124	0.84936225	0.82955563	1
+300	Blood HEMOGLOBIN measurement	Hemoglobin concentration	hemoglobin measurement	hemoglobin measurement	Q	Hematological	0.96943057	0.8493238	0.8175863	1
+301	Congenital malformations of spine and bony thorax	Diffuse idiopathic skeletal hyperostosis flow score	diffuse idiopathic skeletal hyperostosis	diffuse idiopathic skeletal hyperostosis	CC	Skeletal	0.39147547	0.8484163	0.22936183	0
+302	Hand_grip_strength_right measurement	Hand grip strength	grip strength measurement	grip strength measurement	Q	Muscular	0.85551506	0.8455305	0.78584266	1
+303	Heel_bone_mineral_density_bmd_t_score_automated	Heel bone mineral density T score	heel bone mineral density	heel bone mineral density	Q	Skeletal	0.5857698	0.84482324	0.7462893	1
+304	Rectal cancer	Rectal cancer	rectum cancer	rectum cancer	CC	Neoplasm	0.84294456	0.84294456	1.0000002	1
+305	Monocyte percentage	Monocyte percentage of white cells	monocyte percentage of leukocytes	monocyte percentage of leukocytes	Q	Immunological	0.7818872	0.84251714	0.7783129	1
+306	Platelet crit	Plateletcrit	platelet crit	platelet crit	Q	Hematological	1.0000001	0.841635	0.84163505	1
+307	Hdl cholesterol measurement	HDL cholesterol levels	HDL cholesterol change measurement	hdl cholesterol change measurement	Q	Lipid Measurement	0.93229854	0.84022176	0.8142341	1
+308	Peritonsillar abscess	ICD10 J36: Peritonsillar abscess	peritonsillar abscess	peritonsillar abscess	CC	EarNoseThroat	1.0000002	0.83992386	0.83992374	1
+309	Phosphatidylcholines measurement	Phosphatidylcholine levels	phosphatidylcholine measurement	phosphatidylcholine measurement	Q	Metabolic	0.9944736	0.83759993	0.8497952	1
+310	Vasculitis	Vasculitis (pleiotropy)	vasculitis	vasculitis	CC	Cardiovascular	1	0.8365114	0.8365114	1
+311	Cholelithiasis|gall stones	Gallstone disease	gallstones	gallstones	CC	Gastrointestinal	0.77490604	0.8321194	0.7903611	1
+312	Haallergic rhinitis or eczema	Atopic dermatitis	atopic eczema	atopic eczema	CC	Dermatological	0.66164446	0.83012134	0.5384985	1
+313	Apolipoprotein A1 measurement	Apolipoprotein A1 levels	apolipoprotein a 1 measurement	apolipoprotein a 1 measurement	Q	Lipid Measurement	0.9272748	0.82472897	0.89836395	1
+314	Triglycerides measurement	Triglyceride levels	triglyceride measurement	triglyceride measurement	Q	Lipid Measurement	0.9784649	0.82297885	0.79666907	1
+315	PYR measurement	Pyruvate levels	pyruvate measurement	pyruvate measurement	Q	Metabolic	0.97894883	0.8229064	0.79152155	1
+316	C-reactive protein measurement	C-reactive protein levels	c-reactive protein measurement	c-reactive protein measurement	Q	Hepatic	1.0000001	0.8223367	0.82233655	1
+317	Alkaline phosphatase measurement	Serum alkaline phosphatase levels	alkaline phosphatase measurement	alkaline phosphatase measurement	Q	Metabolic	1	0.82139176	0.8213916	1
+318	Omega-6 Fatty Acids to Polyunsaturated Fatty Acids percentage measurement	Plasma omega-6 polyunsaturated fatty acid levels (arachidonic acid)	omega-6 polyunsaturated fatty acid measurement	omega-6 polyunsaturated fatty acid measurement	Q	Lipid Measurement	0.92893785	0.8210083	0.7845612	1
+319	Hof prostate	Prostate cancer (advanced)	prostate carcinoma	prostate carcinoma	CC	Neoplasm	0.6324093	0.82031965	0.6078534	1
+320	Body mass index	Body mass index (MTAG)	body mass index	body mass index	Q	Anthropometric	1.0000001	0.8198094	0.8198094	1
+321	Acne	Acne (severe)	acne	acne	CC	Dermatological	1.0000001	0.8195231	0.8195231	1
+322	Vitamin d measurement	Vitamin D levels	vitamin D measurement	vitamin D measurement	Q	Metabolic	1	0.8195174	0.8195174	1
+323	Polyunsaturated Fatty Acids measurement	Polyunsaturated fatty acids	polyunsaturated fatty acid measurement	polyunsaturated fatty acid measurement	Q	Lipid Measurement	0.98181415	0.8182773	0.86429536	1
+324	PHE measurement	Phenylalanine levels	phenylalanine measurement	phenylalanine measurement	Q	Metabolic	0.9539628	0.8164743	0.74486446	1
+325	Hernia	Hernia (any subtypes)	Hernia	Hernia	CC	Muscular	1.0000004	0.8151173	0.81511736	1
+326	Forced expiratory volume in 1-second (fev1)| predicted	FEV1	forced expiratory volume	forced expiratory volume	Q	Respiratory	0.7514711	0.8100663	0.88493896	1
+327	Coxarthrosis [arthrosis of hip])	Non-surgical hip osteoarthritis	osteoarthritis, hip	osteoarthritis, hip	CC	Skeletal	0.7170415	0.8098905	0.63315284	1
+328	Other proliferative retinopathy	Proliferative diabetic retinopathy (vs NPDR and no DR)	proliferative diabetic retinopathy	proliferative diabetic retinopathy	CC	Opthamological	0.8108374	0.8078178	0.6656822	1
+329	Obesity	Obesity (extreme)	obesity	obesity	CC	Anthropometric	1	0.8053082	0.8053082	1
+330	Icd10 c91: lymphoid leukemia	Lymphocytic leukemia	lymphoid leukemia	lymphoid leukemia	CC	Neoplasm	0.6635034	0.80489516	0.59091544	1
+331	Astigmatism	Refractive astigmatism	astigmatism	astigmatism	CC	Opthamological	1.0000001	0.8038332	0.8038332	1
+332	Lipoprotein a measurement	Lipoprotein (a) levels	lipoprotein A measurement	lipoprotein A measurement	Q	Lipid Measurement	1.0000002	0.8032704	0.8032702	1
+333	Phosphate	Phosphate levels	phosphate measurement	phosphate measurement	Q	Metabolic	0.789086	0.80194855	0.8583415	1
+334	Diaphragmatic hernia	ICD10 K44: Diaphragmatic hernia	diaphragmatic hernia	diaphragmatic hernia	CC	Muscular	1	0.800684	0.800684	1
+335	Diabetic retinopathy	Diabetic retinopathy (all NPDR and PDR)	diabetic retinopathy	diabetic retinopathy	CC	Opthamological	0.99999964	0.8000858	0.8000858	1
+336	Cystatin c measurement	Cystatin C levels	cystatin c measurement	cystatin c measurement	Q	Renal	1	0.79600847	0.7960085	1
+337	Other local infections of skin and subcutaneous tissue	Skin and soft tissue infections	skin and soft tissue Staphylococcus aureus infection	skin and soft tissue Staphylococcus aureus infection	CC	Infection	0.64827204	0.78943336	0.76197654	0
+338	Viral warts measurement	Plantar warts	susceptibility to plantar warts measurement	susceptibility to plantar warts measurement	Q	Infection	0.73985595	0.78902376	0.6139713	1
+339	GLY measurement	Glycine levels	glycine measurement	glycine measurement	Q	Metabolic	0.9692869	0.789007	0.7432374	1
+340	Omega-6 Fatty Acids to Omega-3 Fatty Acids ratio	Omega-6 fatty acids to omega-3 fatty acids ratio (UKB data field 23459)	omega-6:omega-3 polyunsaturated fatty acid ratio	omega-6:omega-3 polyunsaturated fatty acid ratio	Q	Lipid Measurement	0.85712695	0.7865294	0.9031645	1
+341	Dysplasia of cervix uteri	Cervical dysplasia	dysplasia of cervix	dysplasia of cervix	CC	Reproductive	0.9018731	0.7822081	0.68661	1
+342	Myeloproliferative disease	Myeloproliferative neoplasms	myeloproliferative disorder	myeloproliferative disorder	CC	Neoplasm	0.9421505	0.7820284	0.8055885	1
+343	Myelodysplastic syndromes	Non-del(5q) myelodysplastic syndromes	myelodysplastic syndrome	myelodysplastic syndrome	CC	Neoplasm	0.9790536	0.7817436	0.7949482	1
+344	FAW3 measurement	Omega-3 fatty acids levels	omega-3 polyunsaturated fatty acid measurement	omega-3 polyunsaturated fatty acid measurement	Q	Lipid Measurement	0.29923442	0.7814257	0.21608922	1
+345	ALA measurement	Alanine levels	alanine measurement	alanine measurement	Q	Metabolic	0.9512577	0.7805462	0.6936676	1
+346	Biochemistry Calcium measurement	Calcium levels	calcium measurement	calcium measurement	Q	Metabolic	0.9290702	0.77816993	0.76290584	1
+347	Adipon measurement	Adiponectin levels	adiponectin measurement	adiponectin measurement	Q	Endocrine	0.76783395	0.7767695	0.5395164	1
+348	Red blood cell count	Red blood cell count	red blood cell density	red blood cell density	CC	Hematological	0.7724112	0.7724112	1	1
+349	Abnormal serum enlevels measurement	IgG glycosylation	serum IgG glycosylation measurement	serum igg glycosylation measurement	Q	x	0.4038994	0.77010673	0.052196305	0
+350	Diabetes mellitus	Diabetes mellitus (UKB data field 2443)	diabetes mellitus	diabetes mellitus	CC	Endocrine	1.0000002	0.76332057	0.76332057	1
+351	Localisation-related (focal (partial sepilepsand epileptic swith simple partial seizures	Partial epilepsies	partial epilepsy	partial epilepsy	CC	Neurological	0.6940017	0.7622253	0.5775031	1
+352	Retinal problem	Retinopathy in non-diabetics	retinopathy	retinopathy	CC	Opthamological	0.68799806	0.76140463	0.57444847	1
+353	Total protein measurement	Serum total protein levels	total blood protein measurement	total blood protein measurement	Q	Metabolic	0.857908	0.76105785	0.7336142	1
+354	TOTPG measurement	Phospholipid levels (plasma)	phospholipid measurement	phospholipid measurement	Q	Lipid Measurement	0.6702922	0.7585252	0.50158095	0
+355	Total bilirubin measurement	Total bilirubin levels	bilirubin measurement	bilirubin measurement	Q	Hematological	0.95090806	0.751319	0.8184579	1
+356	TYR measurement	Tyrosine levels	tyrosine measurement	tyrosine measurement	Q	Metabolic	0.9450276	0.7442302	0.68784404	1
+357	Nephrotic syndrome	Pediatric steroid sensitive nephrotic syndrome	nephrotic syndrome	nephrotic syndrome	CC	Renal	1.0000002	0.74310994	0.74310994	1
+358	Other diseases of upper respiratory tract	Inflammatory or infectious upper respiratory disease	upper respiratory tract disorder	upper respiratory tract disorder	CC	Respiratory	0.8540096	0.73995614	0.7875551	1
+359	Dermatitis and eczema	Eczema	Eczematoid dermatitis	Eczematoid dermatitis	CC	Dermatological	0.88113105	0.7309514	0.80615395	1
+360	Glucose	Random glucose levels	glucose measurement	glucose measurement	Q	Metabolic	0.74839574	0.72552025	0.680088	1
+361	Forced vital capacity (fvc)| best measure	FVC	vital capacity	vital capacity	Q	Respiratory	0.7442545	0.7211237	0.94787294	1
+362	Monounsaturated Fatty Acids	Total fatty acids	fatty acid measurement	fatty acid measurement	Q	Lipid Measurement	0.6103002	0.7132995	0.71908474	1
+363	Phospholipids to Total Lipids in Large LDL percentage	Phospholipids to total lipids in very small VLDL percentage (UKB data field 23604)	Phospholipids:total lipids ratio	phospholipids:total lipids ratio	Q	Lipid Measurement	0.7901125	0.7100128	0.8788152	0
+364	Cerebral atherosclerosis	Brain arteriolosclerosis	cerebral atherosclerosis	cerebral atherosclerosis	CC	Cardiovascular	1.0000001	0.709023	0.709023	1
+365	TOTCHO measurement	Total cholines levels	choline measurement	choline measurement	Q	Metabolic	0.7972322	0.7032896	0.7243717	1
+366	Basal metabolic rate (23105) measurement	Basal metabolic rate	base metabolic rate measurement	base metabolic rate measurement	Q	Metabolic	0.7517922	0.70310074	0.89885265	1
+367	Chronic obstructive pulmonardisease| unspecified	Asthma-chronic obstructive  pulmonary disease overlap syndrome	Chronic Obstructive Asthma	chronic obstructive asthma	CC	Respiratory	0.23728606	0.7013618	0.16422218	1
+368	Urinartract infection|kidneinfection	Systemic infections	infection	infection	CC	Infection	0.49125123	0.6977718	0.38408196	0
+369	Secondarmalignant neoplasm of liver	Hepatic cancer	liver neoplasm	liver neoplasm	CC	Neoplasm	0.85061735	0.69498336	0.6167107	1
+370	URATE measurement	Urate levels	urate measurement	urate measurement	Q	Renal	1.0000002	0.69378394	0.6937839	1
+371	Total Concentration of Lipoprotein Particles	Total concentration of lipoprotein particles	lipoprotein measurement	lipoprotein measurement	Q	Lipid Measurement	0.69292146	0.69292134	1.0000001	1
+372	IDL-C measurement	Concentration of IDL particles	intermediate density lipoprotein measurement	intermediate density lipoprotein measurement	Q	Lipid Measurement	0.851349	0.6859875	0.7690459	1
+373	Glycated haemoglobin (hba1c) measurement	Glycated hemoglobin HbA1c levels	HbA1c measurement	hba1c measurement	Q	Hematological	0.7615627	0.6845972	0.87037086	1
+374	Body_mass_index_bmi measurement	Body mass index (change over time)	longitudinal BMI measurement	longitudinal bmi measurement	Q	Anthropometric	0.73904026	0.6788846	0.6355033	0
+375	Measles	Measles	susceptibility to measles measurement	susceptibility to measles measurement	CC	Infection	0.67606187	0.67606187	0.9999996	1
+376	Citrate measurement	Citrate levels	citrate measurement	citrate measurement	Q	Metabolic	1	0.6742182	0.6742182	1
+377	Rubella [german measles]	Rubella	susceptibility to rubella infection measurement	susceptibility to rubella infection measurement	CC	Infection	0.65729105	0.6700313	0.7733623	1
+378	Mumps	Mumps	susceptibility to mumps measurement	susceptibility to mumps measurement	CC	Infection	0.6679945	0.6679945	1.0000002	1
+379	Myositis	Idiopathic inflammatory myopathy	myositis	myositis	CC	Muscular	1.0000001	0.66666365	0.66666365	1
+380	Remnant-c measurement	Remnant cholesterol (non-HDL, non-LDL -cholesterol)	remnant cholesterol measurement	remnant cholesterol measurement	Q	Lipid Measurement	0.42373663	0.6639724	0.17344037	1
+381	Appendicitis	Gangrenous vs non-gangrenous appendicitis	appendicitis	appendicitis	CC	Gastrointestinal	1.0000004	0.65026873	0.6502689	0
+382	Shingles	Shingles	susceptibility to shingles measurement	susceptibility to shingles measurement	CC	Infection	0.6337743	0.6337743	0.99999994	1
+383	Total Triglycerides to Total Lipids percentage	Lipid metabolism phenotypes	lipid measurement	lipid measurement	Q	Lipid Measurement	0.64073515	0.6238759	0.52309537	0
+384	IGF-1 measurement	Serum levels of protein IGF1	IgF-1 measurement	IgF-1 measurement	Q	Endocrine	0.813291	0.6143415	0.82796836	1
+385	Lnlvidd measurement	Left ventricular end systole inferoseptal wall thickness	left ventricular structural measurement	left ventricular structural measurement	Q	Cardiovascular	0.3215376	0.602514	0.143915	0
+386	Calculus of kidney and ureter	Kidney stone disease	nephrolithiasis	nephrolithiasis	CC	Renal	0.37679195	0.5952261	0.46476552	1
+387	Congenital malformations of aortic and mitral valves	Left ventricular obstructive tract defect (inherited effect)	congenital left-sided heart lesions	congenital left-sided heart lesions	CC	Cardiovascular	0.5690454	0.5933634	0.45450506	1
+388	Abnormal glucose tolerance test	Two-hour glucose	glucose tolerance test	glucose tolerance test	Q	Metabolic	0.94275093	0.55342436	0.51778376	0
+389	Cardiovascular measurement	Cardiac structure and function	cardiovascular measurement	cardiovascular measurement	Q	Cardiovascular	1	0.48908532	0.48908532	0
+390	Certain disorders involving the immune mechanism	Celiac disease or Rheumatoid arthritis	immune system disease	immune system disease	CC	Immunological	0.7775998	0.46642208	0.4677145	0
+391	Follicular [nodular] non-hodgkin's lymphoma	Follicular lymphoma	neoplasm of mature b-cells	neoplasm of mature b-cells	CC	Neoplasm	0.27104414	0.32537815	0.8456017	1
+392	M88 paget's disease of bone [osteitis deformans]	Paget's disease	osteitis deformans	osteitis deformans	CC	Skeletal	0.7199763	0.3020921	0.7022271	1
+393	Trigger finger-hand	Trigger finger	stenosing tenosynovitis	stenosing tenosynovitis	CC	Muscular	-0.0033345772	0.0019648187	0.93221855	1
