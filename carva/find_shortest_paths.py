@@ -1,8 +1,6 @@
 import pandas as pd
 import networkx as nx
 import os
-import ndex2
-import sys
 import argparse
 
 from network_utils import load_network

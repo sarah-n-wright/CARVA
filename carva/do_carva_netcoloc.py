@@ -1,34 +1,28 @@
 from configparser import NoOptionError
 import numpy as np
 import pandas as pd
-import sys
-from tqdm import tqdm
 import os
 from os.path import exists
 import argparse
-sys.path.append('/cellar/users/snwright/Git/NetColoc/netcoloc/')
 
 from geneset_utils import *
 from network_utils import *
-from netcoloc_utils import Seeds, get_degree_binning, Timer
-import netprop_zscore as netprop_zscore
-from netprop import *
-from network_colocalization import *
-# test if there are unidentified dependencies on updated coloc functions
+from netcoloc.netcoloc_utils import Seeds, get_degree_binning, Timer
+import netcoloc.netprop_zscore as netprop_zscore
+from netcoloc.netprop import *
+from netcoloc.network_colocalization import *
 
-#TODO get format of z outputs
-#TODO check loading of seeds and matrices
-#TODO check functions for significance
-#TODO check joining the difference z score results
-#TODO update node names of pcnet?
-
-    #outdir="/cellar/users/snwright/Data/RareCommon"
-    #common_seeds_file=outdir+"/common_seeds_30630.txt"
-    #rare_seeds_file=outdir+"/rare_seeds_30630.txt"
-    #trait="30630"
-    
     
 def create_file_suffix(quant, transform, normalization, suff):
+    """ Create a suffix for output files based on the parameters.
+    Args:
+        quant (bool): Whether the analysis is for quantitative traits.
+        transform (str): Transformation applied to the scores.
+        normalization (str): Normalization method applied to the scores.
+        suff (str): Additional suffix to append.
+    Returns:
+        str: A string suffix that combines the parameters.
+    """
     if quant:
         suffix ='_q'
     else:
@@ -50,18 +44,18 @@ if __name__=='__main__':
     parser.add_argument('--trait_common', type=str, help='Trait2 to evaluate')
     parser.add_argument('--uuid', type=str, help='UUID of network')
     parser.add_argument('--net_name', type=str, help='Name of network')
-    parser.add_argument('--overlap_control', type=str, choices=['remove', 'bin', 'None'], default='remove')
-    parser.add_argument('--min-genes', type=int, default=3)
-    parser.add_argument('--quant', action='store_true')
-    parser.add_argument('--transform', type=str, default='neglog10')
-    parser.add_argument('--normalization', type=str, required=False)
-    parser.add_argument('--suffix', type=str, default=None)
-    parser.add_argument('--binsize', type=int, default=10)
-    parser.add_argument('--zcoloc', type=float, default=3)
-    parser.add_argument('--z1z2', type=float, default=1)
-    parser.add_argument('--stat_suffix', type=str, default=None)
-    parser.add_argument('--raresuff', type=str, default='_RV')
-    parser.add_argument('--commonsuff', type=str, default='_CV')
+    parser.add_argument('--overlap_control', type=str, choices=['remove', 'bin', 'None'], default='remove', help='Method to control for overlap between seed genes')
+    parser.add_argument('--min-genes', type=int, default=3, help='Minimum number of seed genes required to run analysis')
+    parser.add_argument('--quant', action='store_true', help='Whether the analysis is for quantitative traits (default: False)')
+    parser.add_argument('--transform', type=str, default='neglog10', help='Transformation applied to the scores')
+    parser.add_argument('--normalization', type=str, required=False, help='Normalization method applied to the scores')
+    parser.add_argument('--suffix', type=str, default=None, help='Additional suffix to append')
+    parser.add_argument('--binsize', type=int, default=10, help='Size of the bins for degree binning')
+    parser.add_argument('--zcoloc', type=float, default=3, help='Z-score threshold for colocalization')
+    parser.add_argument('--z1z2', type=float, default=1, help='Z-score threshold for trait 1 and 2')
+    parser.add_argument('--stat_suffix', type=str, default=None, help='Additional suffix for statistics')
+    parser.add_argument('--raresuff', type=str, default='_RV', help='Suffix for the file containing rare trait genes')
+    parser.add_argument('--commonsuff', type=str, default='_CV', help='Suffix for the file containing common trait genes')
     args = parser.parse_args()
 
     t = Timer()
@@ -70,8 +64,7 @@ if __name__=='__main__':
     common_seeds = Seeds(inputdata = os.path.join(args.indir, args.trait_common+args.commonsuff+'.txt'))
     rare_seeds = Seeds(inputdata = os.path.join(args.indir, args.trait_rare+args.raresuff + '.txt'))
     suffix = create_file_suffix(args.quant, args.transform, args.normalization, args.suffix)
-    #common_seeds = load_seed_genes(args.trait_common, 'common', args.indir)
-    #rare_seeds = load_seed_genes(args.trait_rare, 'rare', args.indir)
+
     t.end('Load seeds')
     # check if there are enough seed to start with, if not exit
     if (len(common_seeds.genes) < args.min_genes) or (len(rare_seeds.genes) < args.min_genes):
@@ -89,7 +82,6 @@ if __name__=='__main__':
         # filter to network:
         # load the presaved node and degree info, or create from the network as needed
         pc_nodes = load_saved_network_nodes(netdir, args.net_name)
-        print('debug PC NODES:', len(pc_nodes))
         pc_degree = load_saved_network_degrees(netdir, args.net_name)
         if (pc_nodes is None) or (pc_degree is None):
             create_saved_nodes_and_degrees(args.uuid, netdir, args.net_name, nodes=pc_nodes is None, degrees=pc_degree is None)
@@ -121,6 +113,8 @@ if __name__=='__main__':
             # initialize statistics
             stats = {"trait_rare": args.trait_rare, "trait_common": args.trait_common, 'network':args.net_name, 'transform':args.transform, 'normalization':args.normalization}
             t.start('Common variants')
+
+            ## Analyze the Common Genes using Q-NetColoc or B-NetColoc
             if args.quant:
                 if exists(os.path.join(args.outdir, args.trait_common + f'_z{args.commonsuff}{suffix}.tsv')): # check if already calculated.
                     z_common=pd.read_csv(os.path.join(args.outdir, args.trait_common + f'_z{args.commonsuff}{suffix}.tsv'), sep="\t", index_col=0, header=None).squeeze('columns')
@@ -133,14 +127,7 @@ if __name__=='__main__':
                     t.start('Scored heat zscores')
                     z_common, common_heat, _ = netprop_zscore.calculate_scored_heat_zscores(indiv_heats, pc_nodes, pc_degree, common_seeds.scores, 
                                                         num_reps=1000, minimum_bin_size=args.binsize, verbose=True, normalize_heat=None, random_seed=None, Timer=t)
-                    print('debug Z COMMON', len(z_common))
-                    print('debug COMMON HEAT', len(common_heat))
                     t.end('Scored heat zscores')
-                        #calls netprop.scored_network_propagation
-                        #call perform_randomized_scored_propagation
-                            # calls get_random_binned_scores
-                            # calls netproop.scored_network_propagation
-                        # returns series, series, array - I think?
                     z_common.to_csv(os.path.join(args.outdir, args.trait_common + f'_z{args.commonsuff}{suffix}.tsv'), sep="\t", header=False)
                     z_common=pd.read_csv(os.path.join(args.outdir, args.trait_common + f'_z{args.commonsuff}{suffix}.tsv'), sep="\t", index_col=0, header=None).squeeze('columns')
                     z_common.index.name=None
@@ -164,6 +151,7 @@ if __name__=='__main__':
                     z_common.index.name=None
             t.end('Common variants')
             t.start('Rare variants')
+            ## Analyze the Rare Genes using Q-NetColoc or B-NetColoc
             if args.quant:
                 if exists(os.path.join(args.outdir, args.trait_rare + f'_z{args.raresuff}{suffix}.tsv')):
                     z_rare = pd.read_csv(os.path.join(args.outdir, args.trait_rare + f'_z{args.raresuff}{suffix}.tsv'), sep="\t", index_col=0, header=None).squeeze('columns')
@@ -175,14 +163,8 @@ if __name__=='__main__':
                     t.start('Scored heat zscores')
                     z_rare, rare_heat, _ = netprop_zscore.calculate_scored_heat_zscores(indiv_heats, pc_nodes, pc_degree, rare_seeds.scores, 
                                                     num_reps=1000, minimum_bin_size=args.binsize, verbose=True, normalize_heat=None, random_seed=None, Timer=t)
-                    print('debug Z RARE', len(z_rare))
-                    print('debug RARE HEAT', len(rare_heat))
                     t.end('Scored heat zscores')
-                        #calls netprop.scored_network_propagation
-                        #call perform_randomized_scored_propagation
-                            # calls get_random_binned_scores
-                            # calls netproop.scored_network_propagation
-                        # returns series, series, array - I think?
+
                     z_rare.to_csv(os.path.join(args.outdir, args.trait_rare + f'_z{args.raresuff}{suffix}.tsv'), sep="\t", header=False)
                     z_rare = pd.read_csv(os.path.join(args.outdir, args.trait_rare + f'_z{args.raresuff}{suffix}.tsv'), sep="\t", index_col=0, header=None).squeeze('columns')
                     z_rare.index.name=None
@@ -206,10 +188,7 @@ if __name__=='__main__':
             
             
             z_scores=pd.DataFrame(z_common, columns=["Common"]).join(pd.DataFrame(z_rare, columns=["Rare"]))
-            print('debug Z SCORES', len(z_scores))
-            print('debug Z SCORES inner', len(pd.DataFrame(z_common, columns=["Common"]).join(pd.DataFrame(z_rare, columns=["Rare"]), how='inner')))
-            # TODO does there actually need to be a difference here?
-                # TODO How should overlap be considered??
+
             # Calculate statistics
             t.start('Mean Z-score')
             observed, permuted = calculate_mean_z_score_distribution(pd.DataFrame(z_common).rename(columns={1:'z'}), pd.DataFrame(z_rare).rename(columns={1:'z'}), 
@@ -246,5 +225,3 @@ if __name__=='__main__':
                         f.write("\t"+str(stats[s]))
                 f.write("\n")
             t.print_all_times()
-
-

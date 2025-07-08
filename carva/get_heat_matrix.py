@@ -6,12 +6,12 @@ import os
 import pandas as pd
 import networkx as nx
 
-outdir=str(sys.argv[1])
-uuid=str(sys.argv[2])
-name=str(sys.argv[3])
-filt=str(sys.argv[4]).split('_')
-filter_col = filt[0]
-filter_th = int(filt[1])
+outdir=str(sys.argv[1]) # Output directory for the heat matrix and node information
+uuid=str(sys.argv[2]) # NDEx UUID of the network to load
+name=str(sys.argv[3]) # Name for the output files
+filt=str(sys.argv[4]).split('_') # Filter specification in the format "column_threshold", e.g., "degree_10"
+filter_col = filt[0] # Column to filter on, e.g., "degree"
+filter_th = int(filt[1]) # Threshold for filtering, e.g., 10
 
 # Load the network from NDEx
 G_PC = load_network(uuid)

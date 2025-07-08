@@ -6,12 +6,21 @@ from network_utils import *
 from tqdm import tqdm
 import sys
 from neteval.Timer import Timer
+import networkx as nx
 
 ###################
-# Gene Annotation #
+# Network Annotation #
 ###################
 class GeneSet:
+    """ Class to hold information about pairs of genesets, including common and rare variants."""
     def __init__(self, trait1,  indir, trait2=None, node_col='Gene Symbol'):
+        """ Initialize the GeneSet with common and rare variants.
+        Args:
+            trait1 (str): Name of the first trait.
+            indir (str): Directory containing the seed gene files.
+            trait2 (str, optional): Name of the second trait. If None, only trait1 is used.
+            node_col (str): Column name to use for loading seed genes, defaults to 'Gene Symbol'.
+        """
         if trait2 is None:
             self.trait = trait1
             self.cv = load_seed_genes(self.trait, 'common', indir, usecol=node_col)
@@ -20,12 +29,14 @@ class GeneSet:
             self.rv = load_seed_genes(trait1, 'rare', indir, usecol=node_col)
             self.cv = load_seed_genes(trait2, 'common', indir, usecol=node_col)
             self.trait = trait1 + '_' + trait2
+        # Calculate the sizes of the sets, and the intersection between both sets
         self.ov = set(self.cv).intersection(set(self.rv))
         self.set_sizes = {'common':len(self.cv), 
                             'rare':len(self.rv), 
                             'overlap':len(set(self.cv).intersection(set(self.rv)))}
 
     def get_all_stats(self, network, timer=None):
+        """ Wrapper function to calculate all subnetwork statistics for common, rare, overlap, and union genesets."""
         if timer is not None:
             timer.start(f'Rare')
         rv_stats = get_subnetwork_stats(network, self, 'rare').T
@@ -48,6 +59,7 @@ class GeneSet:
         return stats_df
 
     def get_modularity(self, network, timer=None, gamma=1):
+        """ Wrapper function to calculate modularity for common, rare, overlap, and union genesets."""
         if timer is not None:
             timer.start('Common')
         Q_common = network.get_modularity(self.cv, gamma=gamma)
@@ -75,9 +87,25 @@ class GeneSet:
 
     
 class NDExNetwork:
+    """ Class to hold information about a network loaded from NDEx or a CSV file."""
     def __init__(self, net_input, net_name, username=None, password=None, use_lcc=True, clustering_file=None, paths_file=None, 
                  input_is_uuid=False, netcol1='Entrez_A', netcol2='Entrez_B'):
+        """
+        Initialize the NDExNetwork with a network input, name, and optional parameters.
+        Args:
+            net_input (str): Path to the network file or NDEx UUID.
+            net_name (str): Name of the network.
+            username (str, optional): Username for NDEx if input is a UUID.
+            password (str, optional): Password for NDEx if input is a UUID.
+            use_lcc (bool, optional): Whether to use the largest connected component. Defaults to True.
+            clustering_file (str, optional): Path to a file containing clustering coefficients. Defaults to None.
+            paths_file (str, optional): Path to a file containing path lengths. Defaults to None.
+            input_is_uuid (bool, optional): Whether the input is an NDEx UUID. Defaults to False.
+            netcol1 (str, optional): Source column name in the network file. Defaults to 'Entrez_A'.
+            netcol2 (str, optional): Target column name in the network file. Defaults to 'Entrez_B'.
+        """
         self.net_input = net_input
+        # Load the network
         if input_is_uuid:
             self.full_G = load_network(self.net_input, username, password)
         else:
@@ -85,6 +113,7 @@ class NDExNetwork:
         self.net_name = net_name
         self.n_components = nx.number_connected_components(self.full_G)
         self.is_lcc = False
+        ## Subset to LCC if specified
         if use_lcc:
             self.lcc = max(nx.connected_components(self.full_G), key=len)
             self.G = self.full_G.subgraph(self.lcc)
@@ -93,12 +122,14 @@ class NDExNetwork:
         else:
             self.lcc=None
             self.G = self.full_G
+        # Get basic network properties
         self.degree_map = dict(self.G.degree())
         self.average_degree = sum(self.degree_map.values())/len(self.degree_map)
         self.density = nx.density(self.G)
         self.node_count = len(self.G.nodes)
         self.edge_count = len(self.G.edges)
         self.nodes = list(self.G.nodes)
+        # Are gene clustering values pre-computed? If not, calculate clustering coefficients for all nodes.
         if (clustering_file is None) or (not os.path.exists(clustering_file)):
             self.clustering_coeffs = pd.DataFrame({'clustering_coeff': nx.clustering(self.G)})
             if clustering_file is not None:
@@ -108,6 +139,7 @@ class NDExNetwork:
             if netcol1 == 'Entrez_A':
                 self.clustering_coeffs.index = self.clustering_coeffs.index.astype(int)
             self.clustering_coeffs.columns = ['clustering_coeff']
+        # Are path lengths pre-computed? If not, calculate shortest paths for all pairs of nodes.
         if (paths_file is not None) and (os.path.exists(paths_file)):
             self.path_lengths = pd.read_csv(paths_file, index_col=0)
             self.average_path_lengths = self.path_lengths.sum().sum()/((len(self.path_lengths)**2 - len(self.path_lengths))) # excludes self paths (which are 0 by definition)
@@ -121,6 +153,7 @@ class NDExNetwork:
             
 
     def get_average_clustering(self, genelist):
+        """ Calculate the average clustering coefficient for a list of genes."""
         present_nodes = [g for g in genelist if g in self.clustering_coeffs.index.values]
         try:
             return self.clustering_coeffs.loc[present_nodes].clustering_coeff.mean()
@@ -132,6 +165,7 @@ class NDExNetwork:
             return self.clustering_coeffs.loc[present_nodes].clustering_coeff.mean()
     
     def get_average_shortest_path(self, genelist):
+        """ Calculate the average shortest path length for a list of genes."""
         if self.path_lengths is not None:
             try:
                 present_nodes = [g for g in genelist if g in self.path_lengths.index.values]
@@ -146,18 +180,19 @@ class NDExNetwork:
         else:
             return np.nan
     
-    
     def get_nodes_in_network(self, genelist):
+        """ Get the nodes from the network that are present in a given gene list."""
         present_nodes = [gene for gene in genelist if gene in self.nodes]
         if len(present_nodes) < len(genelist):
             print(f'{len(present_nodes)}/{len(genelist)} genes found in network')
         return present_nodes
     
     def get_node_degrees(self, genelist):
+        """ Get the degrees of nodes in the network for a given gene list."""
         return {gene: self.degree_map[gene] for gene in genelist if gene in self.degree_map}
     
-    
     def export_global_network_stats(self):
+        """ Export global network statistics as a DataFrame."""
         stats = {'uuid': self.uuid,
                     'lcc': self.is_lcc,
                     'node_count': self.node_count,
@@ -168,15 +203,18 @@ class NDExNetwork:
         return pd.DataFrame({self.net_name: stats})
     
     def get_subnetwork(self, genelist):
+        """ Get a subnetwork containing only the nodes in the provided gene list."""
         subgraph = self.G.subgraph(genelist)
         return subgraph
 
     def get_modularity(self, genelist, gamma=1):
+        """ Calculate the modularity of the network for a given gene list."""
         present_nodes = self.get_nodes_in_network(genelist)
         communities = [present_nodes, [node for node in self.G if node not in present_nodes]]
         return nx.community.modularity(self.G, communities, resolution=gamma)
 
     def get_subnetwork_modularity(self, rare_list, common_list, overlap_list, gamma=1):
+        """ Calculate the modularity of the subnetwork formed by rare, common, and overlap genes."""
         partition_o = self.get_nodes_in_network(overlap_list)
         partition_r = [x for x in self.get_nodes_in_network(rare_list) if x not in partition_o]
         partition_c = [x for x in self.get_nodes_in_network(common_list) if x not in partition_o]
@@ -192,17 +230,27 @@ class NDExNetwork:
             print(f'No edges in subnetwork. Returning modularity=0')
             return 0
 
-
     def get_assortativity(self, genelist):
+        """ Calculate the assortativity coefficient of the network for a given gene list."""
         mx_graph = self.G.copy()
         attributes = {node: 1 if node in genelist else 0 for node in mx_graph.nodes}
         nx.set_node_attributes(mx_graph, attributes, 'InGeneSet')
         return nx.attribute_assortativity_coefficient(mx_graph, 'InGeneSet')
     
     def get_subgraph_clustering(self, genelist):
+        """ Calculate the clustering coefficient for a subgraph defined by a list of genes."""
         return nx.average_clustering(self.G.subgraph(genelist))
 
+
 def get_subnetwork_stats(network, geneset, rare_or_common):
+    """ Function to calculate subnetwork statistics for a given geneset and type (rare, common, or overlap).
+    Args:
+        network (NDExNetwork): The network object containing the full network.
+        geneset (GeneSet): The geneset object containing common and rare genes.
+        rare_or_common (str): Type of geneset to analyze ('rare', 'common', or 'overlap').
+    Returns:
+        pd.DataFrame: A DataFrame containing the calculated statistics for the specified geneset.
+    """
     if rare_or_common == 'rare':
         genes_rv = network.get_nodes_in_network(geneset.rv)
         if len(genes_rv) == 0:
@@ -261,6 +309,7 @@ def get_subnetwork_stats(network, geneset, rare_or_common):
     return pd.DataFrame({geneset.trait: stats})
 
 def get_rare_common_network_stats(network, geneset):
+    """ Function to calculate statistics for the subnetwork formed by rare and common genes."""
     r_genes = set(network.get_nodes_in_network(geneset.rv))
     c_genes = set(network.get_nodes_in_network(geneset.cv))
     if len(r_genes) == 0 or len(c_genes) == 0:
@@ -295,6 +344,7 @@ def get_rare_common_network_stats(network, geneset):
     return pd.DataFrame({geneset.trait: stats})
 
 def rare_common_assortativity(network, r_genes, c_genes, o_genes):
+    """ Calculate the assortativity coefficient for the subnetwork formed by rare and common genes."""
     mx_graph = network.copy()
     if len(o_genes) == 0:
         attributes = {node: 1 if node in r_genes else 0 for node in mx_graph.nodes}
@@ -312,16 +362,14 @@ def rare_common_assortativity(network, r_genes, c_genes, o_genes):
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--indir', type=str, default = '',
-                        help='Path to inputs')
+    parser.add_argument('--indir', type=str, default = '', help='Path to inputs')
     parser.add_argument('--outdir', type=str, default = '', help='Path to outputs')
-    parser.add_argument('--uuid', type=str, default=None,
-                        help='UUID of network to analyze')
-    parser.add_argument('--netfile', type=str, default=None)
-    parser.add_argument('--geneset_list_file', type=str, default=None)
-    parser.add_argument('--geneset_list_file2', type=str, default=None)
-    parser.add_argument('--clustering_file', type=str, default=None)
-    parser.add_argument('--paths_file', type=str, default=None)
+    parser.add_argument('--uuid', type=str, default=None, help='UUID of network to analyze')
+    parser.add_argument('--netfile', type=str, default=None, help='Path to network file')
+    parser.add_argument('--geneset_list_file', type=str, default=None, help='Path to the first geneset list file')
+    parser.add_argument('--geneset_list_file2', type=str, default=None, help='Path to second geneset list file')
+    parser.add_argument('--clustering_file', type=str, default=None, help='Path to clustering file')
+    parser.add_argument('--paths_file', type=str, default=None, help='Path to paths file')
     parser.add_argument('--net_name', type=str, default='default')
     parser.add_argument('--update', action='store_true', help='Force update of already calculated values.')
     args = parser.parse_args()
@@ -330,6 +378,7 @@ if __name__ == '__main__':
     
     assert (args.uuid is not None) or (args.netfile is not None), 'Either UUID or network file must be specified'
     
+    #Load the network object
     if args.netfile is not None:
         G_nd = NDExNetwork(args.netfile, args.net_name, clustering_file=args.clustering_file, paths_file=args.paths_file, input_is_uuid=False, netcol1='Entrez_A', netcol2='Entrez_B')
     else:
@@ -358,6 +407,7 @@ if __name__ == '__main__':
     results = []
     
     if True:
+        # calculate all subnetwork statistics for each geneset
         for i, geneset in tqdm(enumerate(all_genesets)):
             if (not args.update) and (os.path.exists(os.path.join(args.outdir, f'network_stats_{args.net_name}_{args.geneset_list_file}.{outprefs[i]}'))):
                 # check if already calculated, skip if true
@@ -374,6 +424,7 @@ if __name__ == '__main__':
         all_results.to_csv(os.path.join(args.outdir, f'network_stats_{args.net_name}_{args.geneset_list_file}'), sep='\t', index=False)
         t.print_all_times()
     if True:
+        # calculate modularity for each geneset
         results = {}
         for i, geneset in tqdm(enumerate(all_genesets)):
             if (not args.update) and (os.path.join(args.outdir, f'network_modularities_{args.net_name}_{args.geneset_list_file}')):

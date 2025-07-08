@@ -1,5 +1,4 @@
 import argparse
-import pandas as pd
 import os
 from scipy.stats import hypergeom
 from geneset_utils import load_gene_profile
@@ -11,11 +10,11 @@ if __name__ == '__main__':
     parser.add_argument('--commontrait', type=str, help='Trait2 to evaluate')
     parser.add_argument('--datadir', type=str, help='Path to data')
     parser.add_argument('--outdir', type=str, help='Path to output')
-    parser.add_argument('--rare_th', type=float, default=1, required=False)
-    parser.add_argument('--common_th', type=float, default=1, required=False)
-    parser.add_argument('--min_genes', type=int, default=3, required=False)
-    parser.add_argument('--background_N', type=int, default=20000, required=False)
-    parser.add_argument('--test_name', type=str)
+    parser.add_argument('--rare_th', type=float, default=1, required=False, help='Network colocalization threshold for rare trait')
+    parser.add_argument('--common_th', type=float, default=1, required=False, help='Network colocalization threshold for common trait')
+    parser.add_argument('--min_genes', type=int, default=3, required=False, help='Minimum number of genes')
+    parser.add_argument('--background_N', type=int, default=20000, required=False, help='Background gene set size')
+    parser.add_argument('--test_name', type=str, help='Name to give the test')
     args = parser.parse_args()
 
     outfile=os.path.join(args.outdir, f'{args.raretrait}_{args.commontrait}.R_C_overlap.txt')
