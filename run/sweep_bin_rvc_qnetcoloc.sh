@@ -1,18 +1,17 @@
 #!/bin/bash -l
 #SBATCH --job-name=qnetcoloc
-#SBATCH --output /cellar/users/snwright/Data/RareCommon/slurm/qnetcoloc_%A_%a.out
-#SBATCH --error /cellar/users/snwright/Data/RareCommon/slurm/qnetcoloc_%A_%a.err
+#SBATCH --output=qnetcoloc_%A_%a.out
+#SBATCH --error=qnetcoloc_%A_%a.err
 #SBATCH --cpus-per-task=1
 #SBATCH --time=05:00:00
 #SBATCH --mem-per-cpu=32G
 #SBATCH --array=0-50%5
 
-#DATADIR=/cellar/users/snwright/Data/RareCommon/inputs/testing
-execdir=/cellar/users/snwright/Git/rare_common/carva
-#OUTDIR=/cellar/users/snwright/Data/RareCommon/outputs/netcoloc/testing
+PWD=$(pwd)
+execdir=$PWD/../carva
 uuid='d73d6357-e87b-11ee-9621-005056ae23aa'
 name=pcnet2_0
-netdir=/cellar/users/snwright/Data/RareCommon/inputs/
+netdir=$PWD/../outputs/
 
 config=$1
 source run_configs/$1
@@ -27,7 +26,6 @@ echo $tR $tC $q $transform $normalization ${SLURM_ARRAY_JOB_ID}_$SLURM_ARRAY_TAS
 
 mkdir -p $outdir
 
-#echo -e "Trait_Common\tTrait_Rare\tNetwork\tMean_NPS\tNull_NPS\tp_NPS\tSize\tNull_Size\tp_Size" > $OUTDIR/netcoloc/pilot_netcoloc_results_$t_$t.txt
 
 file_list=${outdir}/${SLURM_ARRAY_JOB_ID}.files
 
@@ -37,8 +35,7 @@ else
 	overlap_control=remove
 fi
 
-#bin_sizes=(5 20 40 80 160)
-bin_sizes=(10)
+bin_sizes=(5 10 20 40 80 160)
 for bin in ${bin_sizes[@]}; do
 	test_suff=bin$bin
 

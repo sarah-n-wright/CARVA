@@ -1,5 +1,5 @@
 base_url=$1/
-dir=/cellar/users/snwright/Data/RareCommon/GWASCatalog/testing_traits/
+dir=$2
 
 cd $dir
 

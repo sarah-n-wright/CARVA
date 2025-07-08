@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --job-name=netcolocX
-#SBATCH --output /cellar/users/snwright/Data/RareCommon/slurm/Xnetcoloc_%A_%a.out
-#SBATCH --error /cellar/users/snwright/Data/RareCommon/slurm/Xnetcoloc_%A_%a.err
+#SBATCH --output Xnetcoloc_%A_%a.out
+#SBATCH --error Xnetcoloc_%A_%a.err
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1GB
 #SBATCH --time=00:30:00
@@ -9,11 +9,10 @@
 
 rare_file=$1
 common_file=$2
-DATADIR=/cellar/users/snwright/Data/RareCommon/inputs/March_2025
-OUTDIR=/cellar/users/snwright/Data/RareCommon/outputs/overlap/March_2025
-#DATADIR=/cellar/users/snwright/Data/RareCommon/inputs
-execdir=/cellar/users/snwright/Git/rare_common/carva
-#OUTDIR=/cellar/users/snwright/Data/RareCommon/outputs/netcoloc
+PWD=$(pwd)
+DATADIR=$PWD/../outputs
+OUTDIR=$PWD/../outputs
+execdir=$PWD/../carva
 test_name=defaults
 background=19000
 

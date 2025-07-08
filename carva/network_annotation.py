@@ -5,8 +5,7 @@ from geneset_utils import *
 from network_utils import *
 from tqdm import tqdm
 import sys
-sys.path.append('/cellar/users/snwright/Git/Network_Evaluation_Tools/neteval')
-from Timer import Timer
+from neteval.Timer import Timer
 
 ###################
 # Gene Annotation #
@@ -74,23 +73,6 @@ class GeneSet:
                 'Modularity_subnetwork':Q_subnetwork, 'Modularity_all': Q_all}        
     
 
-####################
-# Trait Annotation #
-####################
-
-class Trait:
-    def init(self, trait_code):
-        self.trait_code = trait_code
-
-
-###################
-# Data processing #
-###################
-
-class Efo:
-    def init(self):
-        pass
-    
     
 class NDExNetwork:
     def __init__(self, net_input, net_name, username=None, password=None, use_lcc=True, clustering_file=None, paths_file=None, 
@@ -330,13 +312,13 @@ def rare_common_assortativity(network, r_genes, c_genes, o_genes):
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--indir', type=str, default = '/cellar/users/snwright/Data/RareCommon/inputs/',
+    parser.add_argument('--indir', type=str, default = '',
                         help='Path to inputs')
-    parser.add_argument('--outdir', type=str, default = '/cellar/users/snwright/Data/RareCommon/outputs/', help='Path to outputs')
+    parser.add_argument('--outdir', type=str, default = '', help='Path to outputs')
     parser.add_argument('--uuid', type=str, default=None,
                         help='UUID of network to analyze')
     parser.add_argument('--netfile', type=str, default=None)
-    parser.add_argument('--geneset_list_file', type=str, default='overlap_traits_Jun27_min3_genes.txt')
+    parser.add_argument('--geneset_list_file', type=str, default=None)
     parser.add_argument('--geneset_list_file2', type=str, default=None)
     parser.add_argument('--clustering_file', type=str, default=None)
     parser.add_argument('--paths_file', type=str, default=None)
@@ -375,7 +357,7 @@ if __name__ == '__main__':
     print('OUTPREFs', outprefs)
     results = []
     
-    if False:
+    if True:
         for i, geneset in tqdm(enumerate(all_genesets)):
             if (not args.update) and (os.path.exists(os.path.join(args.outdir, f'network_stats_{args.net_name}_{args.geneset_list_file}.{outprefs[i]}'))):
                 # check if already calculated, skip if true
