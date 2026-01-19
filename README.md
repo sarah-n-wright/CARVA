@@ -4,10 +4,10 @@ Wright SN, Yang J, Ideker T. Common and rare genetic variants show network conve
 
 ## DEPENDENCIES
 * python >= 3.10
-* netcoloc v0.1.8 ([https://github.com/ucsd-ccbb/NetColoc/tree/quant_netcoloc](https://github.com/ucsd-ccbb/NetColoc/tree/quant_netcoloc))
+* netcoloc v1.0.0a2 ([https://pypi.org/project/netcoloc/1.0.0a2/](https://pypi.org/project/netcoloc/1.0.0a2/))
 * sentence-transformers 3.4.1
 * ndex2 3.9.0
-* neteval v0.2.2 ([https://pypi.org/project/neteval/](https://pypi.org/project/neteval/))
+* neteval v0.2.3a1 ([https://pypi.org/project/neteval/0.2.3a1/](https://pypi.org/project/neteval/0.2.3a1/))
 * networkx 2.8.8
 * obonet v1.0.0
 * scikit-learn v1.5.1
