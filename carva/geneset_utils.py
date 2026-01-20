@@ -1,10 +1,29 @@
-# File containing general functions for working with genesets
+"""
+Gene set utility functions for CARVA.
+
+This module provides functions for loading, manipulating, and writing gene sets
+used in CARVA analyses. Gene sets represent collections of genes associated with
+traits, such as rare and common variant associated genes.
+
+Main functions:
+    - map_genes_using_network_map: Convert gene IDs between formats (e.g., Entrez to Symbol)
+    - load_node_sets: Load gene sets from text files into dictionaries
+    - load_seed_genes: Load rare or common variant seed genes for a trait
+    - load_gene_profile: Load gene associations filtered by p-value threshold
+    - load_full_gene_profile: Load complete gene profiles with scores
+    - write_node_sets: Write gene set dictionaries to files
+    - split_gene_profile: Partition gene sets into two subsets (e.g., for cross-validation)
+
+File format conventions:
+    - Rare variant files: <trait>_RV.txt
+    - Common variant files: <trait>_CV.txt
+    - Gene sets can include p-values or be simple gene lists
+
+"""
 import pandas as pd
 import os
 import numpy as np
-CWD = os.path.dirname(os.path.abspath(__file__))
-
-# TODO reduce redundancy of gene set loading functions. 
+CWD = os.path.dirname(os.path.abspath(__file__)) 
 
 def map_genes_using_network_map(genelist, network_map_file=os.path.join(CWD, '../Reference_Data/pcnet2_0_node_map.txt'),
                                from_col='Entrez', to_col='Symbol'):
@@ -100,13 +119,13 @@ def write_node_sets(gene_dict, output_file, id_type='Symbol'):
     followed by tab-separated list values.
     
     Args:
-        dictionary (dict): Dictionary to write to file
+        gene_dict(dict): Dictionary to write to file
         output_file (str): Path to output file
         id_type (str): Type of ID to use for output, e.g., 'Entrez' or 'Symbol'
 
     Usage:
         my_dict = {'key1': [1, 2, 3], 'key2': ['a', 'b', 'c']}
-        write_dict_to_file(my_dict, 'output.tsv')
+        write_node_sets(my_dict, 'output.tsv')
     """
     with open(output_file, 'w') as f:
         for key, values in gene_dict.items():

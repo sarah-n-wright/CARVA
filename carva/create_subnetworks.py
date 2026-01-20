@@ -1,3 +1,33 @@
+"""
+Create trait-specific subnetworks from colocalization analysis results.
+
+This script extracts subnetworks from a biological network based on input genes
+and colocalized genes identified by NetColoc. For each trait pair, it generates two
+subnetworks: one with all genes (inputs + colocalized) and one with input genes only.
+
+Colocalization criteria:
+    - Z_coloc = z_R * z_C (product of rare and common z-scores)
+    - Gene is colocalized if: Z_coloc > zzth AND z_R > zth AND z_C > zth
+
+Input files:
+    - Network from NDEx (--network_uuid)
+    - Trait list with TraitR and TraitC columns (--trait_list_file)
+    - Z-score files: <trait>_z_<R|C>V_q_neglog10_sum.tsv (--z_dir)
+    - Gene lists: <trait>_<R|C>V.txt with Entrez, P-value, Gene Symbol (--genelist_dir)
+
+Outputs (per trait pair):
+    - <traitR>_<traitC>_subnetwork_all.tsv: Edgelist with inputs + colocalized genes
+    - <traitR>_<traitC>_subnetwork_all_node_attributes.tsv: Node attributes
+    - <traitR>_<traitC>_subnetwork_inputs.tsv: Edgelist with input genes only
+    - <traitR>_<traitC>_subnetwork_inputs_node_attributes.tsv: Node attributes
+
+Usage:
+    python create_subnetworks.py --network_uuid <uuid> --trait_list_file traits.tsv \
+        --z_dir /path/to/zscores --genelist_dir /path/to/genelists \
+        --outputdir /path/to/output --zth 1.0 --zzth 3.0
+"""
+
+
 import pandas as pd
 import networkx as nx
 import argparse

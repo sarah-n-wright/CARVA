@@ -1,3 +1,30 @@
+"""
+Generate simulated gene sets for benchmarking network colocalization.
+
+This script creates pairs of gene sets with controlled
+overlap and relevance parameters.
+
+Key parameters:
+    - overlap: Number of genes shared between the two gene sets
+    - relevance: Proportion of genes from original set (1.0 = all original, 0.5 = 50% noise)
+    - totalgenes: Total number of genes in each generated set
+    - background: Method for selecting noise genes (currently only 'degree' matching)
+
+Output naming convention:
+    <setname>_overlap<N>_relevance<R>_totalgenes<T>_repeat<I>_background<B>_<CV|RV>.txt
+
+Usage:
+    # Qualitative mode with degree matching
+    python create_sim_genesets.py --setfile genesets.txt --outdir /path/to/output \
+        --netnodefile network_nodelist.txt --overlap 10 --relevance 0.8 \
+        --totalgenes 100 --nrepeats 5 --background degree
+
+    # Quantitative mode preserving scores and degree matching
+    python create_sim_genesets.py --setfile trait_list.txt --outdir /path/to/output \
+        --netnodefile network_nodelist.txt --overlap 10 --relevance 0.8 \
+        --totalgenes 100 --nrepeats 5 --background degree --quant
+"""
+
 from configparser import NoOptionError
 import numpy as np
 import pandas as pd
@@ -11,6 +38,15 @@ from collections import defaultdict
 from geneset_utils import *
 
 def partition_gene_set(all_genes, total_genes, overlap):
+    """Partition a gene set into overlapping or non-overlapping subsets.
+    Args:
+        all_genes (list): Set of all genes to sample from.
+        total_genes (int): Total number of genes to include across the two partitions.
+        overlap (int): Number of genes that should be shared between the two partitions.
+    Returns:
+        tuple: Three lists (overlap_genes, gene_set1, gene_set2) where overlap_genes are shared
+               between both sets, and gene_set1/gene_set2 are unique to each set.
+    """
     gene_set = rn.sample(all_genes, total_genes)
     if overlap > 0:
         overlap_genes = rn.sample(gene_set, overlap)
@@ -27,6 +63,16 @@ def partition_gene_set(all_genes, total_genes, overlap):
     return overlap_genes, gene_set1, gene_set2
 
 def add_noise_to_gene_set(gene_set, relevance, background, all_subset_genes, netnodefile=None):
+    """Replace a portion of gene set genes with degree-matched random genes.
+    Args:
+        gene_set (list): Original gene set to add noise to.
+        relevance (float): Proportion of original genes to keep (0.0-1.0). E.g., 0.8 keeps 80% of genes and replaces 20% with noise.
+        background (str): Background matching method. Currently only 'degree' is implemented.
+        all_subset_genes (list): All genes already in use, to avoid selecting duplicates.
+        netnodefile (str, optional): Path to network node file (used to find degree file).
+    Returns:
+        list: Gene set with (1-relevance) fraction of original genes replaced by degree-matched random genes.
+    """
     n_to_replace = int(len(gene_set)*(1 - relevance))
     replace_genes = rn.sample(gene_set, n_to_replace)
     out_gene_set = [x for x in gene_set if x not in replace_genes]
@@ -49,6 +95,16 @@ def add_noise_to_gene_set(gene_set, relevance, background, all_subset_genes, net
 
 
 def add_noise_to_gene_set_quant(gene_profile, relevance, background, all_subset_genes, netnodefile=None):
+    """Replace a portion of gene set genes with degree-matched random genes, preserving scores.
+    Args:
+        gene_profile (dict): Dictionary mapping gene IDs to scores (e.g., p-values).
+        relevance (float): Proportion of original genes to keep (0.0-1.0). E.g., 0.8 keeps 80% of genes and replaces 20% with noise.
+        background (str): Background matching method. Currently only 'degree' is implemented.
+        all_subset_genes (list): All genes already in use, to avoid selecting duplicates.
+        netnodefile (str, optional): Path to network node file (used to find degree file).
+    Returns:
+        dict: Gene set with (1-relevance) fraction of original genes replaced, preserving score distribution.
+    """
     n_to_replace = int(len(gene_profile)*(1 - relevance))
     replace_genes = rn.sample(list(gene_profile.keys()), n_to_replace)
     replace_scores = [i for i in list(gene_profile.values())]
@@ -76,10 +132,23 @@ def add_noise_to_gene_set_quant(gene_profile, relevance, background, all_subset_
 
 
 def get_matched_gene(gene_bin, bin_data):
+    """Select a random gene from the same degree bin.
+    Args:
+        gene_bin (int): Degree bin to sample from.
+        bin_data (pd.DataFrame): DataFrame with gene degrees and bin assignments.
+    Returns:
+        int: Randomly selected gene ID from the specified bin.
+    """
     possible_genes = bin_data[bin_data['bin'] == gene_bin].index
     return rn.choice(possible_genes)
         
 def get_degree_bins(degrees):
+    """Create degree bins with approximately 100 genes each for degree matching.
+    Args:
+        degrees (pd.DataFrame): DataFrame with node degrees (column 1 contains degree values).
+    Returns:
+        pd.DataFrame: Input DataFrame with added 'bin' column assigning each gene to a degree bin.
+    """
     degree_counts = defaultdict(int)
     for x in degrees[1].values:
         degree_counts[x] += 1
@@ -104,17 +173,52 @@ def get_degree_bins(degrees):
 
     
 def write_simulated_geneset(geneset, outdir, setname, set_number, overlap, relevance, total_genes, repeat, background):
+    """Write a simulated gene set to file with parameter-encoded filename.
+    Args:
+        geneset (list): List of gene IDs to write.
+        outdir (str): Output directory for the file.
+        setname (str): Base name for the gene set.
+        set_number (str): Set identifier.
+        overlap (int): Number of overlapping genes (for filename encoding).
+        relevance (float): Relevance parameter (for filename encoding).
+        total_genes (int): Total number of genes (for filename encoding).
+        repeat (int): Repeat/iteration number (for filename encoding).
+        background (str): Background matching method (for filename encoding).
+    Returns:
+        None. Writes gene list to file with newline-separated gene IDs.
+    """
     outfile = os.path.join(outdir, f'{setname}_overlap{overlap}_relevance{relevance}_totalgenes{total_genes}_repeat{repeat}_background{background}_{set_number}.txt')
     with open(outfile, 'w') as out:
         out.write('\n'.join([str(x) for x in geneset]))
         
 def write_simulated_geneset_quant(geneset, outdir, setname, set_number, overlap, relevance, total_genes, repeat, background):
+    """Write a simulated gene set with scores to file with parameter-encoded filename.
+    Args:
+        geneset (dict): Dictionary mapping gene IDs to scores.
+        outdir (str): Output directory for the file.
+        setname (str): Base name for the gene set.
+        set_number (str): Set identifier.
+        overlap (int): Number of overlapping genes (for filename encoding).
+        relevance (float): Relevance parameter (for filename encoding).
+        total_genes (int): Total number of genes (for filename encoding).
+        repeat (int): Repeat/iteration number (for filename encoding).
+        background (str): Background matching method (for filename encoding).
+    Returns:
+        None. Writes gene profile to TSV file with 'Entrez' and 'P-value' columns.
+    """
     outfile = os.path.join(outdir, f'{setname}_overlap{overlap}_relevance{relevance}_totalgenes{total_genes}_repeat{repeat}_background{background}_{set_number}.txt')
     out_df = pd.DataFrame({'P-value': geneset}).reset_index(names='Entrez')
     out_df.to_csv(outfile, sep='\t', index=False)
         
 
 def check_genesets_against_network(genesets, network_node_file):
+    """Filter gene sets to include only genes present in the network.
+    Args:
+        genesets (dict): Dictionary of gene sets (set name -> set of gene IDs).
+        network_node_file (str): Path to file containing network node IDs.
+    Returns:
+        dict: Filtered gene sets containing only genes present in the network.
+    """
     network_nodes = set(pd.read_csv(network_node_file, header=None, sep='\t')[0])
     for geneset in genesets:
         genesets[geneset] = genesets[geneset].intersection(network_nodes)
@@ -134,9 +238,6 @@ if __name__=='__main__':
     parser.add_argument('--background', type=str, help='')
     parser.add_argument('--quant', action='store_true', help='Should quantitative scores also be included? Note: only relevance implemented for quant.')
     args = parser.parse_args()
-    
-    
-    
 
     if args.quant:
         with open(args.setfile, 'r') as f:

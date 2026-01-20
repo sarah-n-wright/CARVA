@@ -1,3 +1,22 @@
+"""
+Calculate shortest path lengths for all pairs of nodes in a network.
+
+This script computes the shortest path length between every pair of nodes in a
+network and saves the result as a matrix. The output can be used as the paths_file
+parameter in network_annotation.py's NDExNetwork class to prevent repeated calculations.
+
+Network input options:
+    - Load from NDEx using --uuid
+    - Load from file using --netfile (TSV format with 'Entrez_A' and 'Entrez_B' columns)
+
+Output:
+    - <outpref>path_lengths.csv: Matrix of shortest path lengths between all node pairs
+
+Usage:
+    python find_shortest_paths.py --uuid <network-uuid> --outdir /path/to/output --outpref network_name_
+
+"""
+
 import pandas as pd
 import networkx as nx
 import os

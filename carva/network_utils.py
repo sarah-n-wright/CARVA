@@ -1,4 +1,21 @@
-# File containing general functions for working with networks
+"""
+Network utility functions for CARVA.
+
+This module provides general functions for working with biological networks stored
+in NDEx (Network Data Exchange), including loading, uploading, and managing network
+node and degree information. These utilities support the CARVA workflow by handling
+network I/O and preprocessing.
+
+Main functions:
+    - load_network: Load a network from NDEx (public or private)
+    - upload_network: Upload a network to NDEx with optional styling
+    - load_saved_network_nodes: Load saved network node lists from file
+    - load_saved_network_degrees: Load saved network degree information from file
+    - create_saved_nodes_and_degrees: Generate and save node/degree files for a network
+    - create_ncbi_symbol_map_from_network: Create Entrez ID to gene symbol mappings
+
+"""
+
 import pandas as pd
 import os
 import ndex2

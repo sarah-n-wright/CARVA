@@ -1,3 +1,38 @@
+"""
+Run NetColoc analysis for rare and common variant gene sets.
+
+This script performs network-based colocalization analysis to identify genes where
+rare and common variant signals converge in biological networks. It uses network
+propagation to diffuse genetic signals and statistical tests to assess colocalization.
+
+Analysis modes:
+    - Binary mode (default): Uses gene lists without scores
+    - Quantitative mode (--quant): Incorporates p-values/scores from GWAS
+
+Network propagation:
+    - Uses precomputed heat diffusion matrices (from get_heat_matrix.py)
+    - Generates z-scores for each gene based on propagated signal
+    - Caches z-scores to avoid recomputation
+
+Colocalization statistics:
+    - Mean network proximity score (mean_nps): Average product of z-scores
+    - Size: Number of genes above thresholds (Z_coloc > zcoloc AND z_R > z1z2 AND z_C > z1z2)
+    - P-values calculated via permutation testing (1000 reps)
+
+Input files:
+    - Gene lists: <trait>_RV.txt (rare) and <trait>_CV.txt (common)
+    - Precomputed network files: <net_name>_individual_heats.npy, _nodes.txt, _degrees.txt
+
+Outputs:
+    - Z-scores: <trait>_z_<R|C>V_q_<transform>_<norm>.tsv (cached for reuse)
+    - Statistics: <qnetcoloc|netcoloc>_<traitR>_<traitC>_<suffix>.txt
+
+Usage:
+    python do_carva_netcoloc.py --indir /path/to/genes --netdir /path/to/network \
+        --outdir /path/to/output --trait_rare TRAIT1 --trait_common TRAIT2 \
+        --net_name NETWORK --quant --transform neglog10 --normalization sum
+"""
+
 from configparser import NoOptionError
 import numpy as np
 import pandas as pd

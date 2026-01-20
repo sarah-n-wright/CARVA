@@ -1,3 +1,23 @@
+"""
+Calculate network statistics for rare and common variant gene sets.
+
+This module provides classes for loading gene sets and networks, then calculating
+topological statistics like clustering, modularity, and assortativity.
+
+Main classes:
+    - GeneSet: Holds rare and common variant gene sets for a trait pair
+    - NDExNetwork: Loads networks from NDEx or file and calculates statistics
+
+Network statistics:
+    - Subnetwork density, degree, clustering, and path lengths
+    - Modularity for rare, common, overlap, and combined gene sets
+    - Assortativity coefficients
+
+Usage:
+    python network_annotation.py --uuid <network_uuid> --geneset_list_file traits.txt \
+        --indir /path/to/genesets --outdir /path/to/output --net_name NETWORK
+"""
+
 import os
 import pandas as pd
 import argparse

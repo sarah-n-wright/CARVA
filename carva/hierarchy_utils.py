@@ -1,3 +1,26 @@
+"""
+Hierarchy generation and annotation utilities for colocalized subnetworks.
+
+This module provides functions to create, annotate, and visualize hierarchical
+community structures from trait-specific subnetworks using the HiDeF algorithm.
+
+Key functions:
+    - load_subnetwork: Load trait-specific subnetworks with node attributes
+    - create_hierarchy: Apply HiDeF algorithm to detect nested communities
+    - name_hierarchy_systems: Annotate communities using GO enrichment
+    - add_seed_gene_fractions: Calculate rare/common/shared gene proportions
+    - upload_cx_hierarchy: Upload annotated hierarchy to NDEx
+
+Community annotation:
+    - Uses g:Profiler for GO term enrichment
+    - Filters terms by size (50-1000 genes), significance (p<1e-3), and specificity
+    - Selects best annotation based on precision and recall
+
+Dependencies:
+    - cdapsutil: For HiDeF community detection
+    - gprofiler: For GO enrichment analysis
+"""
+
 import pandas as pd
 import numpy as np
 import networkx as nx

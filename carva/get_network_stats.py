@@ -1,3 +1,25 @@
+"""
+Calculate clustering coefficients for all nodes in a network.
+
+This script loads a network from NDEx and computes the clustering coefficient
+for each node. The output can be used as the clustering_file parameter in
+network_annotation.py's NDExNetwork class to prevent repeated calculations.
+
+Network input:
+    - Loads from NDEx using --uuid parameter
+    - Uses NDExNetwork class from network_annotation module
+
+Output:
+    - <net_name>_clustering_coefficients.csv: CSV file with clustering coefficient for each node
+
+Usage:
+    python get_network_stats.py --uuid <network-uuid> --net_name NETWORK_NAME --outdir /path/to/output
+
+Note:
+    - The script includes retry logic (up to 3 attempts) to handle transient NDEx connection issues
+    - Default values (uuid and net_name) are for a small example network for testing purposes
+"""
+
 from network_annotation import *
 import argparse
 import pandas as pd
@@ -12,7 +34,7 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     os.makedirs(args.outdir, exist_ok=True)
-    # Load the network, allowing for extra retries
+    # Load the network with retry logic (3 attempts) to handle connection issues
     try:
         G_nd = NDExNetwork(args.uuid, args.net_name, input_is_uuid=True)
     except:
@@ -21,6 +43,7 @@ if __name__ == '__main__':
         except:
             G_nd = NDExNetwork(args.uuid, args.net_name, input_is_uuid=True)
 
+    # Calculate clustering coefficient for each node in the network
     cc = nx.clustering(G_nd.G)
-    # save results
+    # Save results
     pd.DataFrame({'clustering_coeff':cc}).to_csv(os.path.join(args.outdir, f'{args.net_name}_clustering_coefficients.csv'))
