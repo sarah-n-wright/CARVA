@@ -135,3 +135,7 @@ Identification and analysis of network colocalization for neuropsychiatric trait
 ## CONTACT
 
 For questions or issues, please open an issue on GitHub.
+
+## LICENSE
+
+MIT License
