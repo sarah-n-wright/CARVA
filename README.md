@@ -1,20 +1,70 @@
 # CARVA (*C*ommon *A*nd *R*are *V*ariant *A*nalysis)
 
+### OVERVIEW
+
+While both common and rare variants contribute to the genetic etiology of complex traits, whether their impacts manifest through the same effector genes and molecular mechanisms is not well understood. With the code in this repository we perform a systematic evaluation of the network convergence of common and rare variants, and assess the factors that drive this convergence.
+
+### CITATION
+
 Wright SN, Yang J, Ideker T. Common and rare genetic variants show network convergence for a majority of human traits. medRxiv (2025). DOI: [https://doi.org/10.1101/2025.06.27.25330419](https://doi.org/10.1101/2025.06.27.25330419)
 
-## DEPENDENCIES
+## INSTALLATION
+
+1. Clone this repository:
+```bash
+git clone https://github.com/sarah-n-wright/CARVA.git
+cd CARVA
+```
+
+2. Create a conda environment and install dependencies:
+```bash
+conda create -n carva python=3.10
+conda activate carva
+pip install netcoloc==1.1.0a1 neteval==0.2.3a1 sentence-transformers==3.4.1 \
+    scikit-learn==1.5.1
+conda install -c conda-forge r-base==4.2
+```
+
+Install R dependencies within R (necessary for performing TSEA):
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("TissueEnrich")
+```
+
+### DEPENDENCIES
 * python >= 3.10
-* netcoloc v1.0.0a2 ([https://pypi.org/project/netcoloc/1.0.0a2/](https://pypi.org/project/netcoloc/1.0.0a2/))
+* netcoloc v1.1.0a1 ([https://pypi.org/project/netcoloc/1.1.0a1/](https://pypi.org/project/netcoloc/1.1.0a1/))
 * sentence-transformers 3.4.1
-* ndex2 3.9.0
 * neteval v0.2.3a1 ([https://pypi.org/project/neteval/0.2.3a1/](https://pypi.org/project/neteval/0.2.3a1/))
-* networkx 2.8.8
-* obonet v1.0.0
 * scikit-learn v1.5.1
 * R >= 4.0
 * TissueEnrich ([Bioconductor](https://www.bioconductor.org/packages/release/bioc/html/TissueEnrich.html))
 
+
+## QUICK START
+
+* `CARVA/Notebooks/` contains all Jupyter notebooks necessary for reproducing manuscript analysis and figures. Note that some components use pre-computed results to allow these notebooks to be run on a standard computer. See **Notebook Descriptions** for further details.
+
+* `CARVA/carva/` contains Python scripts for carrying out the common and rare variant NetColoc analysis, and modules for data processing and analysis.
+
+* `CARVA/run/` contains scripts for implementing the full common and rare variant NetColoc analysis. Running these scripts with a large network (such as PCNet 2.0) requires access to a high-performance computing environment. See `CARVA/run/README.md` for detailed usage.
+
 ## DATA GUIDE
+
+Networks are available at [NDEx](https://ndexbio.org):
+
+* PCNet 2.0: [https://doi.org/10.18119/N9JP5J](https://doi.org/10.18119/N9JP5J)
+* All trait-specific colocalized networks [Network Set](https://www.ndexbio.org/#/networkset/287cafe2-1645-11f0-9806-005056ae3c32?accesskey=66e87e068c4c4709d4a89604558057f386142cc100b4eed1802a04474d2c7fa4)
+
+Expanded View Datasets EV1-6 are available in the `outputs/` directory:
+
+* **DatasetEV1** - All input common and rare studies, properties, and gene sets.
+* **DatasetEV2** - All overlap and network colocalization results.
+* **DatasetEV3** - SNP heritability and disease prevalence estimates.
+* **DatasetEV4** - Trait and gene set features for all common-rare study combinations.
+* **DatasetEV5** - NetColoc optimization results.
+* **DatasetEV6** - NetColoc benchmarking results.
 
 The following data is included in the `Reference_Data/` directory:  
 
@@ -37,7 +87,7 @@ The following data is included in the `Reference_Data/` directory:
 |rv_study_info_cleaned_with_manual_mapped_Mar28.tsv  | Study information with cleaned EFO mappings | 
 |gene_fulltable_06112024.txt.entrez.gz               | Filtered association data with gene identifiers mapped to NCBI Gene IDs |
 
-### Annotation Data
+### Annotation & Network Data
 | File | Description |
 |-----| -------|
 |Ensembl_Feb14_2025.txt.gz               | Ensembl gene annotations, downloaded February 14, 2025 |
@@ -45,8 +95,10 @@ The following data is included in the `Reference_Data/` directory:
 |gene2go.gz                              | Gene - GO mappings, downloaded November 25, 2024 |
 |gnomad.v4.1.constraint_metrics.tsv.gz  | Gene constraint metrics v4.1, downloaded April 14, 2024 |
 |gtex_median_processed_1.tsv.gz         | Median mRNA Expression data, generated November 25, 2024 |
-|ukb31063_h2_topline.02Oct2019.tsv.gz   | SNP-heritability estimates from the UK Biobank, downlowed April 29, 2024 |
-|s_het_estimates.genebayes.tsv          | Selective constraint estimates from GeneBayes |  
+|ukb31063_h2_topline.02Oct2019.tsv.gz   | SNP-heritability estimates from the UK Biobank, downloaded April 29, 2024 |
+|s_het_estimates.genebayes.tsv          | Selective constraint estimates from GeneBayes |
+|pcnet2_0_nodes.txt                     | Node list for PCNet 2.0 network used for analysis |
+|pcnet2_0_node_map.txt                  | Gene identifier mappings for PCNet 2.0 network nodes |
 
 ## NOTEBOOK GUIDE
 
@@ -80,3 +132,6 @@ Identification and analysis of network colocalization for neuropsychiatric trait
 **`S3_ColocalizedNetwork_Uploads.ipynb`** - Formation of colocalized trait networks and upload to NDEx.    
 **`S4_HCX_Creation.ipynb`** - Creation of hierarchical systems maps in HCX format.    
 
+## CONTACT
+
+For questions or issues, please open an issue on GitHub.
