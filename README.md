@@ -57,14 +57,16 @@ Networks are available at [NDEx](https://ndexbio.org):
 * PCNet 2.0: [https://doi.org/10.18119/N9JP5J](https://doi.org/10.18119/N9JP5J)
 * All trait-specific colocalized networks [Network Set](https://www.ndexbio.org/#/networkset/287cafe2-1645-11f0-9806-005056ae3c32?accesskey=66e87e068c4c4709d4a89604558057f386142cc100b4eed1802a04474d2c7fa4)
 
-Expanded View Datasets EV1-6 are available in the `outputs/` directory:
+Expanded View Datasets EV1-3 and Source Data Datasets B-D are available in the `outputs/` directory:
 
 * **DatasetEV1** - All input common and rare studies, properties, and gene sets.
-* **DatasetEV2** - All overlap and network colocalization results.
-* **DatasetEV3** - SNP heritability and disease prevalence estimates.
-* **DatasetEV4** - Trait and gene set features for all common-rare study combinations.
-* **DatasetEV5** - NetColoc optimization results.
-* **DatasetEV6** - NetColoc benchmarking results.
+* **DatasetEV2** - NetColoc optimization results.
+* **DatasetEV3** - NetColoc benchmarking results.
+* **DatasetB** - All overlap and network colocalization results.
+* **DatasetC** - SNP heritability and disease prevalence estimates.
+* **DatasetD** - Trait and gene set features for all common-rare study combinations.
+
+Note: DatasetEV1 is equivalent to Source Data DatasetA.
 
 The following data is included in the `Reference_Data/` directory:  
 
@@ -112,22 +114,22 @@ Filtering based on study metadata and matching of common variant studies to rare
 Curation of gene properties, and analysis of gene level overlap between common variant and rare variant associated genes for the same trait. Related to Figure 1 and Figure EV1. 
 
 ### `2_NetworkColocalization.ipynb`
-Results of network colocalization analysis across 373 human traits. Related to Figure 2, and Dataset EV2. 
+Results of network colocalization analysis across 373 human traits. Related to Figure 2, and Dataset B. 
 
 ### `3_Reproducibility.ipynb`
-Results of network colocalization analysis across 373 human traits, including results from multiple studies of the same trait, and analysis with multiple networks. Related to Figure 3, Figure EV2, Appendix Figure 3, and Dataset EV2. 
+Results of network colocalization analysis across 373 human traits, including results from multiple studies of the same trait, and analysis with multiple networks. Related to Figure 3, Figure EV2, Appendix Figure 3, and Dataset B. 
 
 ### `4A_FeaturePreparation.ipynb`
-Curation of gene and trait features for each pair of common and rare variant studies. Related to Figure 4, Figure EV4, Dataset EV3 and Dataset EV4.
+Curation of gene and trait features for each pair of common and rare variant studies. Related to Figure 4, Figure EV4, Dataset C and Dataset D.
 
 ### `4B_FeatureAnalysis.ipynb`
-Regression analysis of gene and trait features for prediction of network colocalization. Related to Figure 4, Figure 5, Figure EV3, Figure EV4, Appendix Figure 1, and Dataset EV4. 
+Regression analysis of gene and trait features for prediction of network colocalization. Related to Figure 4, Figure 5, Figure EV3, Figure EV4, Appendix Figure 1, and Dataset D. 
 
 ### `5_Examples_NeuropsychiatricTraits.ipynb`
 Identification and analysis of network colocalization for neuropsychiatric traits. Related to Figure 6 and Figure EV5.
 
 ### Supplemental Notebooks
-**`S1_NetColocOptimization.ipynb`** - Optimization and benchmarking of NetColoc. Related to Appendix Figure 2 and Dataset EV5.   
+**`S1_NetColocOptimization.ipynb`** - Optimization and benchmarking of NetColoc. Related to Appendix Figure 2 and Dataset EV2.   
 **`S2_DilutionStudies.ipynb`** - Benchmarking of NetColoc in response to randomized inputs.  Related to Appendix Figure 3.
 **`S3_ColocalizedNetwork_Uploads.ipynb`** - Formation of colocalized trait networks and upload to NDEx.    
 **`S4_HCX_Creation.ipynb`** - Creation of hierarchical systems maps in HCX format.    
