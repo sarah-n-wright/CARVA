@@ -2,11 +2,11 @@
 
 ### OVERVIEW
 
-While both common and rare variants contribute to the genetic etiology of complex traits, whether their impacts manifest through the same effector genes and molecular mechanisms is not well understood. With the code in this repository we perform a systematic evaluation of the network convergence of common and rare variants, and assess the factors that drive this convergence.
+While both common and rare variants contribute to the genetic etiology of complex traits, whether their impacts manifest through the same effector genes and molecular mechanisms is not well understood. With the code in this repository, we perform a systematic evaluation of the network convergence of common and rare variants and assess the factors that drive this convergence.
 
 ### CITATION
 
-Wright SN, Yang J, Ideker T. Common and rare genetic variants show network convergence for a majority of human traits. medRxiv (2025). DOI: [https://doi.org/10.1101/2025.06.27.25330419](https://doi.org/10.1101/2025.06.27.25330419)
+Wright SN, Yang J, Ideker T. Common and rare genetic variants show network convergence for a majority of human traits. EMBO Rep 27, 1918–1943 (2026). DOI: [https://doi.org/10.1038/s44319-026-00733-4](https://doi.org/10.1038/s44319-026-00733-4)
 
 ## INSTALLATION
 
