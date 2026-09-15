@@ -46,7 +46,7 @@ if __name__=='__main__':
     parser.add_argument("--netfile", help="Filepath of network to load", required=False)
     parser.add_argument("--name", help="Base name for output files")
     parser.add_argument("--filter", help="Filter in the format <column>_<threshold> (e.g., score_10)", required=False, default=None)
-    parser.add_argument("--alpha", default=0.5, required=False, help="Dissipation constant for network propagation. Default alpha=0.5 is recommended.")
+    parser.add_argument("--alpha", type = float, default=0.5, required=False, help="Dissipation constant for network propagation. Default alpha=0.5 is recommended.")
     args = parser.parse_args()
     outdir = args.outdir
     uuid = args.uuid
