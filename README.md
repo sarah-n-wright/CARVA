@@ -50,7 +50,7 @@ BiocManager::install("TissueEnrich")
 
 * `CARVA/run/` contains scripts for implementing the full common and rare variant NetColoc analysis. Running these scripts with a large network (such as PCNet 2.0) requires access to a high-performance computing environment. See `CARVA/run/README.md` for detailed usage.
 
-* `CARVA/nextflow/' contains Nextflow pipeline for processing a network and performing network colocalization for paired inputs. 
+* `CARVA/nextflow/` contains Nextflow pipeline for processing a network and performing network colocalization for paired inputs. 
 
 ## DATA GUIDE
 
