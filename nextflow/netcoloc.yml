@@ -1,0 +1,14 @@
+name: netcoloc
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - networkx
+  - pandas
+  - ndex2
+  - numpy
+  - statsmodels
+  - scipy
+  - pip:
+    - netcoloc

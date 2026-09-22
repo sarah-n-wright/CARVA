@@ -18,11 +18,13 @@ Main functions:
 
 import pandas as pd
 import os
+import time
 import ndex2
+import requests
 from getpass import getpass
 
-def load_network(uuid='e8cc9239-d91a-11eb-b666-0ac135e8bacf', use_password=False, verbose=True, 
-                return_cx=False, ndex_password=None, ndex_user=None):
+def load_network(uuid='e8cc9239-d91a-11eb-b666-0ac135e8bacf', use_password=False, verbose=True,
+                return_cx=False, ndex_password=None, ndex_user=None, max_retries=5, retry_backoff=5):
     """Wrapper function for loading a network from NDEx
     Args:
         uuid (str, optional): NDEx identifier. Defaults to 'e8cc9239-d91a-11eb-b666-0ac135e8bacf' for PCNET
@@ -32,6 +34,8 @@ def load_network(uuid='e8cc9239-d91a-11eb-b666-0ac135e8bacf', use_password=False
         return_cx (bool, optional): If True, returns the CX object instead of a networkx object. Defaults to False.
         ndex_password (str, optional): Password for NDEx. If not provided and use_password is True, will prompt for password.
         ndex_user (str, optional): Username for NDEx. If not provided and use_password is True, will prompt for username.
+        max_retries (int, optional): Number of retries on a timeout/connection error before giving up. Defaults to 5.
+        retry_backoff (int, optional): Seconds to wait before each retry, doubling each attempt. Defaults to 5.
 
     Returns:
         :py:class:`networkx.Graph`: A networkx object of the desired network
@@ -46,11 +50,20 @@ def load_network(uuid='e8cc9239-d91a-11eb-b666-0ac135e8bacf', use_password=False
     else:
         ndex_user=None
         ndex_password=None
-    G_cx = ndex2.create_nice_cx_from_server(
-            ndex_server, 
-            username=ndex_user, 
-            password=ndex_password, 
-            uuid=uuid)
+    for attempt in range(1, max_retries + 1):
+        try:
+            G_cx = ndex2.create_nice_cx_from_server(
+                    ndex_server,
+                    username=ndex_user,
+                    password=ndex_password,
+                    uuid=uuid)
+            break
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
+            if attempt == max_retries:
+                raise
+            wait = retry_backoff * (2 ** (attempt - 1))
+            print(f'NDEx request failed ({e}); retrying in {wait}s (attempt {attempt}/{max_retries})')
+            time.sleep(wait)
     if return_cx:
         return G_cx
     G = G_cx.to_networkx()
@@ -116,8 +129,11 @@ def load_saved_network_nodes(indir, net_name):
     '''
     if os.path.exists(os.path.join(indir, net_name+ "_nodes.txt")):
         pc_nodes = pd.read_csv(os.path.join(indir, net_name+ "_nodes.txt"), sep='\t', header=None, index_col=0).index.tolist()
-        pc_nodes = [int(x) for x in pc_nodes]
-        return pc_nodes
+        try: # if numerical IDs, convert to int
+            pc_nodes = [int(x) for x in pc_nodes]
+            return pc_nodes
+        except ValueError: # otherwise keep as string
+            return pc_nodes
     else:
         return
 

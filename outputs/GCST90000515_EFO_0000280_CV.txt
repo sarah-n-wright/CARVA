@@ -1,0 +1,4 @@
+Entrez	Gene Symbol	P-value	Beta
+151449	GDF7	9e-13	0.113
+23373	CRTC1	7e-10	0.096
+7111	TMOD1	9e-09	0.088
