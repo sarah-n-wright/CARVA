@@ -43,7 +43,7 @@ import argparse
 from geneset_utils import *
 from network_utils import *
 from netcoloc.netcoloc_utils import Seeds, get_degree_binning, Timer
-import netcoloc.netprop_zscore as netprop_zscore
+import netcoloc.netprop_zscore as nz
 from netcoloc.netprop import *
 from netcoloc.network_colocalization import *
     
@@ -90,13 +90,17 @@ if __name__=='__main__':
     parser.add_argument('--stat_suffix', type=str, default=None, help='Additional suffix for statistics')
     parser.add_argument('--raresuff', type=str, default='_RV', help='Suffix for the file containing rare trait genes')
     parser.add_argument('--commonsuff', type=str, default='_CV', help='Suffix for the file containing common trait genes')
+    parser.add_argument('--seed_gene_col', type=str, default='Entrez', help='Column name for gene IDs in the input files')
+    parser.add_argument('--seed_score_col', type=str, default='P-value', help='Column name for gene scores in the input files')
     args = parser.parse_args()
 
     t = Timer()
     t.start('Load seeds')
     # Load the seed genes
-    common_seeds = Seeds(inputdata = os.path.join(args.indir, args.trait_common+args.commonsuff+'.txt'))
-    rare_seeds = Seeds(inputdata = os.path.join(args.indir, args.trait_rare+args.raresuff + '.txt'))
+    common_seeds = Seeds(inputdata = os.path.join(args.indir, args.trait_common+args.commonsuff+'.txt'),
+                        gene_col=args.seed_gene_col, score_col=args.seed_score_col)
+    rare_seeds = Seeds(inputdata = os.path.join(args.indir, args.trait_rare+args.raresuff + '.txt'),
+                       gene_col=args.seed_gene_col, score_col=args.seed_score_col)
     suffix = create_file_suffix(args.quant, args.transform, args.normalization, args.suffix)
 
     t.end('Load seeds')
@@ -159,7 +163,7 @@ if __name__=='__main__':
                     if args.normalization in ['max', 'minmax', 'zscore', 'sum', 'log']:
                         common_seeds.normalize_scores(method=args.normalization)
                     t.start('Scored heat zscores')
-                    z_common, common_heat, _ = netprop_zscore.calculate_scored_heat_zscores(indiv_heats, pc_nodes, pc_degree, common_seeds.scores, 
+                    z_common, common_heat, _ = nz.calculate_scored_heat_zscores(indiv_heats, pc_nodes, pc_degree, common_seeds.scores, 
                                                         num_reps=1000, minimum_bin_size=args.binsize, verbose=True, normalize_heat=None, random_seed=None, Timer=t)
 
                     t.end('Scored heat zscores')
@@ -178,7 +182,7 @@ if __name__=='__main__':
                     else:
                         common_genes = common_seeds.genes
                     
-                    z_common, common_heat, _ = netprop_zscore.calculate_heat_zscores(indiv_heats, pc_nodes,pc_degree, 
+                    z_common, common_heat, _ = nz.calculate_heat_zscores(indiv_heats, pc_nodes,pc_degree, 
                                                 common_genes,num_reps=1000, minimum_bin_size=args.binsize, alpha=0.5 )
 
                     z_common.to_csv(os.path.join(args.outdir, args.trait_common +f'_z{args.commonsuff}{suffix}.tsv'), sep="\t", header=False)
@@ -196,7 +200,7 @@ if __name__=='__main__':
                     if args.normalization in ['max', 'minmax', 'zscore', 'sum', 'log']:
                         rare_seeds.normalize_scores(method=args.normalization)
                     t.start('Scored heat zscores')
-                    z_rare, rare_heat, _ = netprop_zscore.calculate_scored_heat_zscores(indiv_heats, pc_nodes, pc_degree, rare_seeds.scores, 
+                    z_rare, rare_heat, _ = nz.calculate_scored_heat_zscores(indiv_heats, pc_nodes, pc_degree, rare_seeds.scores, 
                                                     num_reps=1000, minimum_bin_size=args.binsize, verbose=True, normalize_heat=None, random_seed=None, Timer=t)
                     t.end('Scored heat zscores')
 
@@ -213,7 +217,7 @@ if __name__=='__main__':
                         rare_genes = rare_seeds.get_top_ranked_genes(500, ascending=True)
                     else:
                         rare_genes = rare_seeds.genes
-                    z_rare, rare_heat, _ = netprop_zscore.calculate_heat_zscores(indiv_heats, pc_nodes,pc_degree, rare_genes,
+                    z_rare, rare_heat, _ = nz.calculate_heat_zscores(indiv_heats, pc_nodes,pc_degree, rare_genes,
                                                                 num_reps=1000, alpha=0.5,minimum_bin_size=args.binsize)                                    
 
                     z_rare.to_csv(os.path.join(args.outdir, args.trait_rare + f'_z{args.raresuff}{suffix}.tsv'), sep="\t", header=False)

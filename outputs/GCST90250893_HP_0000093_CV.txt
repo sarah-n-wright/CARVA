@@ -1,0 +1,4 @@
+Entrez	Gene Symbol	P-value	Beta
+51084	CRYL1	2e-08	
+7450	VWF	7e-07	
+11173	ADAMTS7	1e-06	

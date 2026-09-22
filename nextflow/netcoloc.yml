@@ -8,5 +8,7 @@ dependencies:
   - pandas
   - ndex2
   - numpy
+  - statsmodels
+  - scipy
   - pip:
     - netcoloc
